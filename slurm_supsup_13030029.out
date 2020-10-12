@@ -1,0 +1,49 @@
+[{'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}]
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+Traceback (most recent call last):
+  File "main.py", line 425, in <module>
+    main()
+  File "main.py", line 40, in main
+    if not run_base_dir.exists():
+AttributeError: 'str' object has no attribute 'exists'
+Traceback (most recent call last):
+  File "main.py", line 425, in <module>
+    main()
+  File "main.py", line 40, in main
+    if not run_base_dir.exists():
+AttributeError: 'str' object has no attribute 'exists'
+Traceback (most recent call last):
+  File "main.py", line 425, in <module>
+    main()
+  File "main.py", line 40, in main
+    if not run_base_dir.exists():
+AttributeError: 'str' object has no attribute 'exists'
+Traceback (most recent call last):
+  File "main.py", line 425, in <module>
+    main()
+  File "main.py", line 40, in main
+    if not run_base_dir.exists():
+AttributeError: 'str' object has no attribute 'exists'
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=8 --sparsity=8 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=0 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=4 --sparsity=4 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=1 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+Traceback (most recent call last):
+  File "main.py", line 425, in <module>
+    main()
+  File "main.py", line 40, in main
+    if not run_base_dir.exists():
+AttributeError: 'str' object has no attribute 'exists'
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+Traceback (most recent call last):
+  File "main.py", line 425, in <module>
+    main()
+  File "main.py", line 40, in main
+    if not run_base_dir.exists():
+AttributeError: 'str' object has no attribute 'exists'
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=2 --sparsity=2 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=2 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=32 --sparsity=32 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=2 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=1 --sparsity=1 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=3 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=16 --sparsity=16 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=3 
