@@ -1,0 +1,2 @@
+Date Finished,Name,Current Val,Best Val,Save Directory
+10-12-20_17:57:26, id=supsup~seed=0~sparsity=16~try=2~set=RandSplitCIFAR100~task=0, 0.8400, 0.8580, runs/rn18-supsup/id=supsup~seed=0~sparsity=16~try=2

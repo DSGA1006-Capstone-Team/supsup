@@ -1,0 +1,1121 @@
+[{'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}]
+THCudaCheck FAIL file=/pytorch/torch/csrc/cuda/Module.cpp line=59 error=101 : invalid device ordinal
+THCudaCheck FAIL file=/pytorch/torch/csrc/cuda/Module.cpp line=59 error=101 : invalid device ordinal
+THCudaCheck FAIL file=/pytorch/torch/csrc/cuda/Module.cpp line=59 error=101 : invalid device ordinal
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=2~try=3
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.08518518518518518
+Set sparsity of layer1.0.conv1 to 0.022222222222222223
+Set sparsity of layer1.0.conv2 to 0.022222222222222223
+Set sparsity of layer1.1.conv1 to 0.022222222222222223
+Set sparsity of layer1.1.conv2 to 0.022222222222222223
+Set sparsity of layer2.0.conv1 to 0.016666666666666666
+Set sparsity of layer2.0.conv2 to 0.011111111111111112
+Set sparsity of layer2.0.shortcut.0 to 0.15
+Set sparsity of layer2.1.conv1 to 0.011111111111111112
+Set sparsity of layer2.1.conv2 to 0.011111111111111112
+Set sparsity of layer3.0.conv1 to 0.008333333333333333
+Set sparsity of layer3.0.conv2 to 0.005555555555555556
+Set sparsity of layer3.0.shortcut.0 to 0.075
+Set sparsity of layer3.1.conv1 to 0.005555555555555556
+Set sparsity of layer3.1.conv2 to 0.005555555555555556
+Set sparsity of layer4.0.conv1 to 0.004166666666666667
+Set sparsity of layer4.0.conv2 to 0.002777777777777778
+Set sparsity of layer4.0.shortcut.0 to 0.0375
+Set sparsity of layer4.1.conv1 to 0.002777777777777778
+Set sparsity of layer4.1.conv2 to 0.002777777777777778
+Set sparsity of linear to 0.4125
+=> Parallelizing on [2] gpus
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=1~try=3
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.04259259259259259
+Set sparsity of layer1.0.conv1 to 0.011111111111111112
+Set sparsity of layer1.0.conv2 to 0.011111111111111112
+Set sparsity of layer1.1.conv1 to 0.011111111111111112
+Set sparsity of layer1.1.conv2 to 0.011111111111111112
+Set sparsity of layer2.0.conv1 to 0.008333333333333333
+Set sparsity of layer2.0.conv2 to 0.005555555555555556
+Set sparsity of layer2.0.shortcut.0 to 0.075
+Set sparsity of layer2.1.conv1 to 0.005555555555555556
+Set sparsity of layer2.1.conv2 to 0.005555555555555556
+Set sparsity of layer3.0.conv1 to 0.004166666666666667
+Set sparsity of layer3.0.conv2 to 0.002777777777777778
+Set sparsity of layer3.0.shortcut.0 to 0.0375
+Set sparsity of layer3.1.conv1 to 0.002777777777777778
+Set sparsity of layer3.1.conv2 to 0.002777777777777778
+Set sparsity of layer4.0.conv1 to 0.0020833333333333333
+Set sparsity of layer4.0.conv2 to 0.001388888888888889
+Set sparsity of layer4.0.shortcut.0 to 0.01875
+Set sparsity of layer4.1.conv1 to 0.001388888888888889
+Set sparsity of layer4.1.conv2 to 0.001388888888888889
+Set sparsity of linear to 0.20625
+=> Parallelizing on [3] gpus
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=4~try=3
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.17037037037037037
+Set sparsity of layer1.0.conv1 to 0.044444444444444446
+Set sparsity of layer1.0.conv2 to 0.044444444444444446
+Set sparsity of layer1.1.conv1 to 0.044444444444444446
+Set sparsity of layer1.1.conv2 to 0.044444444444444446
+Set sparsity of layer2.0.conv1 to 0.03333333333333333
+Set sparsity of layer2.0.conv2 to 0.022222222222222223
+Set sparsity of layer2.0.shortcut.0 to 0.3
+Set sparsity of layer2.1.conv1 to 0.022222222222222223
+Set sparsity of layer2.1.conv2 to 0.022222222222222223
+Set sparsity of layer3.0.conv1 to 0.016666666666666666
+Set sparsity of layer3.0.conv2 to 0.011111111111111112
+Set sparsity of layer3.0.shortcut.0 to 0.15
+Set sparsity of layer3.1.conv1 to 0.011111111111111112
+Set sparsity of layer3.1.conv2 to 0.011111111111111112
+Set sparsity of layer4.0.conv1 to 0.008333333333333333
+Set sparsity of layer4.0.conv2 to 0.005555555555555556
+Set sparsity of layer4.0.shortcut.0 to 0.075
+Set sparsity of layer4.1.conv1 to 0.005555555555555556
+Set sparsity of layer4.1.conv2 to 0.005555555555555556
+Set sparsity of linear to 0.5
+=> Parallelizing on [1] gpus
+Traceback (most recent call last):
+  File "main.py", line 425, in <module>
+    main()
+  File "main.py", line 81, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: cuda runtime error (101) : invalid device ordinal at /pytorch/torch/csrc/cuda/Module.cpp:59
+Traceback (most recent call last):
+  File "main.py", line 425, in <module>
+    main()
+  File "main.py", line 81, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: cuda runtime error (101) : invalid device ordinal at /pytorch/torch/csrc/cuda/Module.cpp:59
+Traceback (most recent call last):
+  File "main.py", line 425, in <module>
+    main()
+  File "main.py", line 81, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: cuda runtime error (101) : invalid device ordinal at /pytorch/torch/csrc/cuda/Module.cpp:59
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=1 --sparsity=1 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=3 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=8~try=3
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.34074074074074073
+Set sparsity of layer1.0.conv1 to 0.08888888888888889
+Set sparsity of layer1.0.conv2 to 0.08888888888888889
+Set sparsity of layer1.1.conv1 to 0.08888888888888889
+Set sparsity of layer1.1.conv2 to 0.08888888888888889
+Set sparsity of layer2.0.conv1 to 0.06666666666666667
+Set sparsity of layer2.0.conv2 to 0.044444444444444446
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.044444444444444446
+Set sparsity of layer2.1.conv2 to 0.044444444444444446
+Set sparsity of layer3.0.conv1 to 0.03333333333333333
+Set sparsity of layer3.0.conv2 to 0.022222222222222223
+Set sparsity of layer3.0.shortcut.0 to 0.3
+Set sparsity of layer3.1.conv1 to 0.022222222222222223
+Set sparsity of layer3.1.conv2 to 0.022222222222222223
+Set sparsity of layer4.0.conv1 to 0.016666666666666666
+Set sparsity of layer4.0.conv2 to 0.011111111111111112
+Set sparsity of layer4.0.shortcut.0 to 0.15
+Set sparsity of layer4.1.conv1 to 0.011111111111111112
+Set sparsity of layer4.1.conv2 to 0.011111111111111112
+Set sparsity of linear to 0.5
+=> Parallelizing on [0] gpus
+=> Using trainer <module 'trainers.default' from '/home/at2507/supsup/trainers/default.py'>
+Task RandSplitCIFAR100: 0
+THCudaCheck FAIL file=/pytorch/torch/csrc/cuda/Module.cpp line=59 error=101 : invalid device ordinal
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=16~try=3
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.5
+Set sparsity of layer1.0.conv1 to 0.17777777777777778
+Set sparsity of layer1.0.conv2 to 0.17777777777777778
+Set sparsity of layer1.1.conv1 to 0.17777777777777778
+Set sparsity of layer1.1.conv2 to 0.17777777777777778
+Set sparsity of layer2.0.conv1 to 0.13333333333333333
+Set sparsity of layer2.0.conv2 to 0.08888888888888889
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.08888888888888889
+Set sparsity of layer2.1.conv2 to 0.08888888888888889
+Set sparsity of layer3.0.conv1 to 0.06666666666666667
+Set sparsity of layer3.0.conv2 to 0.044444444444444446
+Set sparsity of layer3.0.shortcut.0 to 0.5
+Set sparsity of layer3.1.conv1 to 0.044444444444444446
+Set sparsity of layer3.1.conv2 to 0.044444444444444446
+Set sparsity of layer4.0.conv1 to 0.03333333333333333
+Set sparsity of layer4.0.conv2 to 0.022222222222222223
+Set sparsity of layer4.0.shortcut.0 to 0.3
+Set sparsity of layer4.1.conv1 to 0.022222222222222223
+Set sparsity of layer4.1.conv2 to 0.022222222222222223
+Set sparsity of linear to 0.5
+=> Parallelizing on [2] gpus
+THCudaCheck FAIL file=/pytorch/torch/csrc/cuda/Module.cpp line=59 error=101 : invalid device ordinal
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=32~try=3
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.5
+Set sparsity of layer1.0.conv1 to 0.35555555555555557
+Set sparsity of layer1.0.conv2 to 0.35555555555555557
+Set sparsity of layer1.1.conv1 to 0.35555555555555557
+Set sparsity of layer1.1.conv2 to 0.35555555555555557
+Set sparsity of layer2.0.conv1 to 0.26666666666666666
+Set sparsity of layer2.0.conv2 to 0.17777777777777778
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.17777777777777778
+Set sparsity of layer2.1.conv2 to 0.17777777777777778
+Set sparsity of layer3.0.conv1 to 0.13333333333333333
+Set sparsity of layer3.0.conv2 to 0.08888888888888889
+Set sparsity of layer3.0.shortcut.0 to 0.5
+Set sparsity of layer3.1.conv1 to 0.08888888888888889
+Set sparsity of layer3.1.conv2 to 0.08888888888888889
+Set sparsity of layer4.0.conv1 to 0.06666666666666667
+Set sparsity of layer4.0.conv2 to 0.044444444444444446
+Set sparsity of layer4.0.shortcut.0 to 0.5
+Set sparsity of layer4.1.conv1 to 0.044444444444444446
+Set sparsity of layer4.1.conv2 to 0.044444444444444446
+Set sparsity of linear to 0.5
+=> Parallelizing on [1] gpus
+Traceback (most recent call last):
+  File "main.py", line 425, in <module>
+    main()
+  File "main.py", line 81, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: cuda runtime error (101) : invalid device ordinal at /pytorch/torch/csrc/cuda/Module.cpp:59
+Traceback (most recent call last):
+  File "main.py", line 425, in <module>
+    main()
+  File "main.py", line 81, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+RuntimeError: cuda runtime error (101) : invalid device ordinal at /pytorch/torch/csrc/cuda/Module.cpp:59
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=2 --sparsity=2 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=2 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=16 --sparsity=16 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=2 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=4 --sparsity=4 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=1 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=32 --sparsity=32 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=1 
+Train Epoch: 1 [0/2500 (0%)]	Loss: 1.967914
+Train Epoch: 1 [1280/2500 (50%)]	Loss: 1.398897
+
+Test set: Average loss: 1.1619, Accuracy: (0.5540)
+
+Train Epoch: 2 [0/2500 (0%)]	Loss: 1.306008
+Train Epoch: 2 [1280/2500 (50%)]	Loss: 1.152731
+
+Test set: Average loss: 1.1607, Accuracy: (0.5280)
+
+Train Epoch: 3 [0/2500 (0%)]	Loss: 1.306088
+Train Epoch: 3 [1280/2500 (50%)]	Loss: 1.135038
+
+Test set: Average loss: 1.0015, Accuracy: (0.6260)
+
+Train Epoch: 4 [0/2500 (0%)]	Loss: 0.867730
+Train Epoch: 4 [1280/2500 (50%)]	Loss: 0.914369
+
+Test set: Average loss: 0.9427, Accuracy: (0.6520)
+
+Train Epoch: 5 [0/2500 (0%)]	Loss: 0.936366
+Train Epoch: 5 [1280/2500 (50%)]	Loss: 0.771639
+
+Test set: Average loss: 0.9424, Accuracy: (0.6200)
+
+Train Epoch: 6 [0/2500 (0%)]	Loss: 0.896248
+Train Epoch: 6 [1280/2500 (50%)]	Loss: 0.908032
+
+Test set: Average loss: 0.8439, Accuracy: (0.6660)
+
+Train Epoch: 7 [0/2500 (0%)]	Loss: 0.794887
+Train Epoch: 7 [1280/2500 (50%)]	Loss: 0.649846
+
+Test set: Average loss: 0.9580, Accuracy: (0.6300)
+
+Train Epoch: 8 [0/2500 (0%)]	Loss: 1.112967
+Train Epoch: 8 [1280/2500 (50%)]	Loss: 0.691468
+
+Test set: Average loss: 0.8230, Accuracy: (0.6980)
+
+Train Epoch: 9 [0/2500 (0%)]	Loss: 0.871269
+Train Epoch: 9 [1280/2500 (50%)]	Loss: 0.852883
+
+Test set: Average loss: 0.8652, Accuracy: (0.6640)
+
+Train Epoch: 10 [0/2500 (0%)]	Loss: 0.877054
+Train Epoch: 10 [1280/2500 (50%)]	Loss: 0.834587
+
+Test set: Average loss: 0.8259, Accuracy: (0.6900)
+
+Train Epoch: 11 [0/2500 (0%)]	Loss: 0.792015
+Train Epoch: 11 [1280/2500 (50%)]	Loss: 0.846941
+
+Test set: Average loss: 0.8430, Accuracy: (0.6760)
+
+Train Epoch: 12 [0/2500 (0%)]	Loss: 0.609044
+Train Epoch: 12 [1280/2500 (50%)]	Loss: 0.904029
+
+Test set: Average loss: 0.7922, Accuracy: (0.7000)
+
+Train Epoch: 13 [0/2500 (0%)]	Loss: 0.892639
+Train Epoch: 13 [1280/2500 (50%)]	Loss: 0.731249
+
+Test set: Average loss: 0.8283, Accuracy: (0.6900)
+
+Train Epoch: 14 [0/2500 (0%)]	Loss: 0.915670
+Train Epoch: 14 [1280/2500 (50%)]	Loss: 0.716426
+
+Test set: Average loss: 0.8121, Accuracy: (0.7120)
+
+Train Epoch: 15 [0/2500 (0%)]	Loss: 0.666382
+Train Epoch: 15 [1280/2500 (50%)]	Loss: 0.853766
+
+Test set: Average loss: 0.7630, Accuracy: (0.7160)
+
+Train Epoch: 16 [0/2500 (0%)]	Loss: 0.864436
+Train Epoch: 16 [1280/2500 (50%)]	Loss: 0.821212
+
+Test set: Average loss: 0.8034, Accuracy: (0.7100)
+
+Train Epoch: 17 [0/2500 (0%)]	Loss: 0.651899
+Train Epoch: 17 [1280/2500 (50%)]	Loss: 0.685190
+
+Test set: Average loss: 0.8270, Accuracy: (0.6900)
+
+Train Epoch: 18 [0/2500 (0%)]	Loss: 0.720170
+Train Epoch: 18 [1280/2500 (50%)]	Loss: 0.635312
+
+Test set: Average loss: 0.7768, Accuracy: (0.7100)
+
+Train Epoch: 19 [0/2500 (0%)]	Loss: 0.640777
+Train Epoch: 19 [1280/2500 (50%)]	Loss: 0.836881
+
+Test set: Average loss: 0.8115, Accuracy: (0.6960)
+
+Train Epoch: 20 [0/2500 (0%)]	Loss: 0.754784
+Train Epoch: 20 [1280/2500 (50%)]	Loss: 0.687143
+
+Test set: Average loss: 0.7626, Accuracy: (0.7200)
+
+Train Epoch: 21 [0/2500 (0%)]	Loss: 0.488150
+Train Epoch: 21 [1280/2500 (50%)]	Loss: 0.698604
+
+Test set: Average loss: 0.8321, Accuracy: (0.6740)
+
+Train Epoch: 22 [0/2500 (0%)]	Loss: 0.484145
+Train Epoch: 22 [1280/2500 (50%)]	Loss: 0.792006
+
+Test set: Average loss: 0.7550, Accuracy: (0.7120)
+
+Train Epoch: 23 [0/2500 (0%)]	Loss: 0.580019
+Train Epoch: 23 [1280/2500 (50%)]	Loss: 0.658837
+
+Test set: Average loss: 0.7568, Accuracy: (0.7060)
+
+Train Epoch: 24 [0/2500 (0%)]	Loss: 0.572424
+Train Epoch: 24 [1280/2500 (50%)]	Loss: 0.472355
+
+Test set: Average loss: 0.7494, Accuracy: (0.7340)
+
+Train Epoch: 25 [0/2500 (0%)]	Loss: 0.606933
+Train Epoch: 25 [1280/2500 (50%)]	Loss: 0.708465
+
+Test set: Average loss: 0.7595, Accuracy: (0.7140)
+
+Train Epoch: 26 [0/2500 (0%)]	Loss: 0.799963
+Train Epoch: 26 [1280/2500 (50%)]	Loss: 0.603174
+
+Test set: Average loss: 0.7000, Accuracy: (0.7420)
+
+Train Epoch: 27 [0/2500 (0%)]	Loss: 0.530594
+Train Epoch: 27 [1280/2500 (50%)]	Loss: 0.807535
+
+Test set: Average loss: 0.7195, Accuracy: (0.7360)
+
+Train Epoch: 28 [0/2500 (0%)]	Loss: 0.606107
+Train Epoch: 28 [1280/2500 (50%)]	Loss: 0.642971
+
+Test set: Average loss: 0.7833, Accuracy: (0.7220)
+
+Train Epoch: 29 [0/2500 (0%)]	Loss: 0.744571
+Train Epoch: 29 [1280/2500 (50%)]	Loss: 0.539418
+
+Test set: Average loss: 0.6785, Accuracy: (0.7560)
+
+Train Epoch: 30 [0/2500 (0%)]	Loss: 0.588534
+Train Epoch: 30 [1280/2500 (50%)]	Loss: 0.623017
+
+Test set: Average loss: 0.6925, Accuracy: (0.7560)
+
+Train Epoch: 31 [0/2500 (0%)]	Loss: 0.502332
+Train Epoch: 31 [1280/2500 (50%)]	Loss: 0.511490
+
+Test set: Average loss: 0.7343, Accuracy: (0.7480)
+
+Train Epoch: 32 [0/2500 (0%)]	Loss: 0.583546
+Train Epoch: 32 [1280/2500 (50%)]	Loss: 0.547150
+
+Test set: Average loss: 0.7542, Accuracy: (0.7220)
+
+Train Epoch: 33 [0/2500 (0%)]	Loss: 0.442686
+Train Epoch: 33 [1280/2500 (50%)]	Loss: 0.742900
+
+Test set: Average loss: 0.6815, Accuracy: (0.7560)
+
+Train Epoch: 34 [0/2500 (0%)]	Loss: 0.587201
+Train Epoch: 34 [1280/2500 (50%)]	Loss: 0.722480
+
+Test set: Average loss: 0.7047, Accuracy: (0.7440)
+
+Train Epoch: 35 [0/2500 (0%)]	Loss: 0.446663
+Train Epoch: 35 [1280/2500 (50%)]	Loss: 0.535684
+
+Test set: Average loss: 0.7453, Accuracy: (0.7360)
+
+Train Epoch: 36 [0/2500 (0%)]	Loss: 0.476922
+Train Epoch: 36 [1280/2500 (50%)]	Loss: 0.772463
+
+Test set: Average loss: 0.7888, Accuracy: (0.7200)
+
+Train Epoch: 37 [0/2500 (0%)]	Loss: 0.622918
+Train Epoch: 37 [1280/2500 (50%)]	Loss: 0.520355
+
+Test set: Average loss: 0.6755, Accuracy: (0.7600)
+
+Train Epoch: 38 [0/2500 (0%)]	Loss: 0.516234
+Train Epoch: 38 [1280/2500 (50%)]	Loss: 0.704447
+
+Test set: Average loss: 0.6910, Accuracy: (0.7480)
+
+Train Epoch: 39 [0/2500 (0%)]	Loss: 0.474458
+Train Epoch: 39 [1280/2500 (50%)]	Loss: 0.517469
+
+Test set: Average loss: 0.7452, Accuracy: (0.7420)
+
+Train Epoch: 40 [0/2500 (0%)]	Loss: 0.590411
+Train Epoch: 40 [1280/2500 (50%)]	Loss: 0.572664
+
+Test set: Average loss: 0.6508, Accuracy: (0.7720)
+
+Train Epoch: 41 [0/2500 (0%)]	Loss: 0.385548
+Train Epoch: 41 [1280/2500 (50%)]	Loss: 0.591430
+
+Test set: Average loss: 0.6846, Accuracy: (0.7380)
+
+Train Epoch: 42 [0/2500 (0%)]	Loss: 0.499669
+Train Epoch: 42 [1280/2500 (50%)]	Loss: 0.452738
+
+Test set: Average loss: 0.6895, Accuracy: (0.7660)
+
+Train Epoch: 43 [0/2500 (0%)]	Loss: 0.511104
+Train Epoch: 43 [1280/2500 (50%)]	Loss: 0.602744
+
+Test set: Average loss: 0.8078, Accuracy: (0.7240)
+
+Train Epoch: 44 [0/2500 (0%)]	Loss: 0.637355
+Train Epoch: 44 [1280/2500 (50%)]	Loss: 0.558231
+
+Test set: Average loss: 0.6772, Accuracy: (0.7640)
+
+Train Epoch: 45 [0/2500 (0%)]	Loss: 0.511921
+Train Epoch: 45 [1280/2500 (50%)]	Loss: 0.546032
+
+Test set: Average loss: 0.6636, Accuracy: (0.7720)
+
+Train Epoch: 46 [0/2500 (0%)]	Loss: 0.529414
+Train Epoch: 46 [1280/2500 (50%)]	Loss: 0.376582
+
+Test set: Average loss: 0.6785, Accuracy: (0.7540)
+
+Train Epoch: 47 [0/2500 (0%)]	Loss: 0.522276
+Train Epoch: 47 [1280/2500 (50%)]	Loss: 0.382410
+
+Test set: Average loss: 0.7365, Accuracy: (0.7720)
+
+Train Epoch: 48 [0/2500 (0%)]	Loss: 0.507569
+Train Epoch: 48 [1280/2500 (50%)]	Loss: 0.546509
+
+Test set: Average loss: 0.6462, Accuracy: (0.7600)
+
+Train Epoch: 49 [0/2500 (0%)]	Loss: 0.421327
+Train Epoch: 49 [1280/2500 (50%)]	Loss: 0.400589
+
+Test set: Average loss: 0.6277, Accuracy: (0.7820)
+
+Train Epoch: 50 [0/2500 (0%)]	Loss: 0.432347
+Train Epoch: 50 [1280/2500 (50%)]	Loss: 0.529234
+
+Test set: Average loss: 0.7397, Accuracy: (0.7380)
+
+Train Epoch: 51 [0/2500 (0%)]	Loss: 0.399222
+Train Epoch: 51 [1280/2500 (50%)]	Loss: 0.497412
+
+Test set: Average loss: 0.7094, Accuracy: (0.7600)
+
+Train Epoch: 52 [0/2500 (0%)]	Loss: 0.480453
+Train Epoch: 52 [1280/2500 (50%)]	Loss: 0.443707
+
+Test set: Average loss: 0.5802, Accuracy: (0.7960)
+
+Train Epoch: 53 [0/2500 (0%)]	Loss: 0.408077
+Train Epoch: 53 [1280/2500 (50%)]	Loss: 0.508347
+
+Test set: Average loss: 0.6641, Accuracy: (0.7520)
+
+Train Epoch: 54 [0/2500 (0%)]	Loss: 0.430931
+Train Epoch: 54 [1280/2500 (50%)]	Loss: 0.639899
+
+Test set: Average loss: 0.5802, Accuracy: (0.7920)
+
+Train Epoch: 55 [0/2500 (0%)]	Loss: 0.392201
+Train Epoch: 55 [1280/2500 (50%)]	Loss: 0.411357
+
+Test set: Average loss: 0.6250, Accuracy: (0.7740)
+
+Train Epoch: 56 [0/2500 (0%)]	Loss: 0.417184
+Train Epoch: 56 [1280/2500 (50%)]	Loss: 0.369384
+
+Test set: Average loss: 0.5699, Accuracy: (0.7840)
+
+Train Epoch: 57 [0/2500 (0%)]	Loss: 0.273070
+Train Epoch: 57 [1280/2500 (50%)]	Loss: 0.489635
+
+Test set: Average loss: 0.6428, Accuracy: (0.7740)
+
+Train Epoch: 58 [0/2500 (0%)]	Loss: 0.372797
+Train Epoch: 58 [1280/2500 (50%)]	Loss: 0.497798
+
+Test set: Average loss: 0.6245, Accuracy: (0.7640)
+
+Train Epoch: 59 [0/2500 (0%)]	Loss: 0.426048
+Train Epoch: 59 [1280/2500 (50%)]	Loss: 0.515809
+
+Test set: Average loss: 0.6311, Accuracy: (0.7680)
+
+Train Epoch: 60 [0/2500 (0%)]	Loss: 0.411362
+Train Epoch: 60 [1280/2500 (50%)]	Loss: 0.432132
+
+Test set: Average loss: 0.6594, Accuracy: (0.7620)
+
+Train Epoch: 61 [0/2500 (0%)]	Loss: 0.386255
+Train Epoch: 61 [1280/2500 (50%)]	Loss: 0.490214
+
+Test set: Average loss: 0.6724, Accuracy: (0.7520)
+
+Train Epoch: 62 [0/2500 (0%)]	Loss: 0.479785
+Train Epoch: 62 [1280/2500 (50%)]	Loss: 0.402764
+
+Test set: Average loss: 0.6242, Accuracy: (0.7700)
+
+Train Epoch: 63 [0/2500 (0%)]	Loss: 0.478032
+Train Epoch: 63 [1280/2500 (50%)]	Loss: 0.377903
+
+Test set: Average loss: 0.5981, Accuracy: (0.7880)
+
+Train Epoch: 64 [0/2500 (0%)]	Loss: 0.345266
+Train Epoch: 64 [1280/2500 (50%)]	Loss: 0.400710
+
+Test set: Average loss: 0.6614, Accuracy: (0.7540)
+
+Train Epoch: 65 [0/2500 (0%)]	Loss: 0.386511
+Train Epoch: 65 [1280/2500 (50%)]	Loss: 0.350047
+
+Test set: Average loss: 0.6043, Accuracy: (0.7840)
+
+Train Epoch: 66 [0/2500 (0%)]	Loss: 0.285818
+Train Epoch: 66 [1280/2500 (50%)]	Loss: 0.409235
+
+Test set: Average loss: 0.6562, Accuracy: (0.7800)
+
+Train Epoch: 67 [0/2500 (0%)]	Loss: 0.370209
+Train Epoch: 67 [1280/2500 (50%)]	Loss: 0.345382
+
+Test set: Average loss: 0.6636, Accuracy: (0.7600)
+
+Train Epoch: 68 [0/2500 (0%)]	Loss: 0.399703
+Train Epoch: 68 [1280/2500 (50%)]	Loss: 0.417643
+
+Test set: Average loss: 0.6328, Accuracy: (0.7660)
+
+Train Epoch: 69 [0/2500 (0%)]	Loss: 0.467040
+Train Epoch: 69 [1280/2500 (50%)]	Loss: 0.375946
+
+Test set: Average loss: 0.6006, Accuracy: (0.8000)
+
+Train Epoch: 70 [0/2500 (0%)]	Loss: 0.562065
+Train Epoch: 70 [1280/2500 (50%)]	Loss: 0.399762
+
+Test set: Average loss: 0.5540, Accuracy: (0.8000)
+
+Train Epoch: 71 [0/2500 (0%)]	Loss: 0.361900
+Train Epoch: 71 [1280/2500 (50%)]	Loss: 0.392786
+
+Test set: Average loss: 0.5658, Accuracy: (0.8040)
+
+Train Epoch: 72 [0/2500 (0%)]	Loss: 0.423719
+Train Epoch: 72 [1280/2500 (50%)]	Loss: 0.419696
+
+Test set: Average loss: 0.6578, Accuracy: (0.7780)
+
+Train Epoch: 73 [0/2500 (0%)]	Loss: 0.378366
+Train Epoch: 73 [1280/2500 (50%)]	Loss: 0.579468
+
+Test set: Average loss: 0.6270, Accuracy: (0.7740)
+
+Train Epoch: 74 [0/2500 (0%)]	Loss: 0.301325
+Train Epoch: 74 [1280/2500 (50%)]	Loss: 0.373712
+
+Test set: Average loss: 0.6496, Accuracy: (0.7860)
+
+Train Epoch: 75 [0/2500 (0%)]	Loss: 0.379983
+Train Epoch: 75 [1280/2500 (50%)]	Loss: 0.288268
+
+Test set: Average loss: 0.5886, Accuracy: (0.7860)
+
+Train Epoch: 76 [0/2500 (0%)]	Loss: 0.364822
+Train Epoch: 76 [1280/2500 (50%)]	Loss: 0.300119
+
+Test set: Average loss: 0.6218, Accuracy: (0.8020)
+
+Train Epoch: 77 [0/2500 (0%)]	Loss: 0.228424
+Train Epoch: 77 [1280/2500 (50%)]	Loss: 0.347158
+
+Test set: Average loss: 0.6345, Accuracy: (0.7800)
+
+Train Epoch: 78 [0/2500 (0%)]	Loss: 0.367566
+Train Epoch: 78 [1280/2500 (50%)]	Loss: 0.438762
+
+Test set: Average loss: 0.6211, Accuracy: (0.7700)
+
+Train Epoch: 79 [0/2500 (0%)]	Loss: 0.346913
+Train Epoch: 79 [1280/2500 (50%)]	Loss: 0.340177
+
+Test set: Average loss: 0.5868, Accuracy: (0.8040)
+
+Train Epoch: 80 [0/2500 (0%)]	Loss: 0.382519
+Train Epoch: 80 [1280/2500 (50%)]	Loss: 0.374773
+
+Test set: Average loss: 0.6376, Accuracy: (0.7680)
+
+Train Epoch: 81 [0/2500 (0%)]	Loss: 0.386948
+Train Epoch: 81 [1280/2500 (50%)]	Loss: 0.279443
+
+Test set: Average loss: 0.6845, Accuracy: (0.7760)
+
+Train Epoch: 82 [0/2500 (0%)]	Loss: 0.414966
+Train Epoch: 82 [1280/2500 (50%)]	Loss: 0.368452
+
+Test set: Average loss: 0.5921, Accuracy: (0.7900)
+
+Train Epoch: 83 [0/2500 (0%)]	Loss: 0.333070
+Train Epoch: 83 [1280/2500 (50%)]	Loss: 0.329231
+
+Test set: Average loss: 0.6391, Accuracy: (0.7840)
+
+Train Epoch: 84 [0/2500 (0%)]	Loss: 0.319963
+Train Epoch: 84 [1280/2500 (50%)]	Loss: 0.438392
+
+Test set: Average loss: 0.6092, Accuracy: (0.7880)
+
+Train Epoch: 85 [0/2500 (0%)]	Loss: 0.259616
+Train Epoch: 85 [1280/2500 (50%)]	Loss: 0.394711
+
+Test set: Average loss: 0.6114, Accuracy: (0.7900)
+
+Train Epoch: 86 [0/2500 (0%)]	Loss: 0.310977
+Train Epoch: 86 [1280/2500 (50%)]	Loss: 0.455895
+
+Test set: Average loss: 0.5980, Accuracy: (0.7920)
+
+Train Epoch: 87 [0/2500 (0%)]	Loss: 0.332147
+Train Epoch: 87 [1280/2500 (50%)]	Loss: 0.351720
+
+Test set: Average loss: 0.6543, Accuracy: (0.7560)
+
+Train Epoch: 88 [0/2500 (0%)]	Loss: 0.219754
+Train Epoch: 88 [1280/2500 (50%)]	Loss: 0.313487
+
+Test set: Average loss: 0.6147, Accuracy: (0.8060)
+
+Train Epoch: 89 [0/2500 (0%)]	Loss: 0.331045
+Train Epoch: 89 [1280/2500 (50%)]	Loss: 0.317012
+
+Test set: Average loss: 0.5854, Accuracy: (0.7900)
+
+Train Epoch: 90 [0/2500 (0%)]	Loss: 0.276961
+Train Epoch: 90 [1280/2500 (50%)]	Loss: 0.334266
+
+Test set: Average loss: 0.5909, Accuracy: (0.8100)
+
+Train Epoch: 91 [0/2500 (0%)]	Loss: 0.217406
+Train Epoch: 91 [1280/2500 (50%)]	Loss: 0.289147
+
+Test set: Average loss: 0.5575, Accuracy: (0.8040)
+
+Train Epoch: 92 [0/2500 (0%)]	Loss: 0.268069
+Train Epoch: 92 [1280/2500 (50%)]	Loss: 0.265006
+
+Test set: Average loss: 0.5599, Accuracy: (0.8000)
+
+Train Epoch: 93 [0/2500 (0%)]	Loss: 0.259695
+Train Epoch: 93 [1280/2500 (50%)]	Loss: 0.339568
+
+Test set: Average loss: 0.6284, Accuracy: (0.7780)
+
+Train Epoch: 94 [0/2500 (0%)]	Loss: 0.262440
+Train Epoch: 94 [1280/2500 (50%)]	Loss: 0.311826
+
+Test set: Average loss: 0.6379, Accuracy: (0.7680)
+
+Train Epoch: 95 [0/2500 (0%)]	Loss: 0.356193
+Train Epoch: 95 [1280/2500 (50%)]	Loss: 0.318120
+
+Test set: Average loss: 0.6904, Accuracy: (0.7740)
+
+Train Epoch: 96 [0/2500 (0%)]	Loss: 0.377547
+Train Epoch: 96 [1280/2500 (50%)]	Loss: 0.226991
+
+Test set: Average loss: 0.6262, Accuracy: (0.7820)
+
+Train Epoch: 97 [0/2500 (0%)]	Loss: 0.265206
+Train Epoch: 97 [1280/2500 (50%)]	Loss: 0.262865
+
+Test set: Average loss: 0.7507, Accuracy: (0.7460)
+
+Train Epoch: 98 [0/2500 (0%)]	Loss: 0.401405
+Train Epoch: 98 [1280/2500 (50%)]	Loss: 0.306943
+
+Test set: Average loss: 0.6828, Accuracy: (0.7660)
+
+Train Epoch: 99 [0/2500 (0%)]	Loss: 0.348648
+Train Epoch: 99 [1280/2500 (50%)]	Loss: 0.300950
+
+Test set: Average loss: 0.5988, Accuracy: (0.8000)
+
+Train Epoch: 100 [0/2500 (0%)]	Loss: 0.309969
+Train Epoch: 100 [1280/2500 (50%)]	Loss: 0.288517
+
+Test set: Average loss: 0.5958, Accuracy: (0.8060)
+
+Train Epoch: 101 [0/2500 (0%)]	Loss: 0.279689
+Train Epoch: 101 [1280/2500 (50%)]	Loss: 0.322186
+
+Test set: Average loss: 0.6574, Accuracy: (0.7740)
+
+Train Epoch: 102 [0/2500 (0%)]	Loss: 0.407677
+Train Epoch: 102 [1280/2500 (50%)]	Loss: 0.321007
+
+Test set: Average loss: 0.6099, Accuracy: (0.7900)
+
+Train Epoch: 103 [0/2500 (0%)]	Loss: 0.220681
+Train Epoch: 103 [1280/2500 (50%)]	Loss: 0.317701
+
+Test set: Average loss: 0.5987, Accuracy: (0.8060)
+
+Train Epoch: 104 [0/2500 (0%)]	Loss: 0.391559
+Train Epoch: 104 [1280/2500 (50%)]	Loss: 0.294384
+
+Test set: Average loss: 0.6360, Accuracy: (0.7760)
+
+Train Epoch: 105 [0/2500 (0%)]	Loss: 0.189667
+Train Epoch: 105 [1280/2500 (50%)]	Loss: 0.315461
+
+Test set: Average loss: 0.6263, Accuracy: (0.7940)
+
+Train Epoch: 106 [0/2500 (0%)]	Loss: 0.268046
+Train Epoch: 106 [1280/2500 (50%)]	Loss: 0.359660
+
+Test set: Average loss: 0.6121, Accuracy: (0.7960)
+
+Train Epoch: 107 [0/2500 (0%)]	Loss: 0.263458
+Train Epoch: 107 [1280/2500 (50%)]	Loss: 0.245739
+
+Test set: Average loss: 0.6356, Accuracy: (0.7820)
+
+Train Epoch: 108 [0/2500 (0%)]	Loss: 0.321316
+Train Epoch: 108 [1280/2500 (50%)]	Loss: 0.270660
+
+Test set: Average loss: 0.6910, Accuracy: (0.7760)
+
+Train Epoch: 109 [0/2500 (0%)]	Loss: 0.307488
+Train Epoch: 109 [1280/2500 (50%)]	Loss: 0.296919
+
+Test set: Average loss: 0.6353, Accuracy: (0.7840)
+
+Train Epoch: 110 [0/2500 (0%)]	Loss: 0.316275
+Train Epoch: 110 [1280/2500 (50%)]	Loss: 0.252216
+
+Test set: Average loss: 0.6701, Accuracy: (0.7800)
+
+Train Epoch: 111 [0/2500 (0%)]	Loss: 0.295174
+Train Epoch: 111 [1280/2500 (50%)]	Loss: 0.223483
+
+Test set: Average loss: 0.6011, Accuracy: (0.7980)
+
+Train Epoch: 112 [0/2500 (0%)]	Loss: 0.249406
+Train Epoch: 112 [1280/2500 (50%)]	Loss: 0.418213
+
+Test set: Average loss: 0.6769, Accuracy: (0.7860)
+
+Train Epoch: 113 [0/2500 (0%)]	Loss: 0.261962
+Train Epoch: 113 [1280/2500 (50%)]	Loss: 0.203792
+
+Test set: Average loss: 0.6020, Accuracy: (0.8240)
+
+Train Epoch: 114 [0/2500 (0%)]	Loss: 0.295578
+Train Epoch: 114 [1280/2500 (50%)]	Loss: 0.292849
+
+Test set: Average loss: 0.5386, Accuracy: (0.8240)
+
+Train Epoch: 115 [0/2500 (0%)]	Loss: 0.305261
+Train Epoch: 115 [1280/2500 (50%)]	Loss: 0.262919
+
+Test set: Average loss: 0.6518, Accuracy: (0.7880)
+
+Train Epoch: 116 [0/2500 (0%)]	Loss: 0.312348
+Train Epoch: 116 [1280/2500 (50%)]	Loss: 0.218828
+
+Test set: Average loss: 0.5844, Accuracy: (0.8060)
+
+Train Epoch: 117 [0/2500 (0%)]	Loss: 0.329440
+Train Epoch: 117 [1280/2500 (50%)]	Loss: 0.224881
+
+Test set: Average loss: 0.6748, Accuracy: (0.7900)
+
+Train Epoch: 118 [0/2500 (0%)]	Loss: 0.149447
+Train Epoch: 118 [1280/2500 (50%)]	Loss: 0.285702
+
+Test set: Average loss: 0.5892, Accuracy: (0.8040)
+
+Train Epoch: 119 [0/2500 (0%)]	Loss: 0.323198
+Train Epoch: 119 [1280/2500 (50%)]	Loss: 0.280000
+
+Test set: Average loss: 0.6660, Accuracy: (0.7800)
+
+Train Epoch: 120 [0/2500 (0%)]	Loss: 0.236992
+Train Epoch: 120 [1280/2500 (50%)]	Loss: 0.179491
+
+Test set: Average loss: 0.6327, Accuracy: (0.8000)
+
+Train Epoch: 121 [0/2500 (0%)]	Loss: 0.251181
+Train Epoch: 121 [1280/2500 (50%)]	Loss: 0.357939
+
+Test set: Average loss: 0.5811, Accuracy: (0.7980)
+
+Train Epoch: 122 [0/2500 (0%)]	Loss: 0.226524
+Train Epoch: 122 [1280/2500 (50%)]	Loss: 0.312592
+
+Test set: Average loss: 0.5989, Accuracy: (0.7900)
+
+Train Epoch: 123 [0/2500 (0%)]	Loss: 0.223447
+Train Epoch: 123 [1280/2500 (50%)]	Loss: 0.197693
+
+Test set: Average loss: 0.5286, Accuracy: (0.8160)
+
+Train Epoch: 124 [0/2500 (0%)]	Loss: 0.253150
+Train Epoch: 124 [1280/2500 (50%)]	Loss: 0.235468
+
+Test set: Average loss: 0.5594, Accuracy: (0.8060)
+
+Train Epoch: 125 [0/2500 (0%)]	Loss: 0.150372
+Train Epoch: 125 [1280/2500 (50%)]	Loss: 0.432583
+
+Test set: Average loss: 0.6368, Accuracy: (0.7860)
+
+Train Epoch: 126 [0/2500 (0%)]	Loss: 0.235190
+Train Epoch: 126 [1280/2500 (50%)]	Loss: 0.204954
+
+Test set: Average loss: 0.5764, Accuracy: (0.8080)
+
+Train Epoch: 127 [0/2500 (0%)]	Loss: 0.209283
+Train Epoch: 127 [1280/2500 (50%)]	Loss: 0.259476
+
+Test set: Average loss: 0.5971, Accuracy: (0.8160)
+
+Train Epoch: 128 [0/2500 (0%)]	Loss: 0.242452
+Train Epoch: 128 [1280/2500 (50%)]	Loss: 0.248915
+
+Test set: Average loss: 0.6152, Accuracy: (0.8000)
+
+Train Epoch: 129 [0/2500 (0%)]	Loss: 0.263026
+Train Epoch: 129 [1280/2500 (50%)]	Loss: 0.197448
+
+Test set: Average loss: 0.5858, Accuracy: (0.8120)
+
+Train Epoch: 130 [0/2500 (0%)]	Loss: 0.204939
+Train Epoch: 130 [1280/2500 (50%)]	Loss: 0.220263
+
+Test set: Average loss: 0.6151, Accuracy: (0.7980)
+
+Train Epoch: 131 [0/2500 (0%)]	Loss: 0.192241
+Train Epoch: 131 [1280/2500 (50%)]	Loss: 0.264576
+
+Test set: Average loss: 0.5549, Accuracy: (0.8140)
+
+Train Epoch: 132 [0/2500 (0%)]	Loss: 0.155008
+Train Epoch: 132 [1280/2500 (50%)]	Loss: 0.271740
+
+Test set: Average loss: 0.5764, Accuracy: (0.8100)
+
+Train Epoch: 133 [0/2500 (0%)]	Loss: 0.286528
+Train Epoch: 133 [1280/2500 (50%)]	Loss: 0.239966
+
+Test set: Average loss: 0.6131, Accuracy: (0.7920)
+
+Train Epoch: 134 [0/2500 (0%)]	Loss: 0.225737
+Train Epoch: 134 [1280/2500 (50%)]	Loss: 0.269332
+
+Test set: Average loss: 0.6322, Accuracy: (0.8000)
+
+Train Epoch: 135 [0/2500 (0%)]	Loss: 0.190690
+Train Epoch: 135 [1280/2500 (50%)]	Loss: 0.205034
+
+Test set: Average loss: 0.5705, Accuracy: (0.8180)
+
+Train Epoch: 136 [0/2500 (0%)]	Loss: 0.149539
+Train Epoch: 136 [1280/2500 (50%)]	Loss: 0.210920
+
+Test set: Average loss: 0.5809, Accuracy: (0.7960)
+
+Train Epoch: 137 [0/2500 (0%)]	Loss: 0.265403
+Train Epoch: 137 [1280/2500 (50%)]	Loss: 0.216600
+
+Test set: Average loss: 0.6262, Accuracy: (0.7980)
+
+Train Epoch: 138 [0/2500 (0%)]	Loss: 0.165289
+Train Epoch: 138 [1280/2500 (50%)]	Loss: 0.199722
+
+Test set: Average loss: 0.5484, Accuracy: (0.8120)
+
+Train Epoch: 139 [0/2500 (0%)]	Loss: 0.149153
+Train Epoch: 139 [1280/2500 (50%)]	Loss: 0.207570
+
+Test set: Average loss: 0.5711, Accuracy: (0.8100)
+
+Train Epoch: 140 [0/2500 (0%)]	Loss: 0.198205
+Train Epoch: 140 [1280/2500 (50%)]	Loss: 0.253826
+
+Test set: Average loss: 0.6071, Accuracy: (0.8140)
+
+Train Epoch: 141 [0/2500 (0%)]	Loss: 0.169315
+Train Epoch: 141 [1280/2500 (50%)]	Loss: 0.188628
+
+Test set: Average loss: 0.6566, Accuracy: (0.7960)
+
+Train Epoch: 142 [0/2500 (0%)]	Loss: 0.217178
+Train Epoch: 142 [1280/2500 (50%)]	Loss: 0.183175
+
+Test set: Average loss: 0.5938, Accuracy: (0.8140)
+
+Train Epoch: 143 [0/2500 (0%)]	Loss: 0.261529
+Train Epoch: 143 [1280/2500 (50%)]	Loss: 0.180751
+
+Test set: Average loss: 0.5195, Accuracy: (0.8280)
+
+Train Epoch: 144 [0/2500 (0%)]	Loss: 0.188829
+Train Epoch: 144 [1280/2500 (50%)]	Loss: 0.221392
+
+Test set: Average loss: 0.5447, Accuracy: (0.8260)
+
+Train Epoch: 145 [0/2500 (0%)]	Loss: 0.131160
+Train Epoch: 145 [1280/2500 (50%)]	Loss: 0.156018
+
+Test set: Average loss: 0.6444, Accuracy: (0.7840)
+
+Train Epoch: 146 [0/2500 (0%)]	Loss: 0.205126
+Train Epoch: 146 [1280/2500 (50%)]	Loss: 0.203180
+
+Test set: Average loss: 0.5369, Accuracy: (0.8100)
+
+Train Epoch: 147 [0/2500 (0%)]	Loss: 0.218386
+Train Epoch: 147 [1280/2500 (50%)]	Loss: 0.210664
+
+Test set: Average loss: 0.5939, Accuracy: (0.8100)
+
+Train Epoch: 148 [0/2500 (0%)]	Loss: 0.148042
+Train Epoch: 148 [1280/2500 (50%)]	Loss: 0.206410
+
+Test set: Average loss: 0.5523, Accuracy: (0.8200)
+
+Train Epoch: 149 [0/2500 (0%)]	Loss: 0.149702
+Train Epoch: 149 [1280/2500 (50%)]	Loss: 0.153388
+
+Test set: Average loss: 0.5425, Accuracy: (0.8140)
+
+Train Epoch: 150 [0/2500 (0%)]	Loss: 0.197289
+Train Epoch: 150 [1280/2500 (50%)]	Loss: 0.189912
+
+Test set: Average loss: 0.5688, Accuracy: (0.8040)
+
+Train Epoch: 151 [0/2500 (0%)]	Loss: 0.211256
+Train Epoch: 151 [1280/2500 (50%)]	Loss: 0.187361
