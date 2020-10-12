@@ -66,7 +66,8 @@ def main():
         experiments.append(kwargs)
 
     print(experiments)
-    input("Press any key to continue...")
+    # AT Remove any key 
+    # input("Press any key to continue...")
     queue = Queue()
 
     for e in experiments:
