@@ -1,0 +1,1918 @@
+Last login: Mon Oct  5 14:28:20 on ttys000
+ls 
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) AngelasMBP2020:supsup angelateng$ ls  
+README.md		experiments		models			trainers
+adaptors.py		images			parser.py		utils.py
+args.py			main.py			requirements.txt
+data			mnist			schedulers.py
+env			mnist.ipynb		supsup.code-workspace
+(base) AngelasMBP2020:supsup angelateng$ cd .. 
+(base) AngelasMBP2020:Github angelateng$ ls 
+AlphaVantage_NLP			economic_news_nlp
+DSGA3001_at				educative.io-downloader
+EmbeddingsinSocSci			keyword_search_api
+LinkedIn-Easy-Apply-Bot			lab-0-environment-setup-angelaaaateng
+WiBEPh					lab-0-starter
+alpha_vantage_interview			lab-1-movies
+amberteng.github.io			lab2-evaluation
+awesome-streamlit-master		pilot-app
+common-intern				sentiment_analysis_api
+course-nlp				smoke-test-landing-page
+ds-incubator-summer-2020		supsup
+(base) AngelasMBP2020:Github angelateng$ cd supsup/
+(base) AngelasMBP2020:supsup angelateng$ ls 
+README.md		experiments		models			trainers
+adaptors.py		images			parser.py		utils.py
+args.py			main.py			requirements.txt
+data			mnist			schedulers.py
+env			mnist.ipynb		supsup.code-workspace
+(base) AngelasMBP2020:supsup angelateng$ source env/bin/activate
+(env) (base) AngelasMBP2020:supsup angelateng$ ls 
+README.md		experiments		models			trainers
+adaptors.py		images			parser.py		utils.py
+args.py			main.py			requirements.txt
+data			mnist			schedulers.py
+env			mnist.ipynb		supsup.code-workspace
+(env) (base) AngelasMBP2020:supsup angelateng$ conda install requirements.txt 
+Collecting package metadata (current_repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+Collecting package metadata (repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - requirements.txt
+
+Current channels:
+
+  - https://repo.anaconda.com/pkgs/main/osx-64
+  - https://repo.anaconda.com/pkgs/main/noarch
+  - https://repo.anaconda.com/pkgs/r/osx-64
+  - https://repo.anaconda.com/pkgs/r/noarch
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(env) (base) AngelasMBP2020:supsup angelateng$ conda install torch
+Collecting package metadata (current_repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+Collecting package metadata (repodata.json): done
+Solving environment: failed with initial frozen solve. Retrying with flexible solve.
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - torch
+
+Current channels:
+
+  - https://repo.anaconda.com/pkgs/main/osx-64
+  - https://repo.anaconda.com/pkgs/main/noarch
+  - https://repo.anaconda.com/pkgs/r/osx-64
+  - https://repo.anaconda.com/pkgs/r/noarch
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+(env) (base) AngelasMBP2020:supsup angelateng$ ls 
+README.md		experiments		models			trainers
+adaptors.py		images			parser.py		utils.py
+args.py			main.py			requirements.txt
+data			mnist			schedulers.py
+env			mnist.ipynb		supsup.code-workspace
+(env) (base) AngelasMBP2020:supsup angelateng$ pip install requirements.txt 
+ERROR: Could not find a version that satisfies the requirement requirements.txt (from versions: none)
+ERROR: No matching distribution found for requirements.txt
+(env) (base) AngelasMBP2020:supsup angelateng$ deactivate
+(base) AngelasMBP2020:supsup angelateng$ ls 
+README.md		experiments		models			trainers
+adaptors.py		images			parser.py		utils.py
+args.py			main.py			requirements.txt
+data			mnist			schedulers.py
+env			mnist.ipynb		supsup.code-workspace
+(base) AngelasMBP2020:supsup angelateng$ ls 
+README.md		env			mnist			requirements.txt	utils.py
+adaptors.py		experiments		mnist.ipynb		schedulers.py
+args.py			images			models			supsup.code-workspace
+data			main.py			parser.py		trainers
+(base) AngelasMBP2020:supsup angelateng$ ssh at2507@gw.hpc.nyu.edu
+** NOTICE: NYU Authorized Use Only **
+
+Access and use, or causing access and use, of this computer system by anyone other than as permitted by New York University (NYU) is strictly prohibited by NYU and by law. Such use might subject an unauthorized user, including unauthorized employees, to criminal and civil penalties as well as NYU-initiated disciplinary proceedings. The use of this system is routinely monitored and recorded, and anyone accessing this system consents to such monitoring and recording.
+at2507@gw.hpc.nyu.edu's password: 
+Last login: Fri Sep 18 13:52:45 2020 from 10.27.81.117
+at2507@hpc-bastion2~>$ ssh at2507@prince.hpc.nyu.edu
+at2507@prince.hpc.nyu.edu's password: 
+Permission denied, please try again.
+at2507@prince.hpc.nyu.edu's password: 
+Permission denied, please try again.
+at2507@prince.hpc.nyu.edu's password: 
+Last failed login: Tue Oct  6 11:26:59 EDT 2020 from psd01a-0047s.cfs.its.nyu.edu on ssh:notty
+There were 2 failed login attempts since the last successful login.
+Last login: Fri Sep 18 14:58:21 2020 from psd01a-0047s.cfs.its.nyu.edu
+
+PyTorch GPUs
+
+GPU driver on Prince does not support CUDA 10.2, if you are running PyTorch, please try to use PyTorch built with CUDA 10.1
+Please follow instructions on PyTorch page to reinstall PyTorch, https://pytorch.org
+pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+If you run pip list, the PyTorch version should be torch==1.5.0+cu101
+
+
+Hostname: log-1 at Tue Oct  6 11:27:07 EDT 2020
+
+Filesystem   Environment   Backed up?   Allocation       Current Usage
+Space        Variable      /Flushed?    Space / Files    Space(%) / Files(%)
+
+/home       $HOME         Yes/No        20.0GB/-           5.83GB(29.15%)/-
+/scratch    $SCRATCH       No/Yes        5.0TB/1.0M       0.38GB(0.01%)/2760(0.28%)
+/beegfs     $BEEGFS        No/Yes        2.0TB/3.0M        0.04GB(0.00%)/732(0.02%)
+/archive    $ARCHIVE      Yes/No         2.0TB/-           0.00GB(0.00%)/1
+
+Agent pid 148701
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '/home/at2507/.ssh/id_rsa.pub' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+(base) [at2507@log-1 ~]$ ls 
+dsga1001            lab-0-starter  run-jupyter.sbatch  slurm-5996959.out       slurm-6003602.out       slurm-6003604.out.save.1
+DSGA3001_at         lab-1-movies   seaborn-data        slurm-5997230.out       slurm-6003604.out       slurm-6046293.out
+EmbeddingsinSocSci  miniconda3     slurm-5996953.out   slurm-5997230.out.save  slurm-6003604.out.save  Untitled.ipynb
+(base) [at2507@log-1 ~]$ ssh-keygen -t rsa -b 4096 -C "at2507@nyu.edu"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/at2507/.ssh/id_rsa): ~/.ssh/prince_github_rsa
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+open ~/.ssh/prince_github_rsa failed: No such file or directory.
+Saving the key failed: ~/.ssh/prince_github_rsa.
+(base) [at2507@log-1 ~]$ ls
+dsga1001            lab-0-starter  run-jupyter.sbatch  slurm-5996959.out       slurm-6003602.out       slurm-6003604.out.save.1
+DSGA3001_at         lab-1-movies   seaborn-data        slurm-5997230.out       slurm-6003604.out       slurm-6046293.out
+EmbeddingsinSocSci  miniconda3     slurm-5996953.out   slurm-5997230.out.save  slurm-6003604.out.save  Untitled.ipynb
+(base) [at2507@log-1 ~]$ ls -al ~/.ssh
+total 49
+drwx--S---  2 at2507 users    9 Dec  4  2019 .
+drwxr-s--- 17 at2507 users   36 Sep 16 00:10 ..
+-rw-------  1 at2507 users  609 Sep 18  2019 authorized_keys
+-rw-------  1 at2507 users  227 Sep 18  2019 cluster
+-rw-r--r--  1 at2507 users  182 Sep 18  2019 cluster.pub
+-rw-------  1 at2507 users   98 Sep  2 01:18 config
+-rw-------  1 at2507 users 3247 Sep  9 18:10 id_rsa
+-rw-r--r--  1 at2507 users  740 Sep  9 18:10 id_rsa.pub
+-rw-r--r--  1 at2507 users 2912 Sep  9 17:49 known_hosts
+(base) [at2507@log-1 ~]$ eval $(ssh-agent -s)
+Agent pid 151332
+(base) [at2507@log-1 ~]$ ssh-add ~/.ssh/id_rsa
+Identity added: /home/at2507/.ssh/id_rsa (/home/at2507/.ssh/id_rsa)
+(base) [at2507@log-1 ~]$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDDBRGlhsiJvAYU14kRRqgb05xxFY3R6TW38BZ88g5XuFRPXNHuLAxFpFgwmrCvKF68vYzI2cM2ljGKvDjwrAgKgxtcJLRL6a5oQ16X0WePboMPjPbC3dkmqSsuqfSrZTlDelld7n2PTbX9ectsRr4qk+CO3daYFn5kkTa/WMMuDICpwfOjAf2PFtMTcBeYTF0i1rvRP/a4WIJRBep6YJlLCLh4U+i/rwYPQCLK7oohgBaDmUNDxs28VB7V5Yp6bbLecK0nYbU7SPaZmp9IHNvQc0bVDfohkqVK973D2xezLSzM5cvCRFsNVFPwBf5+dq5cAaGgUd1VNAsMBIcLSvVXxPc22XIG8+g7fA5l+xIYIJplcQuO0zVydpyyU96hGJk+w5wi7cXuJWhyZE+GJu+v4dICUDumbM/BV5puT59dA2eYVVn1hHoViLQQ/oxuCeN3LE75zMnfbb8W7ptRfkNqglhMAIkQfO+neWHEuZFiQJmk1ZC0OZDTfunZK/+wAPA5uuIZ/12D972+iXgUUXx53XZBU3BLQv8Y4PLO6l2kzN2DyshoeWEkTE8rPZMQR1YyyxnXrgRZeTlyY9GjvnE9zNlkcp8J3kZh1jR19D/uiVTkk7EfaGrmp6X90JUA0PyEgmN2ti93OgWD8c2HijrmeNOr83PkFYOvJAChQtb22Q== at2507@nyu.edu
+(base) [at2507@log-1 ~]$ ls 
+dsga1001            lab-0-starter  run-jupyter.sbatch  slurm-5996959.out       slurm-6003602.out       slurm-6003604.out.save.1
+DSGA3001_at         lab-1-movies   seaborn-data        slurm-5997230.out       slurm-6003604.out       slurm-6046293.out
+EmbeddingsinSocSci  miniconda3     slurm-5996953.out   slurm-5997230.out.save  slurm-6003604.out.save  Untitled.ipynb
+(base) [at2507@log-1 ~]$ git clone git@github.com:angelaaaateng/supsup.git
+Cloning into 'supsup'...
+remote: Enumerating objects: 5071, done.
+remote: Counting objects: 100% (5071/5071), done.
+remote: Compressing objects: 100% (4620/4620), done.
+remote: Total 17417 (delta 291), reused 5068 (delta 291), pack-reused 12346
+Receiving objects: 100% (17417/17417), 134.24 MiB | 26.83 MiB/s, done.
+Resolving deltas: 100% (1400/1400), done.
+Checking out files: 100% (16382/16382), done.
+(base) [at2507@log-1 ~]$ ls 
+dsga1001            lab-1-movies        slurm-5996953.out       slurm-6003602.out         slurm-6046293.out
+DSGA3001_at         miniconda3          slurm-5996959.out       slurm-6003604.out         supsup
+EmbeddingsinSocSci  run-jupyter.sbatch  slurm-5997230.out       slurm-6003604.out.save    Untitled.ipynb
+lab-0-starter       seaborn-data        slurm-5997230.out.save  slurm-6003604.out.save.1
+(base) [at2507@log-1 ~]$ cd supsup/
+(base) [at2507@log-1 supsup]$ ls 
+adaptors.py  data  experiments  main.py  mnist.ipynb  parser.py  requirements.txt  supsup.code-workspace  utils.py
+args.py      env   images       mnist    models       README.md  schedulers.py     trainers
+(base) [at2507@log-1 supsup]$ source env/bin/activate
+(env) (base) [at2507@log-1 supsup]$ pip install -r requirements.txt
+Collecting torch==1.5.0
+  Downloading torch-1.5.0-cp38-cp38-manylinux1_x86_64.whl (752.0 MB)
+     |████████████████████████████████| 752.0 MB 7.4 kB/s 
+Collecting matplotlib==3.2.2
+  Downloading matplotlib-3.2.2-cp38-cp38-manylinux1_x86_64.whl (12.4 MB)
+     |████████████████████████████████| 12.4 MB 17.5 MB/s 
+Collecting numpy==1.18.1
+  Downloading numpy-1.18.1-cp38-cp38-manylinux1_x86_64.whl (20.6 MB)
+     |████████████████████████████████| 20.6 MB 18.0 MB/s 
+Collecting scipy==1.4.1
+  Downloading scipy-1.4.1-cp38-cp38-manylinux1_x86_64.whl (26.0 MB)
+     |████████████████████████████████| 26.0 MB 25.3 MB/s 
+Collecting seaborn==0.10.0
+  Downloading seaborn-0.10.0-py3-none-any.whl (215 kB)
+     |████████████████████████████████| 215 kB 35.0 MB/s 
+Collecting torchvision==0.5.0
+  Downloading torchvision-0.5.0-cp38-cp38-manylinux1_x86_64.whl (4.0 MB)
+     |████████████████████████████████| 4.0 MB 33.4 MB/s 
+Collecting Pillow==7.2.0
+  Downloading Pillow-7.2.0-cp38-cp38-manylinux1_x86_64.whl (2.2 MB)
+     |████████████████████████████████| 2.2 MB 24.3 MB/s 
+Collecting PyYAML==5.3.1
+  Downloading PyYAML-5.3.1.tar.gz (269 kB)
+     |████████████████████████████████| 269 kB 36.9 MB/s 
+Collecting tqdm==4.46.1
+  Downloading tqdm-4.46.1-py2.py3-none-any.whl (63 kB)
+     |████████████████████████████████| 63 kB 2.4 MB/s 
+Collecting future
+  Downloading future-0.18.2.tar.gz (829 kB)
+     |████████████████████████████████| 829 kB 63.8 MB/s 
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1
+  Downloading pyparsing-2.4.7-py2.py3-none-any.whl (67 kB)
+     |████████████████████████████████| 67 kB 6.2 MB/s 
+Collecting kiwisolver>=1.0.1
+  Downloading kiwisolver-1.2.0-cp38-cp38-manylinux1_x86_64.whl (92 kB)
+     |████████████████████████████████| 92 kB 114 kB/s 
+Collecting python-dateutil>=2.1
+  Downloading python_dateutil-2.8.1-py2.py3-none-any.whl (227 kB)
+     |████████████████████████████████| 227 kB 91.2 MB/s 
+Collecting cycler>=0.10
+  Downloading cycler-0.10.0-py2.py3-none-any.whl (6.5 kB)
+Collecting pandas>=0.22.0
+  Downloading pandas-1.1.3-cp38-cp38-manylinux1_x86_64.whl (9.3 MB)
+     |████████████████████████████████| 9.3 MB 34.6 MB/s 
+Requirement already satisfied: six in /home/at2507/miniconda3/lib/python3.8/site-packages (from torchvision==0.5.0->-r requirements.txt (line 6)) (1.14.0)
+Collecting pytz>=2017.2
+  Downloading pytz-2020.1-py2.py3-none-any.whl (510 kB)
+     |████████████████████████████████| 510 kB 24.1 MB/s 
+Building wheels for collected packages: PyYAML, future
+  Building wheel for PyYAML (setup.py) ... done
+  Created wheel for PyYAML: filename=PyYAML-5.3.1-cp38-cp38-linux_x86_64.whl size=44617 sha256=29817243df1ee6d0834dac0ebd38c5c706c94fc53df99a154ad83930743401ec
+  Stored in directory: /home/at2507/.cache/pip/wheels/13/90/db/290ab3a34f2ef0b5a0f89235dc2d40fea83e77de84ed2dc05c
+  Building wheel for future (setup.py) ... done
+  Created wheel for future: filename=future-0.18.2-py3-none-any.whl size=491058 sha256=023e8706765c684c87d56ea70c607b37564bebf0605a1d8398ebf21c0631333b
+  Stored in directory: /home/at2507/.cache/pip/wheels/8e/70/28/3d6ccd6e315f65f245da085482a2e1c7d14b90b30f239e2cf4
+Successfully built PyYAML future
+ERROR: torchvision 0.5.0 has requirement torch==1.4.0, but you'll have torch 1.5.0 which is incompatible.
+Installing collected packages: future, numpy, torch, pyparsing, kiwisolver, python-dateutil, cycler, matplotlib, scipy, pytz, pandas, seaborn, Pillow, torchvision, PyYAML, tqdm
+  Attempting uninstall: tqdm
+    Found existing installation: tqdm 4.46.0
+    Uninstalling tqdm-4.46.0:
+      Successfully uninstalled tqdm-4.46.0
+Successfully installed Pillow-7.2.0 PyYAML-5.3.1 cycler-0.10.0 future-0.18.2 kiwisolver-1.2.0 matplotlib-3.2.2 numpy-1.18.1 pandas-1.1.3 pyparsing-2.4.7 python-dateutil-2.8.1 pytz-2020.1 scipy-1.4.1 seaborn-0.10.0 torch-1.5.0 torchvision-0.5.0 tqdm-4.46.1
+(env) (base) [at2507@log-1 supsup]$ git pull 
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 2), reused 4 (delta 2), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From github.com:angelaaaateng/supsup
+   179d9cb..28108f9  master     -> origin/master
+Updating 179d9cb..28108f9
+Fast-forward
+ README.md     |  4 ++++
+ supup_slurm.s | 29 +++++++++++++++++++++++++++++
+ 2 files changed, 33 insertions(+)
+ create mode 100644 supup_slurm.s
+(env) (base) [at2507@log-1 supsup]$ ls 
+adaptors.py  data  experiments  main.py  mnist.ipynb  parser.py  requirements.txt  supsup.code-workspace  trainers
+args.py      env   images       mnist    models       README.md  schedulers.py     supup_slurm.s          utils.py
+(env) (base) [at2507@log-1 supsup]$ sbatch supsup.s
+sbatch: error: Unable to open file supsup.s
+(env) (base) [at2507@log-1 supsup]$ sbatch supsup_slurm.s
+sbatch: error: Unable to open file supsup_slurm.s
+(env) (base) [at2507@log-1 supsup]$ ls 
+adaptors.py  data  experiments  main.py  mnist.ipynb  parser.py  requirements.txt  supsup.code-workspace  trainers
+args.py      env   images       mnist    models       README.md  schedulers.py     supup_slurm.s          utils.py
+(env) (base) [at2507@log-1 supsup]$ sbatch supsup_slurm.s
+sbatch: error: Unable to open file supsup_slurm.s
+(env) (base) [at2507@log-1 supsup]$ python ./experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data=/path/to/dataset/parent --seeds 1
+[{'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}]
+Press any key to continue...
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=1 --sparsity=1 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=0 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=2 --sparsity=2 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=1 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=4 --sparsity=4 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=2 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=8 --sparsity=8 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=3 
+
+Traceback (most recent call last):
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 2, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 2, in <module>
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 2, in <module>
+Traceback (most recent call last):
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 2, in <module>
+    from tensorboard.summary.writer.record_writer import RecordWriter  # noqa F401
+    from tensorboard.summary.writer.record_writer import RecordWriter  # noqa F401
+ModuleNotFoundError: No module named 'tensorboard'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    from tensorboard.summary.writer.record_writer import RecordWriter  # noqa F401
+ModuleNotFoundError: No module named 'tensorboard'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    from tensorboard.summary.writer.record_writer import RecordWriter  # noqa F401
+ModuleNotFoundError: No module named 'tensorboard'
+    from torch.utils.tensorboard import SummaryWriter
+ModuleNotFoundError: No module named 'tensorboard'
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 4, in <module>
+    from torch.utils.tensorboard import SummaryWriter
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 4, in <module>
+
+During handling of the above exception, another exception occurred:
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+  File "main.py", line 11, in <module>
+    from torch.utils.tensorboard import SummaryWriter
+    from torch.utils.tensorboard import SummaryWriter
+    raise ImportError('TensorBoard logging requires TensorBoard with Python summary writer installed. '
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 4, in <module>
+ImportError: TensorBoard logging requires TensorBoard with Python summary writer installed. This should be available in 1.14 or above.
+    raise ImportError('TensorBoard logging requires TensorBoard with Python summary writer installed. '
+ImportError: TensorBoard logging requires TensorBoard with Python summary writer installed. This should be available in 1.14 or above.
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 4, in <module>
+    raise ImportError('TensorBoard logging requires TensorBoard with Python summary writer installed. '
+ImportError: TensorBoard logging requires TensorBoard with Python summary writer installed. This should be available in 1.14 or above.
+    raise ImportError('TensorBoard logging requires TensorBoard with Python summary writer installed. '
+ImportError: TensorBoard logging requires TensorBoard with Python summary writer installed. This should be available in 1.14 or above.
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=16 --sparsity=16 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=1 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=32 --sparsity=32 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=3 
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 2, in <module>
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 2, in <module>
+    from tensorboard.summary.writer.record_writer import RecordWriter  # noqa F401
+ModuleNotFoundError: No module named 'tensorboard'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    from torch.utils.tensorboard import SummaryWriter
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 4, in <module>
+    from tensorboard.summary.writer.record_writer import RecordWriter  # noqa F401
+ModuleNotFoundError: No module named 'tensorboard'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 11, in <module>
+    from torch.utils.tensorboard import SummaryWriter
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 4, in <module>
+    raise ImportError('TensorBoard logging requires TensorBoard with Python summary writer installed. '
+ImportError: TensorBoard logging requires TensorBoard with Python summary writer installed. This should be available in 1.14 or above.
+    raise ImportError('TensorBoard logging requires TensorBoard with Python summary writer installed. '
+ImportError: TensorBoard logging requires TensorBoard with Python summary writer installed. This should be available in 1.14 or above.
+(env) (base) [at2507@log-1 supsup]$ 
+(env) (base) [at2507@log-1 supsup]$ pip install tensorboard
+Collecting tensorboard
+  Downloading tensorboard-2.3.0-py3-none-any.whl (6.8 MB)
+     |████████████████████████████████| 6.8 MB 5.1 MB/s 
+Requirement already satisfied: wheel>=0.26; python_version >= "3" in /home/at2507/miniconda3/lib/python3.8/site-packages (from tensorboard) (0.34.2)
+Collecting grpcio>=1.24.3
+  Downloading grpcio-1.32.0-cp38-cp38-manylinux2014_x86_64.whl (3.8 MB)
+     |████████████████████████████████| 3.8 MB 27.1 MB/s 
+Collecting werkzeug>=0.11.15
+  Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+     |████████████████████████████████| 298 kB 45.9 MB/s 
+Requirement already satisfied: requests<3,>=2.21.0 in /home/at2507/miniconda3/lib/python3.8/site-packages (from tensorboard) (2.23.0)
+Collecting protobuf>=3.6.0
+  Downloading protobuf-3.13.0-cp38-cp38-manylinux1_x86_64.whl (1.3 MB)
+     |████████████████████████████████| 1.3 MB 59.5 MB/s 
+Requirement already satisfied: setuptools>=41.0.0 in /home/at2507/miniconda3/lib/python3.8/site-packages (from tensorboard) (46.4.0.post20200518)
+Requirement already satisfied: six>=1.10.0 in /home/at2507/miniconda3/lib/python3.8/site-packages (from tensorboard) (1.14.0)
+Collecting markdown>=2.6.8
+  Downloading Markdown-3.2.2-py3-none-any.whl (88 kB)
+     |████████████████████████████████| 88 kB 7.9 MB/s 
+Requirement already satisfied: numpy>=1.12.0 in /home/at2507/miniconda3/lib/python3.8/site-packages (from tensorboard) (1.18.1)
+Collecting tensorboard-plugin-wit>=1.6.0
+  Downloading tensorboard_plugin_wit-1.7.0-py3-none-any.whl (779 kB)
+     |████████████████████████████████| 779 kB 46.4 MB/s 
+Collecting google-auth<2,>=1.6.3
+  Downloading google_auth-1.22.1-py2.py3-none-any.whl (114 kB)
+     |████████████████████████████████| 114 kB 54.1 MB/s 
+Collecting google-auth-oauthlib<0.5,>=0.4.1
+  Downloading google_auth_oauthlib-0.4.1-py2.py3-none-any.whl (18 kB)
+Collecting absl-py>=0.4
+  Downloading absl_py-0.10.0-py3-none-any.whl (127 kB)
+     |████████████████████████████████| 127 kB 56.6 MB/s 
+Requirement already satisfied: idna<3,>=2.5 in /home/at2507/miniconda3/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard) (2.9)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /home/at2507/miniconda3/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard) (1.25.8)
+Requirement already satisfied: chardet<4,>=3.0.2 in /home/at2507/miniconda3/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard) (3.0.4)
+Requirement already satisfied: certifi>=2017.4.17 in /home/at2507/miniconda3/lib/python3.8/site-packages (from requests<3,>=2.21.0->tensorboard) (2020.4.5.1)
+Collecting pyasn1-modules>=0.2.1
+  Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+     |████████████████████████████████| 155 kB 57.8 MB/s 
+Collecting cachetools<5.0,>=2.0.0
+  Downloading cachetools-4.1.1-py3-none-any.whl (10 kB)
+Collecting rsa<5,>=3.1.4; python_version >= "3.5"
+  Downloading rsa-4.6-py3-none-any.whl (47 kB)
+     |████████████████████████████████| 47 kB 4.1 MB/s 
+Collecting requests-oauthlib>=0.7.0
+  Downloading requests_oauthlib-1.3.0-py2.py3-none-any.whl (23 kB)
+Collecting pyasn1<0.5.0,>=0.4.6
+  Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+     |████████████████████████████████| 77 kB 5.0 MB/s 
+Collecting oauthlib>=3.0.0
+  Downloading oauthlib-3.1.0-py2.py3-none-any.whl (147 kB)
+     |████████████████████████████████| 147 kB 47.3 MB/s 
+Installing collected packages: grpcio, werkzeug, protobuf, markdown, tensorboard-plugin-wit, pyasn1, pyasn1-modules, cachetools, rsa, google-auth, oauthlib, requests-oauthlib, google-auth-oauthlib, absl-py, tensorboard
+Successfully installed absl-py-0.10.0 cachetools-4.1.1 google-auth-1.22.1 google-auth-oauthlib-0.4.1 grpcio-1.32.0 markdown-3.2.2 oauthlib-3.1.0 protobuf-3.13.0 pyasn1-0.4.8 pyasn1-modules-0.2.8 requests-oauthlib-1.3.0 rsa-4.6 tensorboard-2.3.0 tensorboard-plugin-wit-1.7.0 werkzeug-1.0.1
+(env) (base) [at2507@log-1 supsup]$ python ./experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data=/path/to/dataset/parent --seeds 1
+[{'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}]
+Press any key to continue...
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=1 --sparsity=1 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=0 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=2 --sparsity=2 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=1 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=4 --sparsity=4 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=2 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=8 --sparsity=8 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=3 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=2~try=0
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=8~try=0
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=4~try=0
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=1~try=0
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+Traceback (most recent call last):
+  File "main.py", line 49, in main
+    main()
+  File "main.py", line 49, in main
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    train_dataset = datasets.CIFAR100(
+    train_dataset = datasets.CIFAR100(
+  File "main.py", line 422, in <module>
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 49, in main
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    main()
+  File "main.py", line 49, in main
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    train_dataset = datasets.CIFAR100(
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    train_dataset = datasets.CIFAR100(
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    makedir_exist_ok(root)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    makedir_exist_ok(root)
+    os.makedirs(dirpath)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    makedir_exist_ok(root)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    os.makedirs(dirpath)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    os.makedirs(dirpath)
+    makedir_exist_ok(root)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    os.makedirs(dirpath)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+    mkdir(name, mode)
+    mkdir(name, mode)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+  [Previous line repeated 1 more time]
+PermissionError: [Errno 13] Permission denied: '/path'
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/path'
+PermissionError: [Errno 13] Permission denied: '/path'
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/path'
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=16 --sparsity=16 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=2 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=32 --sparsity=32 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=1 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=16~try=0
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 49, in main
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    train_dataset = datasets.CIFAR100(
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    makedir_exist_ok(root)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    os.makedirs(dirpath)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/path'
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=32~try=0
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 49, in main
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    train_dataset = datasets.CIFAR100(
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    makedir_exist_ok(root)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    os.makedirs(dirpath)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/path'
+(env) (base) [at2507@log-1 supsup]$ python ./experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data="./data" --seeds 1
+[{'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}]
+Press any key to continue...
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=1 --sparsity=1 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=0 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=2 --sparsity=2 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=1 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=4 --sparsity=4 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=2 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=8 --sparsity=8 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=3 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=8~try=1
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=2~try=1
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=1~try=1
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=4~try=1
+Downloading https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz to ./data/cifar100/cifar-100-python.tar.gz
+Downloading https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz to ./data/cifar100/cifar-100-python.tar.gz
+Downloading https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz to ./data/cifar100/cifar-100-python.tar.gz
+Downloading https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz to ./data/cifar100/cifar-100-python.tar.gz
+ 97%|██████████████████████████████████████████████████████████████████████████████▋  | 164110336/169001437 [00:32<00:01, 4729739.94it/s]Extracting ./data/cifar100/cifar-100-python.tar.gz to ./data/cifar100
+ 99%|████████████████████████████████████████████████████████████████████████████████▍| 167780352/169001437 [00:33<00:00, 7340189.27it/s]Extracting ./data/cifar100/cifar-100-python.tar.gz to ./data/cifar100
+Extracting ./data/cifar100/cifar-100-python.tar.gz to ./data/cifar100
+Extracting ./data/cifar100/cifar-100-python.tar.gz to ./data/cifar100
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 49, in main
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    train_dataset = datasets.CIFAR100(
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 67, in __init__
+    raise RuntimeError('Dataset not found or corrupted.' +
+RuntimeError: Dataset not found or corrupted. You can use download=True to download it
+169009152it [00:40, 4202505.06it/s]                                                                                                      
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=16 --sparsity=16 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=0 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=16~try=1
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Files already downloaded and verified
+169009152it [00:50, 7340189.27it/s]                                                                                                      Set sparsity of conv1 to 0.5
+Set sparsity of layer1.0.conv1 to 0.17777777777777778
+Set sparsity of layer1.0.conv2 to 0.17777777777777778
+Set sparsity of layer1.1.conv1 to 0.17777777777777778
+Set sparsity of layer1.1.conv2 to 0.17777777777777778
+Set sparsity of layer2.0.conv1 to 0.13333333333333333
+Set sparsity of layer2.0.conv2 to 0.08888888888888889
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.08888888888888889
+Set sparsity of layer2.1.conv2 to 0.08888888888888889
+Set sparsity of layer3.0.conv1 to 0.06666666666666667
+Set sparsity of layer3.0.conv2 to 0.044444444444444446
+Set sparsity of layer3.0.shortcut.0 to 0.5
+Set sparsity of layer3.1.conv1 to 0.044444444444444446
+Set sparsity of layer3.1.conv2 to 0.044444444444444446
+Set sparsity of layer4.0.conv1 to 0.03333333333333333
+Set sparsity of layer4.0.conv2 to 0.022222222222222223
+Set sparsity of layer4.0.shortcut.0 to 0.3
+Set sparsity of layer4.1.conv1 to 0.022222222222222223
+Set sparsity of layer4.1.conv2 to 0.022222222222222223
+Set sparsity of linear to 0.5
+=> Parallelizing on [0] gpus
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 78, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 149, in _lazy_init
+    _check_driver()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 51, in _check_driver
+    raise AssertionError("""
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+Files already downloaded and verified
+Files already downloaded and verified
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=32 --sparsity=32 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=0 
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.34074074074074073
+Set sparsity of layer1.0.conv1 to 0.08888888888888889
+Set sparsity of layer1.0.conv2 to 0.08888888888888889
+Set sparsity of layer1.1.conv1 to 0.08888888888888889
+Set sparsity of layer1.1.conv2 to 0.08888888888888889
+Set sparsity of layer2.0.conv1 to 0.06666666666666667
+Set sparsity of layer2.0.conv2 to 0.044444444444444446
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.044444444444444446
+Set sparsity of layer2.1.conv2 to 0.044444444444444446
+Set sparsity of layer3.0.conv1 to 0.03333333333333333
+Set sparsity of layer3.0.conv2 to 0.022222222222222223
+Set sparsity of layer3.0.shortcut.0 to 0.3
+Set sparsity of layer3.1.conv1 to 0.022222222222222223
+Set sparsity of layer3.1.conv2 to 0.022222222222222223
+Set sparsity of layer4.0.conv1 to 0.016666666666666666
+Set sparsity of layer4.0.conv2 to 0.011111111111111112
+Set sparsity of layer4.0.shortcut.0 to 0.15
+Set sparsity of layer4.1.conv1 to 0.011111111111111112
+Set sparsity of layer4.1.conv2 to 0.011111111111111112
+Set sparsity of linear to 0.5
+=> Parallelizing on [3] gpus
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 78, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 149, in _lazy_init
+    _check_driver()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 51, in _check_driver
+    raise AssertionError("""
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+169009152it [00:54, 3085720.62it/s]
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.08518518518518518
+Set sparsity of layer1.0.conv1 to 0.022222222222222223
+Set sparsity of layer1.0.conv2 to 0.022222222222222223
+Set sparsity of layer1.1.conv1 to 0.022222222222222223
+Set sparsity of layer1.1.conv2 to 0.022222222222222223
+Set sparsity of layer2.0.conv1 to 0.016666666666666666
+Set sparsity of layer2.0.conv2 to 0.011111111111111112
+Set sparsity of layer2.0.shortcut.0 to 0.15
+Set sparsity of layer2.1.conv1 to 0.011111111111111112
+Set sparsity of layer2.1.conv2 to 0.011111111111111112
+Set sparsity of layer3.0.conv1 to 0.008333333333333333
+Set sparsity of layer3.0.conv2 to 0.005555555555555556
+Set sparsity of layer3.0.shortcut.0 to 0.075
+Set sparsity of layer3.1.conv1 to 0.005555555555555556
+Set sparsity of layer3.1.conv2 to 0.005555555555555556
+Set sparsity of layer4.0.conv1 to 0.004166666666666667
+Set sparsity of layer4.0.conv2 to 0.002777777777777778
+Set sparsity of layer4.0.shortcut.0 to 0.0375
+Set sparsity of layer4.1.conv1 to 0.002777777777777778
+Set sparsity of layer4.1.conv2 to 0.002777777777777778
+Set sparsity of linear to 0.4125
+=> Parallelizing on [1] gpus
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 78, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 149, in _lazy_init
+    _check_driver()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 51, in _check_driver
+    raise AssertionError("""
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+169009152it [00:56, 2974644.13it/s]
+Set sparsity of conv1 to 0.17037037037037037
+Set sparsity of layer1.0.conv1 to 0.044444444444444446
+Set sparsity of layer1.0.conv2 to 0.044444444444444446
+Set sparsity of layer1.1.conv1 to 0.044444444444444446
+Set sparsity of layer1.1.conv2 to 0.044444444444444446
+Set sparsity of layer2.0.conv1 to 0.03333333333333333
+Set sparsity of layer2.0.conv2 to 0.022222222222222223
+Set sparsity of layer2.0.shortcut.0 to 0.3
+Set sparsity of layer2.1.conv1 to 0.022222222222222223
+Set sparsity of layer2.1.conv2 to 0.022222222222222223
+Set sparsity of layer3.0.conv1 to 0.016666666666666666
+Set sparsity of layer3.0.conv2 to 0.011111111111111112
+Set sparsity of layer3.0.shortcut.0 to 0.15
+Set sparsity of layer3.1.conv1 to 0.011111111111111112
+Set sparsity of layer3.1.conv2 to 0.011111111111111112
+Set sparsity of layer4.0.conv1 to 0.008333333333333333
+Set sparsity of layer4.0.conv2 to 0.005555555555555556
+Set sparsity of layer4.0.shortcut.0 to 0.075
+Set sparsity of layer4.1.conv1 to 0.005555555555555556
+Set sparsity of layer4.1.conv2 to 0.005555555555555556
+Set sparsity of linear to 0.5
+=> Parallelizing on [2] gpus
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 78, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 149, in _lazy_init
+    _check_driver()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 51, in _check_driver
+    raise AssertionError("""
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+169009152it [00:56, 2971234.70it/s]
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=32~try=1
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.5
+Set sparsity of layer1.0.conv1 to 0.35555555555555557
+Set sparsity of layer1.0.conv2 to 0.35555555555555557
+Set sparsity of layer1.1.conv1 to 0.35555555555555557
+Set sparsity of layer1.1.conv2 to 0.35555555555555557
+Set sparsity of layer2.0.conv1 to 0.26666666666666666
+Set sparsity of layer2.0.conv2 to 0.17777777777777778
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.17777777777777778
+Set sparsity of layer2.1.conv2 to 0.17777777777777778
+Set sparsity of layer3.0.conv1 to 0.13333333333333333
+Set sparsity of layer3.0.conv2 to 0.08888888888888889
+Set sparsity of layer3.0.shortcut.0 to 0.5
+Set sparsity of layer3.1.conv1 to 0.08888888888888889
+Set sparsity of layer3.1.conv2 to 0.08888888888888889
+Set sparsity of layer4.0.conv1 to 0.06666666666666667
+Set sparsity of layer4.0.conv2 to 0.044444444444444446
+Set sparsity of layer4.0.shortcut.0 to 0.5
+Set sparsity of layer4.1.conv1 to 0.044444444444444446
+Set sparsity of layer4.1.conv2 to 0.044444444444444446
+Set sparsity of linear to 0.5
+=> Parallelizing on [0] gpus
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 78, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 149, in _lazy_init
+    _check_driver()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 51, in _check_driver
+    raise AssertionError("""
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+(env) (base) [at2507@log-1 supsup]$ git pull 
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 4 (delta 3), reused 4 (delta 3), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From github.com:angelaaaateng/supsup
+   28108f9..5608e9e  master     -> origin/master
+Updating 28108f9..5608e9e
+Fast-forward
+ README.md     | 10 ++++++++++
+ supup_slurm.s |  2 +-
+ 2 files changed, 11 insertions(+), 1 deletion(-)
+(env) (base) [at2507@log-1 supsup]$ sbatch supsup_slurm.s
+sbatch: error: Unable to open file supsup_slurm.s
+(env) (base) [at2507@log-1 supsup]$ git pull 
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 2 (delta 1), reused 2 (delta 1), pack-reused 0
+Unpacking objects: 100% (2/2), done.
+From github.com:angelaaaateng/supsup
+   5608e9e..4a982f0  master     -> origin/master
+Updating 5608e9e..4a982f0
+Fast-forward
+ supup_slurm.s => supup0.s | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename supup_slurm.s => supup0.s (100%)
+(env) (base) [at2507@log-1 supsup]$ sbatch supsup0.s
+sbatch: error: Unable to open file supsup0.s
+(env) (base) [at2507@log-1 supsup]$ nano supsup0.s
+(env) (base) [at2507@log-1 supsup]$ sbatch supsup0.s
+Submitted batch job 12909614
+(env) (base) [at2507@log-1 supsup]$ squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          12909614 c39_41,c1 dsga1006   at2507 PD       0:00      2 (None)
+(env) (base) [at2507@log-1 supsup]$ ls ]
+ls: cannot access ]: No such file or directory
+(env) (base) [at2507@log-1 supsup]$ ls 
+adaptors.py  env          main.py      models      __pycache__       runs                       supsup0.s              trainers
+args.py      experiments  mnist        output.txt  README.md         schedulers.py              supsup.code-workspace  utils.py
+data         images       mnist.ipynb  parser.py   requirements.txt  slurm_supsup_12909614.out  supup0.s
+(env) (base) [at2507@log-1 supsup]$ git add . 
+     
+(env) (base) [at2507@log-1 supsup]$ 
+(env) (base) [at2507@log-1 supsup]$ git commit -m "add prince output" 
+g[master bf973e3] add prince output
+ 44 files changed, 60 insertions(+)
+ create mode 100644 __pycache__/adaptors.cpython-38.pyc
+ create mode 100644 __pycache__/args.cpython-38.pyc
+ create mode 100644 __pycache__/parser.cpython-38.pyc
+ create mode 100644 __pycache__/schedulers.cpython-38.pyc
+ create mode 100644 __pycache__/utils.cpython-38.pyc
+ create mode 100644 data/__pycache__/__init__.cpython-38.pyc
+ create mode 100644 data/__pycache__/cifar.cpython-38.pyc
+ create mode 100644 data/__pycache__/mnist.cpython-38.pyc
+ create mode 100644 data/__pycache__/partitioncifar.cpython-38.pyc
+ create mode 100644 data/__pycache__/partitionmnistv2.cpython-38.pyc
+ create mode 100644 data/__pycache__/rotatingmnist.cpython-38.pyc
+ create mode 100644 data/__pycache__/splitimagenet.cpython-38.pyc
+ create mode 100644 data/cifar100/cifar-100-python.tar.gz
+ create mode 100644 data/cifar100/cifar-100-python/file.txt~
+ create mode 100644 data/cifar100/cifar-100-python/meta
+ create mode 100644 data/cifar100/cifar-100-python/test
+ create mode 100644 data/cifar100/cifar-100-python/train
+ create mode 100644 models/__pycache__/__init__.cpython-38.pyc
+ create mode 100644 models/__pycache__/builder.cpython-38.pyc
+ create mode 100644 models/__pycache__/gemresnet.cpython-38.pyc
+ create mode 100644 models/__pycache__/init.cpython-38.pyc
+ create mode 100644 models/__pycache__/module_util.cpython-38.pyc
+ create mode 100644 models/__pycache__/modules.cpython-38.pyc
+ create mode 100644 models/__pycache__/resnet.cpython-38.pyc
+ create mode 100644 models/__pycache__/small.cpython-38.pyc
+ create mode 100644 output.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=16~try=0/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=16~try=1/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=1~try=0/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=1~try=1/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=2~try=0/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=2~try=1/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=32~try=0/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=32~try=1/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=4~try=0/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=4~try=1/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=8~try=0/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=8~try=1/settings.txt
+ create mode 100644 slurm_supsup_12909614.out
+ create mode 100644 supsup0.s
+ create mode 100644 trainers/__pycache__/__init__.cpython-38.pyc
+ create mode 100644 trainers/__pycache__/default.cpython-38.pyc
+ create mode 100644 trainers/__pycache__/nns.cpython-38.pyc
+ create mode 100644 trainers/__pycache__/reinit.cpython-38.pyc
+(env) (base) [at2507@log-1 supsup]$ git push 
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 72, done.
+Delta compression using up to 28 threads.
+Compressing objects: 100% (55/55), done.
+Writing objects: 100% (68/68), 321.92 MiB | 12.99 MiB/s, done.
+Total 68 (delta 15), reused 0 (delta 0)
+remote: Resolving deltas: 100% (15/15), completed with 4 local objects.
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+remote: error: Trace: dcff4028e620256a9470e65e2d7e2df0a31cf2403f18775a10bf8b6e0423a437
+remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File data/cifar100/cifar-100-python.tar.gz is 161.17 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: File data/cifar100/cifar-100-python/train is 148.06 MB; this exceeds GitHub's file size limit of 100.00 MB
+To git@github.com:angelaaaateng/supsup.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'git@github.com:angelaaaateng/supsup.git'
+(env) (base) [at2507@log-1 supsup]$ git revert
+usage: git revert [options] <commit-ish>...
+   or: git revert <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add Signed-off-by:
+    -m, --mainline <n>    parent number
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+
+(env) (base) [at2507@log-1 supsup]$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+nothing to commit, working directory clean
+(env) (base) [at2507@log-1 supsup]$ git reset --hard HEAD~1
+HEAD is now at 4a982f0 rename slurm
+(env) (base) [at2507@log-1 supsup]$ git status
+# On branch master
+nothing to commit, working directory clean
+(env) (base) [at2507@log-1 supsup]$ ls 
+adaptors.py  data  experiments  main.py  mnist.ipynb  parser.py  requirements.txt  supsup.code-workspace  trainers
+args.py      env   images       mnist    models       README.md  schedulers.py     supup0.s               utils.py
+(env) (base) [at2507@log-1 supsup]$ cd .. 
+(env) (base) [at2507@log-1 ~]$ ls 
+dsga1001            lab-1-movies        slurm-5996953.out       slurm-6003602.out         slurm-6046293.out
+DSGA3001_at         miniconda3          slurm-5996959.out       slurm-6003604.out         supsup
+EmbeddingsinSocSci  run-jupyter.sbatch  slurm-5997230.out       slurm-6003604.out.save    Untitled.ipynb
+lab-0-starter       seaborn-data        slurm-5997230.out.save  slurm-6003604.out.save.1
+(env) (base) [at2507@log-1 ~]$ cd supsup/
+(env) (base) [at2507@log-1 supsup]$ ls
+adaptors.py  data  experiments  main.py  mnist.ipynb  parser.py  requirements.txt  supsup.code-workspace  trainers
+args.py      env   images       mnist    models       README.md  schedulers.py     supup0.s               utils.py
+(env) (base) [at2507@log-1 supsup]$ git add supsup0.s
+fatal: pathspec 'supsup0.s' did not match any files
+(env) (base) [at2507@log-1 supsup]$ git add supup0.s
+(env) (base) [at2507@log-1 supsup]$ git commit -m "add supsup
+> ^C
+(env) (base) [at2507@log-1 supsup]$ git commit -m "add supsup"
+# On branch master
+nothing to commit, working directory clean
+(env) (base) [at2507@log-1 supsup]$ git reset --hard HEAD~1
+HEAD is now at 5608e9e update slurm job
+(env) (base) [at2507@log-1 supsup]$ lss
+bash: lss: command not found...
+Similar command is: 'ls'
+(env) (base) [at2507@log-1 supsup]$ ls 
+adaptors.py  data  experiments  main.py  mnist.ipynb  parser.py  requirements.txt  supsup.code-workspace  trainers
+args.py      env   images       mnist    models       README.md  schedulers.py     supup_slurm.s          utils.py
+(env) (base) [at2507@log-1 supsup]$ git pull 
+Updating 5608e9e..4a982f0
+Fast-forward
+ supup_slurm.s => supup0.s | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename supup_slurm.s => supup0.s (100%)
+(env) (base) [at2507@log-1 supsup]$ ls 
+adaptors.py  data  experiments  main.py  mnist.ipynb  parser.py  requirements.txt  supsup.code-workspace  trainers
+args.py      env   images       mnist    models       README.md  schedulers.py     supup0.s               utils.py
+(env) (base) [at2507@log-1 supsup]$ sbatch supup0.s
+Submitted batch job 12909618
+(env) (base) [at2507@log-1 supsup]$ ls 
+adaptors.py  data  experiments  main.py  mnist.ipynb  parser.py  requirements.txt  slurm_supsup_12909618.out  supup0.s  utils.py
+args.py      env   images       mnist    models       README.md  schedulers.py     supsup.code-workspace      trainers
+(env) (base) [at2507@log-1 supsup]$ git add slurm_supsup_12909618.out
+(env) (base) [at2507@log-1 supsup]$ git commit -m "add log" 
+[master e4f789d] add log
+ 1 file changed, 7 insertions(+)
+ create mode 100644 slurm_supsup_12909618.out
+(env) (base) [at2507@log-1 supsup]$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 4, done.
+Delta compression using up to 28 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 588 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To git@github.com:angelaaaateng/supsup.git
+   4a982f0..e4f789d  master -> master
+(env) (base) [at2507@log-1 supsup]$ python ./experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0" --data="./data" --seeds 1
+[{'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}]
+Press any key to continue...
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=1 --sparsity=1 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=0 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=1~try=0
+Downloading https://www.cs.toronto.edu/~kriz/cifar-100-python.tar.gz to ./data/cifar100/cifar-100-python.tar.gz
+169009152it [00:06, 24356535.04it/s]                                                                                                     
+Extracting ./data/cifar100/cifar-100-python.tar.gz to ./data/cifar100
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.04259259259259259
+Set sparsity of layer1.0.conv1 to 0.011111111111111112
+Set sparsity of layer1.0.conv2 to 0.011111111111111112
+Set sparsity of layer1.1.conv1 to 0.011111111111111112
+Set sparsity of layer1.1.conv2 to 0.011111111111111112
+Set sparsity of layer2.0.conv1 to 0.008333333333333333
+Set sparsity of layer2.0.conv2 to 0.005555555555555556
+Set sparsity of layer2.0.shortcut.0 to 0.075
+Set sparsity of layer2.1.conv1 to 0.005555555555555556
+Set sparsity of layer2.1.conv2 to 0.005555555555555556
+Set sparsity of layer3.0.conv1 to 0.004166666666666667
+Set sparsity of layer3.0.conv2 to 0.002777777777777778
+Set sparsity of layer3.0.shortcut.0 to 0.0375
+Set sparsity of layer3.1.conv1 to 0.002777777777777778
+Set sparsity of layer3.1.conv2 to 0.002777777777777778
+Set sparsity of layer4.0.conv1 to 0.0020833333333333333
+Set sparsity of layer4.0.conv2 to 0.001388888888888889
+Set sparsity of layer4.0.shortcut.0 to 0.01875
+Set sparsity of layer4.1.conv1 to 0.001388888888888889
+Set sparsity of layer4.1.conv2 to 0.001388888888888889
+Set sparsity of linear to 0.20625
+=> Parallelizing on [0] gpus
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 78, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 149, in _lazy_init
+    _check_driver()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 51, in _check_driver
+    raise AssertionError("""
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=2 --sparsity=2 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=0 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=2~try=0
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.08518518518518518
+Set sparsity of layer1.0.conv1 to 0.022222222222222223
+Set sparsity of layer1.0.conv2 to 0.022222222222222223
+Set sparsity of layer1.1.conv1 to 0.022222222222222223
+Set sparsity of layer1.1.conv2 to 0.022222222222222223
+Set sparsity of layer2.0.conv1 to 0.016666666666666666
+Set sparsity of layer2.0.conv2 to 0.011111111111111112
+Set sparsity of layer2.0.shortcut.0 to 0.15
+Set sparsity of layer2.1.conv1 to 0.011111111111111112
+Set sparsity of layer2.1.conv2 to 0.011111111111111112
+Set sparsity of layer3.0.conv1 to 0.008333333333333333
+Set sparsity of layer3.0.conv2 to 0.005555555555555556
+Set sparsity of layer3.0.shortcut.0 to 0.075
+Set sparsity of layer3.1.conv1 to 0.005555555555555556
+Set sparsity of layer3.1.conv2 to 0.005555555555555556
+Set sparsity of layer4.0.conv1 to 0.004166666666666667
+Set sparsity of layer4.0.conv2 to 0.002777777777777778
+Set sparsity of layer4.0.shortcut.0 to 0.0375
+Set sparsity of layer4.1.conv1 to 0.002777777777777778
+Set sparsity of layer4.1.conv2 to 0.002777777777777778
+Set sparsity of linear to 0.4125
+=> Parallelizing on [0] gpus
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 78, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 149, in _lazy_init
+    _check_driver()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 51, in _check_driver
+    raise AssertionError("""
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=4 --sparsity=4 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=0 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=4~try=0
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.17037037037037037
+Set sparsity of layer1.0.conv1 to 0.044444444444444446
+Set sparsity of layer1.0.conv2 to 0.044444444444444446
+Set sparsity of layer1.1.conv1 to 0.044444444444444446
+Set sparsity of layer1.1.conv2 to 0.044444444444444446
+Set sparsity of layer2.0.conv1 to 0.03333333333333333
+Set sparsity of layer2.0.conv2 to 0.022222222222222223
+Set sparsity of layer2.0.shortcut.0 to 0.3
+Set sparsity of layer2.1.conv1 to 0.022222222222222223
+Set sparsity of layer2.1.conv2 to 0.022222222222222223
+Set sparsity of layer3.0.conv1 to 0.016666666666666666
+Set sparsity of layer3.0.conv2 to 0.011111111111111112
+Set sparsity of layer3.0.shortcut.0 to 0.15
+Set sparsity of layer3.1.conv1 to 0.011111111111111112
+Set sparsity of layer3.1.conv2 to 0.011111111111111112
+Set sparsity of layer4.0.conv1 to 0.008333333333333333
+Set sparsity of layer4.0.conv2 to 0.005555555555555556
+Set sparsity of layer4.0.shortcut.0 to 0.075
+Set sparsity of layer4.1.conv1 to 0.005555555555555556
+Set sparsity of layer4.1.conv2 to 0.005555555555555556
+Set sparsity of linear to 0.5
+=> Parallelizing on [0] gpus
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 78, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 149, in _lazy_init
+    _check_driver()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 51, in _check_driver
+    raise AssertionError("""
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=8 --sparsity=8 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=0 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=8~try=0
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.34074074074074073
+Set sparsity of layer1.0.conv1 to 0.08888888888888889
+Set sparsity of layer1.0.conv2 to 0.08888888888888889
+Set sparsity of layer1.1.conv1 to 0.08888888888888889
+Set sparsity of layer1.1.conv2 to 0.08888888888888889
+Set sparsity of layer2.0.conv1 to 0.06666666666666667
+Set sparsity of layer2.0.conv2 to 0.044444444444444446
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.044444444444444446
+Set sparsity of layer2.1.conv2 to 0.044444444444444446
+Set sparsity of layer3.0.conv1 to 0.03333333333333333
+Set sparsity of layer3.0.conv2 to 0.022222222222222223
+Set sparsity of layer3.0.shortcut.0 to 0.3
+Set sparsity of layer3.1.conv1 to 0.022222222222222223
+Set sparsity of layer3.1.conv2 to 0.022222222222222223
+Set sparsity of layer4.0.conv1 to 0.016666666666666666
+Set sparsity of layer4.0.conv2 to 0.011111111111111112
+Set sparsity of layer4.0.shortcut.0 to 0.15
+Set sparsity of layer4.1.conv1 to 0.011111111111111112
+Set sparsity of layer4.1.conv2 to 0.011111111111111112
+Set sparsity of linear to 0.5
+=> Parallelizing on [0] gpus
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 78, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 149, in _lazy_init
+    _check_driver()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 51, in _check_driver
+    raise AssertionError("""
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=16 --sparsity=16 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=0 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=16~try=0
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.5
+Set sparsity of layer1.0.conv1 to 0.17777777777777778
+Set sparsity of layer1.0.conv2 to 0.17777777777777778
+Set sparsity of layer1.1.conv1 to 0.17777777777777778
+Set sparsity of layer1.1.conv2 to 0.17777777777777778
+Set sparsity of layer2.0.conv1 to 0.13333333333333333
+Set sparsity of layer2.0.conv2 to 0.08888888888888889
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.08888888888888889
+Set sparsity of layer2.1.conv2 to 0.08888888888888889
+Set sparsity of layer3.0.conv1 to 0.06666666666666667
+Set sparsity of layer3.0.conv2 to 0.044444444444444446
+Set sparsity of layer3.0.shortcut.0 to 0.5
+Set sparsity of layer3.1.conv1 to 0.044444444444444446
+Set sparsity of layer3.1.conv2 to 0.044444444444444446
+Set sparsity of layer4.0.conv1 to 0.03333333333333333
+Set sparsity of layer4.0.conv2 to 0.022222222222222223
+Set sparsity of layer4.0.shortcut.0 to 0.3
+Set sparsity of layer4.1.conv1 to 0.022222222222222223
+Set sparsity of layer4.1.conv2 to 0.022222222222222223
+Set sparsity of linear to 0.5
+=> Parallelizing on [0] gpus
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 78, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 149, in _lazy_init
+    _check_driver()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 51, in _check_driver
+    raise AssertionError("""
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=32 --sparsity=32 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=./data --multigpu=0 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=32~try=0
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+Set sparsity of conv1 to 0.5
+Set sparsity of layer1.0.conv1 to 0.35555555555555557
+Set sparsity of layer1.0.conv2 to 0.35555555555555557
+Set sparsity of layer1.1.conv1 to 0.35555555555555557
+Set sparsity of layer1.1.conv2 to 0.35555555555555557
+Set sparsity of layer2.0.conv1 to 0.26666666666666666
+Set sparsity of layer2.0.conv2 to 0.17777777777777778
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.17777777777777778
+Set sparsity of layer2.1.conv2 to 0.17777777777777778
+Set sparsity of layer3.0.conv1 to 0.13333333333333333
+Set sparsity of layer3.0.conv2 to 0.08888888888888889
+Set sparsity of layer3.0.shortcut.0 to 0.5
+Set sparsity of layer3.1.conv1 to 0.08888888888888889
+Set sparsity of layer3.1.conv2 to 0.08888888888888889
+Set sparsity of layer4.0.conv1 to 0.06666666666666667
+Set sparsity of layer4.0.conv2 to 0.044444444444444446
+Set sparsity of layer4.0.shortcut.0 to 0.5
+Set sparsity of layer4.1.conv1 to 0.044444444444444446
+Set sparsity of layer4.1.conv2 to 0.044444444444444446
+Set sparsity of linear to 0.5
+=> Parallelizing on [0] gpus
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 78, in main
+    model = utils.set_gpu(model)
+  File "/home/at2507/supsup/utils.py", line 93, in set_gpu
+    torch.cuda.set_device(args.multigpu[0])
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 245, in set_device
+    torch._C._cuda_setDevice(device)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 149, in _lazy_init
+    _check_driver()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torch/cuda/__init__.py", line 51, in _check_driver
+    raise AssertionError("""
+AssertionError: 
+Found no NVIDIA driver on your system. Please check that you
+have an NVIDIA GPU and installed a driver from
+http://www.nvidia.com/Download/index.aspx
+(env) (base) [at2507@log-1 supsup]$ python ./experiments/GG/splitcifar100/rn18-supsup.py  --data="./data" --seeds 1
+[{'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}]
+Press any key to continue...
+Traceback (most recent call last):
+  File "./experiments/GG/splitcifar100/rn18-supsup.py", line 86, in <module>
+    main()
+  File "./experiments/GG/splitcifar100/rn18-supsup.py", line 76, in main
+    for gpu in gpus:
+TypeError: 'int' object is not iterable
+(env) (base) [at2507@log-1 supsup]$ git pull
+remote: Enumerating objects: 35, done.
+remote: Counting objects: 100% (35/35), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 27 (delta 12), reused 23 (delta 8), pack-reused 0
+Unpacking objects: 100% (27/27), done.
+From github.com:angelaaaateng/supsup
+   e4f789d..d5662cc  master     -> origin/master
+Updating e4f789d..d5662cc
+error: The following untracked working tree files would be overwritten by merge:
+	output.txt
+Please move or remove them before you can merge.
+Aborting
+(env) (base) [at2507@log-1 supsup]$ ls
+adaptors.py  env          main.py      models      __pycache__       runs                       supsup.code-workspace  utils.py
+args.py      experiments  mnist        output.txt  README.md         schedulers.py              supup0.s
+data         images       mnist.ipynb  parser.py   requirements.txt  slurm_supsup_12909618.out  trainers
+(env) (base) [at2507@log-1 supsup]$ rm output.txt
+(env) (base) [at2507@log-1 supsup]$ ls 
+adaptors.py  env          main.py      models       README.md         schedulers.py              supup0.s
+args.py      experiments  mnist        parser.py    requirements.txt  slurm_supsup_12909618.out  trainers
+data         images       mnist.ipynb  __pycache__  runs              supsup.code-workspace      utils.py
+(env) (base) [at2507@log-1 supsup]$ git pull
+Updating e4f789d..d5662cc
+Fast-forward
+ .DS_Store                                                      |  Bin 0 -> 8196 bytes
+ .ipynb_checkpoints/mnist-checkpoint.ipynb                      |  162 ++++-----
+ README.md                                                      |   10 +
+ dsga1006-env.yml                                               |  128 +++++++
+ experiments/GG/splitcifar100/rn18-supsup.py                    |   19 +-
+ slurm_supsup_12909618.out => logs_at/slurm_supsup_12909618.out |    0
+ logs_at/slurm_supsup_log_10062020.txt                          | 1212 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ mnist.ipynb                                                    |  164 ++++-----
+ output.txt                                                     |    1 +
+ 9 files changed, 1494 insertions(+), 202 deletions(-)
+ create mode 100644 .DS_Store
+ create mode 100644 dsga1006-env.yml
+ rename slurm_supsup_12909618.out => logs_at/slurm_supsup_12909618.out (100%)
+ create mode 100644 logs_at/slurm_supsup_log_10062020.txt
+ create mode 100644 output.txt
+(env) (base) [at2507@log-1 supsup]$ python ./experiments/GG/splitcifar100/rn18-supsup.py  --data="./data" --seeds 1
+[{'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}]
+Press any key to continue...
+\Traceback (most recent call last):
+  File "./experiments/GG/splitcifar100/rn18-supsup.py", line 87, in <module>
+    main()
+  File "./experiments/GG/splitcifar100/rn18-supsup.py", line 82, in main
+    for p in processes:
+NameError: name 'processes' is not defined
+(env) (base) [at2507@log-1 supsup]$ git pull 
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 3), reused 6 (delta 3), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+From github.com:angelaaaateng/supsup
+   d5662cc..cc6a0b9  master     -> origin/master
+Updating d5662cc..cc6a0b9
+^[[C^[[C^[[C^[[C^[[C^[[CFast-forward
+ experiments/GG/splitcifar100/rn18-supsup.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+(env) (base) [at2507@log-1 supsup]$ python ./experiments/GG/splitcifar100/rn18-supsup.py  --data="./data" --seeds 1
+[{'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data'}]
+Press any key to continue...
+(env) (base) [at2507@log-1 supsup]$ ls 
+adaptors.py  dsga1006-env.yml  images   mnist        output.txt   README.md         schedulers.py          trainers
+args.py      env               logs_at  mnist.ipynb  parser.py    requirements.txt  supsup.code-workspace  utils.py
+data         experiments       main.py  models       __pycache__  runs              supup0.s
+(env) (base) [at2507@log-1 supsup]$ cat output.txt 
+Finished experiment {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data', 'multigpu': '0'} in 0.022840499877929688.Finished experiment {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data', 'multigpu': '0'} in 0.011424481868743896.Finished experiment {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data', 'multigpu': '0'} in 0.014385680357615152.Finished experiment {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data', 'multigpu': '0'} in 0.014226667086283366.Finished experiment {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data', 'multigpu': '0'} in 0.012143067518870036.Finished experiment {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': './data', 'multigpu': '0'} in 0.011808069547017415.(env) (base) [at2507@log-1 supsup]$ git add output.txt
+(env) (base) [at2507@log-1 supsup]$ git commit -m "add output.txt" 
+g# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	__pycache__/
+#	data/__pycache__/
+#	data/cifar100/
+#	models/__pycache__/
+#	runs/
+#	trainers/__pycache__/
+nothing added to commit but untracked files present (use "git add" to track)
+(env) (base) [at2507@log-1 supsup]$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Everything up-to-date
+(env) (base) [at2507@log-1 supsup]$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Everything up-to-date
+(env) (base) [at2507@log-1 supsup]$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	__pycache__/
+#	data/__pycache__/
+#	data/cifar100/
+#	models/__pycache__/
+#	runs/
+#	trainers/__pycache__/
+nothing added to commit but untracked files present (use "git add" to track)
+(env) (base) [at2507@log-1 supsup]$ git pull 
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:angelaaaateng/supsup
+   cc6a0b9..b890b5a  master     -> origin/master
+Updating cc6a0b9..b890b5a
+Fast-forward
+ supup0.s | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+(env) (base) [at2507@log-1 supsup]$ sbatch supup0.s
+Submitted batch job 12910147
+(env) (base) [at2507@log-1 supsup]$ ls 
+adaptors.py  dsga1006-env.yml  images   mnist        output.txt   README.md         schedulers.py              supup0.s
+args.py      env               logs_at  mnist.ipynb  parser.py    requirements.txt  slurm_supsup_12910147.out  trainers
+data         experiments       main.py  models       __pycache__  runs              supsup.code-workspace      utils.py
+(env) (base) [at2507@log-1 supsup]$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	__pycache__/
+#	data/__pycache__/
+#	data/cifar100/
+#	models/__pycache__/
+#	runs/
+#	slurm_supsup_12910147.out
+#	trainers/__pycache__/
+nothing added to commit but untracked files present (use "git add" to track)
+(env) (base) [at2507@log-1 supsup]$ git add runs/
+(env) (base) [at2507@log-1 supsup]$ git commit -m "add runs" 
+[master 1b29834] add runs
+ 6 files changed, 6 insertions(+)
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=16~try=0/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=1~try=0/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=2~try=0/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=32~try=0/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=4~try=0/settings.txt
+ create mode 100644 runs/rn18-supsup/id=supsup~seed=0~sparsity=8~try=0/settings.txt
+(env) (base) [at2507@log-1 supsup]$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 17, done.
+Delta compression using up to 28 threads.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (16/16), 1.50 KiB | 0 bytes/s, done.
+Total 16 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+To git@github.com:angelaaaateng/supsup.git
+   b890b5a..1b29834  master -> master
+(env) (base) [at2507@log-1 supsup]$ git add slurm_supsup_12910147.out
+(env) (base) [at2507@log-1 supsup]$ git add models/
+(env) (base) [at2507@log-1 supsup]$ git commit -m "add models" 
+[master c915862] add models
+ 9 files changed, 7 insertions(+)
+ create mode 100644 models/__pycache__/__init__.cpython-38.pyc
+ create mode 100644 models/__pycache__/builder.cpython-38.pyc
+ create mode 100644 models/__pycache__/gemresnet.cpython-38.pyc
+ create mode 100644 models/__pycache__/init.cpython-38.pyc
+ create mode 100644 models/__pycache__/module_util.cpython-38.pyc
+ create mode 100644 models/__pycache__/modules.cpython-38.pyc
+ create mode 100644 models/__pycache__/resnet.cpython-38.pyc
+ create mode 100644 models/__pycache__/small.cpython-38.pyc
+ create mode 100644 slurm_supsup_12910147.out
+(env) (base) [at2507@log-1 supsup]$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 15, done.
+Delta compression using up to 28 threads.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 14.52 KiB | 0 bytes/s, done.
+Total 13 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To git@github.com:angelaaaateng/supsup.git
+   1b29834..c915862  master -> master
+(env) (base) [at2507@log-1 supsup]$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	__pycache__/
+#	data/__pycache__/
+#	data/cifar100/
+#	trainers/__pycache__/
+nothing added to commit but untracked files present (use "git add" to track)
+(env) (base) [at2507@log-1 supsup]$ git add trainers/
+(env) (base) [at2507@log-1 supsup]$ git add __pycache__/
+(env) (base) [at2507@log-1 supsup]$ git commit -m "add trainers" 
+[master eba3ff6] add trainers
+ 9 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 __pycache__/adaptors.cpython-38.pyc
+ create mode 100644 __pycache__/args.cpython-38.pyc
+ create mode 100644 __pycache__/parser.cpython-38.pyc
+ create mode 100644 __pycache__/schedulers.cpython-38.pyc
+ create mode 100644 __pycache__/utils.cpython-38.pyc
+ create mode 100644 trainers/__pycache__/__init__.cpython-38.pyc
+ create mode 100644 trainers/__pycache__/default.cpython-38.pyc
+ create mode 100644 trainers/__pycache__/nns.cpython-38.pyc
+ create mode 100644 trainers/__pycache__/reinit.cpython-38.pyc
+(env) (base) [at2507@log-1 supsup]$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 16, done.
+Delta compression using up to 28 threads.
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 19.30 KiB | 0 bytes/s, done.
+Total 14 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To git@github.com:angelaaaateng/supsup.git
+   c915862..eba3ff6  master -> master
+(env) (base) [at2507@log-1 supsup]$ ls 
+adaptors.py  dsga1006-env.yml  images   mnist        output.txt   README.md         schedulers.py              supup0.s
+args.py      env               logs_at  mnist.ipynb  parser.py    requirements.txt  slurm_supsup_12910147.out  trainers
+data         experiments       main.py  models       __pycache__  runs              supsup.code-workspace      utils.py
+(env) (base) [at2507@log-1 supsup]$ 
