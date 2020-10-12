@@ -32,7 +32,10 @@ def main():
     # Make the a directory corresponding to this run for saving results, checkpoints etc.
     i = 0
     while True:
-        run_base_dir = pathlib.Path(f"{args.log_dir}/{args.name}~try={str(i)}")
+        # AT comments
+        # getting PermissionError: [Errno 13] Permission denied: '/path'
+        run_base_dir = "./at_results"
+        # run_base_dir = pathlib.Path(f"{args.log_dir}/{args.name}~try={str(i)}")
 
         if not run_base_dir.exists():
             os.makedirs(run_base_dir)
@@ -237,7 +240,7 @@ def main():
             optimizer = optim.SGD(
                 params, lr=lr, momentum=args.momentum, weight_decay=args.wd
             )
-        
+
         train_epochs = args.epochs
 
         if args.no_scheduler:
@@ -359,7 +362,7 @@ def main():
             writer.add_scalar(
                 "adapt/avg_acc", avg_acc / num_tasks_learned, num_tasks_learned
             )
-            
+
             utils.clear_masks(model)
             torch.cuda.empty_cache()
 
