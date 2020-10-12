@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#SBATCH --ntasks-per-node=10
-#SBATCH --cpus-per-task=10
+#SBATCH --ntasks-per-node=32
+
 #SBATCH --time=20:00:00
 #SBATCH --mem=30GB
 #SBATCH --job-name=dsga1006-supsup
@@ -30,4 +30,5 @@ source env/bin/activate
 
 # python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data=/path/to/dataset/parent --seeds 1
 # python ./experiments/GG/splitcifar100/rn18-supsup.py  --data="./data" --seeds 1
-python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data=./data --seeds 1
+# python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data=./data --seeds 1
+python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1" --data=./data --seeds 1
