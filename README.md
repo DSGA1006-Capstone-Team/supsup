@@ -134,3 +134,11 @@ pip install -r requirements.txt
 ```
 
 - tried to run jupyter notebook on prince via https://wikis.nyu.edu/display/NYUHPC/Running+Jupyter+on+Prince but it's not working
+
+
+#### Helpful Prince Resources:
+
+- https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/batch/gpu-jobs
+- https://sites.google.com/a/nyu.edu/nyu-hpc/systems/prince
+- https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/batch/slurm-best-practices#TOC-Is-my-job-scalable-How-efficiently-I-use-multiple-CPUs-GPUs
+- https://docs.computecanada.ca/wiki/Using_GPUs_with_Slurm 
