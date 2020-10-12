@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#SBATCH --ntasks-per-node=32
-
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=1
 #SBATCH --time=20:00:00
 #SBATCH --mem=30GB
 #SBATCH --job-name=dsga1006-supsup
