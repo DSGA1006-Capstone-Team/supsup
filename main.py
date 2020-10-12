@@ -34,8 +34,8 @@ def main():
     while True:
         # AT comments
         # getting PermissionError: [Errno 13] Permission denied: '/path'
-        run_base_dir = "./at_results"
-        # run_base_dir = pathlib.Path(f"{args.log_dir}/{args.name}~try={str(i)}")
+        # run_base_dir = "./at_results"
+        run_base_dir = pathlib.Path(f"{args.log_dir}/{args.name}~try={str(i)}")
 
         if not run_base_dir.exists():
             os.makedirs(run_base_dir)
