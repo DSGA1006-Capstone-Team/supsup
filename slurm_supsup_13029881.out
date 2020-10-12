@@ -1,0 +1,181 @@
+[{'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}, {'config': 'experiments/GG/splitcifar100/configs/rn18-supsup.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/rn18-supsup', 'epochs': 250, 'data': '/path/to/dataset/parent'}]
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=2~try=1
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=8~try=1
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=4~try=1
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=1~try=1
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 49, in main
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    train_dataset = datasets.CIFAR100(
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    makedir_exist_ok(root)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    os.makedirs(dirpath)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/path'
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 49, in main
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    train_dataset = datasets.CIFAR100(
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    makedir_exist_ok(root)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    os.makedirs(dirpath)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/path'
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 49, in main
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    train_dataset = datasets.CIFAR100(
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    makedir_exist_ok(root)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    os.makedirs(dirpath)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/path'
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 49, in main
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    train_dataset = datasets.CIFAR100(
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    makedir_exist_ok(root)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    os.makedirs(dirpath)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/path'
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=1 --sparsity=1 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=3 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=8 --sparsity=8 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=0 
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=32~try=1
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 49, in main
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    train_dataset = datasets.CIFAR100(
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    makedir_exist_ok(root)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    os.makedirs(dirpath)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/path'
+=> Reading YAML config from experiments/GG/splitcifar100/configs/rn18-supsup.yaml
+=> Saving data in runs/rn18-supsup/id=supsup~seed=0~sparsity=16~try=1
+Traceback (most recent call last):
+  File "main.py", line 422, in <module>
+    main()
+  File "main.py", line 49, in main
+    data_loader = getattr(data, args.set)()
+  File "/home/at2507/supsup/data/partitioncifar.py", line 287, in __init__
+    train_dataset = datasets.CIFAR100(
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 64, in __init__
+    self.download()
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/cifar.py", line 148, in download
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 264, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 75, in download_url
+    makedir_exist_ok(root)
+  File "/home/at2507/miniconda3/lib/python3.8/site-packages/torchvision/datasets/utils.py", line 51, in makedir_exist_ok
+    os.makedirs(dirpath)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 213, in makedirs
+    makedirs(head, exist_ok=exist_ok)
+  [Previous line repeated 1 more time]
+  File "/home/at2507/miniconda3/lib/python3.8/os.py", line 223, in makedirs
+    mkdir(name, mode)
+PermissionError: [Errno 13] Permission denied: '/path'
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=2 --sparsity=2 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=2 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=32 --sparsity=32 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=2 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=4 --sparsity=4 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=1 
+==> Starting experiment python main.py --config=experiments/GG/splitcifar100/configs/rn18-supsup.yaml --name=id=supsup~seed=0~sparsity=16 --sparsity=16 --seed=0 --log-dir=runs/rn18-supsup --epochs=250 --data=/path/to/dataset/parent --multigpu=1 
