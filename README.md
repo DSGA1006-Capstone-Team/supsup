@@ -87,6 +87,7 @@ These can be changed in the python file. The ablations can be reproduced by e.g.
 
 
 ### Amber's Notes for 1006 Replication:
+
 #### Logging into HPC
 
 Use the [Prince](https://sites.google.com/a/nyu.edu/nyu-hpc/systems/prince) cluster.
@@ -107,7 +108,8 @@ eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub
 
-git clone git@github.com:angelaaaateng/supsup.git
+rm -rf supsup
+git clone git@github.com:DSGA1006-Capstone-Team/supsup.git
 source env/bin/activate
 pip install -r requirements.txt
 
@@ -130,3 +132,5 @@ python ./experiments/GG/splitcifar100/rn18-supsup.py  --data="./data" --seeds 1
 create conda new env
 pip install -r requirements.txt
 ```
+
+- tried to run jupyter notebook on prince via https://wikis.nyu.edu/display/NYUHPC/Running+Jupyter+on+Prince but it's not working
