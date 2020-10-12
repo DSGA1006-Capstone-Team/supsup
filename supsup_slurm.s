@@ -7,7 +7,7 @@
 #SBATCH --job-name=dsga1006-supsup
 #SBATCH --mail-type=END
 #SBATCH --mail-user=at2507@nyu.edu
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:3
 #SBATCH --output=slurm_supsup_%j.out
 
 # Refer to https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/batch/submitting-jobs-with-sbatch
