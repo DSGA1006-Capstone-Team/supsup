@@ -155,7 +155,7 @@ def parse_arguments():
         help="keep the bottom 1/log_base elements during binary optimization",
     )
     parser.add_argument(
-        "--save", action="store_true", default=False, help="save checkpoints"
+        "--save", action="store_true", default=True, help="save checkpoints"
     )
     parser.add_argument(
         "--train-weight-tasks",

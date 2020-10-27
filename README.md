@@ -143,3 +143,12 @@ conda install pytorch==1.5.1 torchvision==0.6.1 -c pytorch
 - https://sites.google.com/a/nyu.edu/nyu-hpc/systems/prince
 - https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/batch/slurm-best-practices#TOC-Is-my-job-scalable-How-efficiently-I-use-multiple-CPUs-GPUs
 - https://docs.computecanada.ca/wiki/Using_GPUs_with_Slurm
+
+
+## Running jobs for Seed Masks:
+
+The experiment and associated config files for the seed SupSup models are in `experiments/SupsupSeed/splitcifar100/configs/`. To run the driver for a 3 basis mask seed model run the following:
+
+```
+python ./experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 3 --gpu-sets="0"
+```
