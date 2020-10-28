@@ -31,4 +31,6 @@ source env/bin/activate
 # python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data=/path/to/dataset/parent --seeds 1
 # python ./experiments/GG/splitcifar100/rn18-supsup.py  --data="./data" --seeds 1
 # python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data=./data --seeds 1
-python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1" --data=./data --seeds 1
+# python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1" --data=./data --seeds 1
+
+python experiments/GG/splitimagenet/rn50-supsup.py --gpu-sets="0|1" --data=./data --seeds 1
