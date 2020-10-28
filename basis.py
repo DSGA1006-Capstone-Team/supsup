@@ -61,7 +61,12 @@ def main():
 
     # Get model with correct architecture and load in state dict.
     model = utils.get_model()
-    model.load_state_dict(pretrained_dict)
+    model_dict = model.state_dict()
+    pretrained_dict = {
+        k: v for k, v in pretrained_dict.items() if k in model_dict
+    }
+    model_dict.update(pretrained_dict)
+    model.load_state_dict(model_dict)
     model.eval()
     print(f"=> Loaded seed model parameters from '{args.seed_model}' (num tasks: {checkpoint['args'].num_tasks}) (epochs: {checkpoint['epoch']})")
     if seed_args.er_sparsity:
