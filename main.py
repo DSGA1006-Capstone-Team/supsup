@@ -53,9 +53,9 @@ def main():
 
     # Track accuracy on all tasks.
     if args.num_tasks:
-        best_acc1 = [0.0 for _ in range(args.num_tasks)]
-        curr_acc1 = [0.0 for _ in range(args.num_tasks)]
-        adapt_acc1 = [0.0 for _ in range(args.num_tasks)]
+        best_acc1 = [0.0]*args.num_tasks
+        curr_acc1 = [0.0]*args.num_tasks
+        adapt_acc1 = [0.0]*args.num_tasks
 
     # Get the model.
     model = utils.get_model()
@@ -231,6 +231,7 @@ def main():
             else args.lr
         )
 
+
         # get optimizer, scheduler
         if args.optimizer == "adam":
             optimizer = optim.Adam(params, lr=lr, weight_decay=args.wd)
@@ -365,7 +366,6 @@ def main():
 
             utils.clear_masks(model)
             torch.cuda.empty_cache()
-
 
     if args.save:
         torch.save(

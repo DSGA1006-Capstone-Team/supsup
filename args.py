@@ -16,6 +16,10 @@ def parse_arguments():
     parser.add_argument(
         "--optimizer", type=str, default="sgd", help="Which optimizer to use"
     )
+
+    parser.add_argument(
+        "--seed-model", type=str, help="Path to seed model"
+    )
     parser.add_argument(
         "--batch-size",
         type=int,
