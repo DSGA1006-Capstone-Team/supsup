@@ -3,3 +3,4 @@
 *.swo
 *.pt
 runs/
+.DS_Store
