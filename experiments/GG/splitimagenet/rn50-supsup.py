@@ -52,7 +52,7 @@ def main():
     sparsities = [8, 4, 16, 32] # We report [4, 8, 16] in the paper
     experiments = []
 
-    
+
     for sparsity, task_idx in product(sparsities, range(100)):
         kwargs = {
             "config": config,
@@ -66,7 +66,8 @@ def main():
         experiments.append(kwargs)
 
     print(experiments)
-    input("Press any key to continue...")
+    print("***STARTING RUN")
+    # input("Press any key to continue...")
     queue = Queue()
 
     for e in experiments:
