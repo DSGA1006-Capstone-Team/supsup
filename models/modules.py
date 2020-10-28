@@ -112,6 +112,8 @@ class BasisMaskConv(nn.Conv2d):
                 for _ in range(pargs.num_tasks)
             ]
         )
+        for s in self.scores:
+            s.requires_grad = False
         self.scores.requires_grad = False
         if pargs.train_weight_tasks == 0:
             self.weight.requires_grad = False

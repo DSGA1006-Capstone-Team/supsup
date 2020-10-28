@@ -23,12 +23,6 @@ from collections import defaultdict
 
 def main():
     print(args.seed_model)
-    if args.seed is not None:
-        random.seed(args.seed)
-        torch.manual_seed(args.seed)
-        torch.cuda.manual_seed(args.seed)
-        torch.cuda.manual_seed_all(args.seed)
-
     if os.path.isfile(args.seed_model):
         print(f"=> Loading seed model from '{args.seed_model}'")
         checkpoint = torch.load(
@@ -40,6 +34,13 @@ def main():
         num_tasks_learned = checkpoint['args'].num_tasks
     else:
         raise Exception(f"=> No seed model found at '{args.seed_model}'!")
+
+    if seed_args.seed is not None:
+        random.seed(seed_args.seed)
+        torch.manual_seed(seed_args.seed)
+        torch.cuda.manual_seed(seed_args.seed)
+        torch.cuda.manual_seed_all(seed_args.seed)
+
     # Make the a directory corresponding to this run for saving results, checkpoints etc.
     i = 0
     while True:
@@ -55,6 +56,7 @@ def main():
         i += 1
 
     (run_base_dir / "settings.txt").write_text(str(args))
+    (run_base_dir / "seed_settings.txt").write_text(str(seed_args))
     args.run_base_dir = run_base_dir
 
     print(f"=> Saving data in {run_base_dir}")
@@ -110,7 +112,7 @@ def main():
         trainer.init(args)
 
     if args.task_eval is not None:
-        assert 0 <= args.task_eval < seed_args.num_tasks, "Not a valid task idx"
+        assert 0 <= args.task_eval < args.num_tasks, "Not a valid task idx"
         print(f"Task {args.set}: {args.task_eval}")
 
         # Settting task to -1 tells the model to infer task identity instead of being given the task.
@@ -164,91 +166,26 @@ def main():
         torch.cuda.empty_cache()
         return
 
+    # Iterate through all tasks.
+    for idx in range(seed_args.num_tasks, args.num_tasks):
+        print(f"Task {args.set}: {idx}")
 
-#        model.apply(lambda m: setattr(m, "task", args.task_eval))
-#
-#        assert hasattr(
-#            data_loader, "update_task"
-#        ), "[ERROR] Need to implement update task method for use with multitask experiments"
-#
-#        data_loader.update_task(args.task_eval)
-#
-#        optimizer = get_optimizer(args, model)
-#        lr_scheduler = schedulers.get_policy(args.lr_policy or "cosine_lr")(
-#            optimizer, args
-#        )
-#
-#        # Train and do inference and normal for args.epochs epcohs.
-#        best_acc1 = 0.0
-#
-#        for epoch in range(0, args.epochs):
-#            lr_scheduler(epoch, None)
-#
-#            train(
-#                model,
-#                writer,
-#                data_loader.train_loader,
-#                optimizer,
-#                criterion,
-#                epoch,
-#                task_idx=args.task_eval,
-#                data_loader=None,
-#            )
-#
-#            curr_acc1 = test(
-#                model,
-#                writer,
-#                criterion,
-#                data_loader.val_loader,
-#                epoch,
-#                task_idx=args.task_eval,
-#            )
-#
-#            if curr_acc1 > best_acc1:
-#                best_acc1 = curr_acc1
-#
-#        utils.write_result_to_csv(
-#            name=f"{args.name}~set={args.set}~task={args.task_eval}",
-#            curr_acc1=curr_acc1,
-#            best_acc1=best_acc1,
-#            save_dir=run_base_dir,
-#        )
+        # Tell the model which task it is trying to solve -- in Scenario NNs this is ignored.
+        model.apply(lambda m: setattr(m, "task", idx))
 
-#        if args.save:
-#            torch.save(
-#                {
-#                    "epoch": args.epochs,
-#                    "arch": args.model,
-#                    "state_dict": model.state_dict(),
-#                    "best_acc1": best_acc1,
-#                    "curr_acc1": curr_acc1,
-#                    "args": args,
-#                },
-#                run_base_dir / "final.pt",
-#            )
+        # Update the data loader so that it returns the data for the correct task, also done by passing the task index.
+        assert hasattr(
+            data_loader, "update_task"
+        ), "[ERROR] Need to implement update task method for use with multitask experiments"
 
-#        return best_acc1
-#
-#    # Iterate through all tasks.
-#    for idx in range(args.num_tasks or 0):
-#        print(f"Task {args.set}: {idx}")
-#
-#        # Tell the model which task it is trying to solve -- in Scenario NNs this is ignored.
-#        model.apply(lambda m: setattr(m, "task", idx))
-#
-#        # Update the data loader so that it returns the data for the correct task, also done by passing the task index.
-#        assert hasattr(
-#            data_loader, "update_task"
-#        ), "[ERROR] Need to implement update task method for use with multitask experiments"
-#
-#        data_loader.update_task(idx)
-#
-#        # Clear the grad on all the parameters.
-#        for p in model.parameters():
-#            p.grad = None
-#
-#        # Make a list of the parameters relavent to this task.
-#        params = []
+        data_loader.update_task(idx)
+
+        # Clear the grad on all the parameters.
+        for p in model.parameters():
+            p.grad = None
+
+        # Make a list of the parameters relavent to this task.
+        params = [p for _, p in model.named_parameters() if p.requires_grad]
 #        for n, p in model.named_parameters():
 #            if not p.requires_grad:
 #                continue
@@ -264,91 +201,89 @@ def main():
 #            ):
 #                if split[-1] == "weight" or split[-1] == "bias":
 #                    params.append(p)
-#
-#        # train_weight_tasks specifies the number of tasks that the weights are trained for.
-#        # e.g. in SupSup, train_weight_tasks = 0. in BatchE, train_weight_tasks = 1.
-#        # If training weights, use train_weight_lr. Else use lr.
-#        lr = (
-#            args.train_weight_lr
-#            if args.train_weight_tasks < 0
-#            or num_tasks_learned < args.train_weight_tasks
-#            else args.lr
-#        )
-#
-#        # get optimizer, scheduler
-#        if args.optimizer == "adam":
-#            optimizer = optim.Adam(params, lr=lr, weight_decay=args.wd)
-#        elif args.optimizer == "rmsprop":
-#            optimizer = optim.RMSprop(params, lr=lr)
-#        else:
-#            optimizer = optim.SGD(
-#                params, lr=lr, momentum=args.momentum, weight_decay=args.wd
-#            )
-#
-#        train_epochs = args.epochs
-#
-#        if args.no_scheduler:
-#            scheduler = None
-#        else:
-#            scheduler = CosineAnnealingLR(optimizer, T_max=train_epochs)
-#
-#        # Train on the current task.
-#        for epoch in range(1, train_epochs + 1):
-#            train(
-#                model,
-#                writer,
-#                data_loader.train_loader,
-#                optimizer,
-#                criterion,
-#                epoch,
-#                idx,
-#                data_loader,
-#            )
-#
-#            # Required for our PSP implementation, not used otherwise.
-#            utils.cache_weights(model, num_tasks_learned + 1)
-#
-#            curr_acc1[idx] = test(
-#                model, writer, criterion, data_loader.val_loader, epoch, idx
-#            )
-#            if curr_acc1[idx] > best_acc1[idx]:
-#                best_acc1[idx] = curr_acc1[idx]
-#            if scheduler:
-#                scheduler.step()
-#
-#            if (
-#                args.iter_lim > 0
-#                and len(data_loader.train_loader) * epoch > args.iter_lim
-#            ):
-#                break
-#
-#        utils.write_result_to_csv(
-#            name=f"{args.name}~set={args.set}~task={idx}",
-#            curr_acc1=curr_acc1[idx],
-#            best_acc1=best_acc1[idx],
-#            save_dir=run_base_dir,
-#        )
-#
-#        # Save memory by deleting the optimizer and scheduler.
-#        del optimizer, scheduler, params
-#
-#        # Increment the number of tasks learned.
-#        num_tasks_learned += 1
-#
-#        # If operating in NNS scenario, get the number of tasks learned count from the model.
-#        if args.trainer and "nns" in args.trainer:
-#            model.apply(
-#                lambda m: setattr(
-#                    m, "num_tasks_learned", min(model.num_tasks_learned, args.num_tasks)
-#                )
-#            )
-#        else:
-#            model.apply(lambda m: setattr(m, "num_tasks_learned", num_tasks_learned))
-#
-#        # TODO series of asserts with required arguments (eg num_tasks)
-#        # args.eval_ckpts contains values of num_tasks_learned for which testing on all tasks so far is performed.
-#        # this is done by default when all tasks have been learned, but you can do something like
-#        # args.eval_ckpts = [5,10] to also do this when 5 tasks are learned, and again when 10 tasks are learned.
+
+        # train_weight_tasks specifies the number of tasks that the weights are trained for.
+        # e.g. in SupSup, train_weight_tasks = 0. in BatchE, train_weight_tasks = 1.
+        # If training weights, use train_weight_lr. Else use lr.
+        lr = (
+            args.train_weight_lr
+            if args.train_weight_tasks < 0
+            or num_tasks_learned < args.train_weight_tasks
+            else args.lr
+        )
+
+        # get optimizer, scheduler
+        if args.optimizer == "adam":
+            optimizer = optim.Adam(params, lr=lr, weight_decay=args.wd)
+        elif args.optimizer == "rmsprop":
+            optimizer = optim.RMSprop(params, lr=lr)
+        else:
+            optimizer = optim.SGD(
+                params, lr=lr, momentum=args.momentum, weight_decay=args.wd
+            )
+
+        train_epochs = args.epochs
+
+        if args.no_scheduler:
+            scheduler = None
+        else:
+            scheduler = CosineAnnealingLR(optimizer, T_max=train_epochs)
+
+        # Train on the current task.
+        for epoch in range(1, train_epochs + 1):
+            train(
+                model,
+                writer,
+                data_loader.train_loader,
+                optimizer,
+                criterion,
+                epoch,
+                idx,
+                data_loader,
+            )
+
+            # Required for our PSP implementation, not used otherwise.
+            utils.cache_weights(model, num_tasks_learned + 1)
+
+            curr_acc1[idx] = test(
+                model, writer, criterion, data_loader.val_loader, epoch, idx
+            )
+            if curr_acc1[idx] > best_acc1[idx]:
+                best_acc1[idx] = curr_acc1[idx]
+            if scheduler:
+                scheduler.step()
+
+            if (
+                args.iter_lim > 0
+                and len(data_loader.train_loader) * epoch > args.iter_lim
+            ):
+                break
+
+        utils.write_result_to_csv(
+            name=f"{args.name}~set={args.set}~task={idx}",
+            curr_acc1=curr_acc1[idx],
+            best_acc1=best_acc1[idx],
+            save_dir=run_base_dir,
+        )
+
+        # Save memory by deleting the optimizer and scheduler.
+        del optimizer, scheduler, params
+
+        # Increment the number of tasks learned.
+        num_tasks_learned += 1
+
+        # If operating in NNS scenario, get the number of tasks learned count from the model.
+        if args.trainer and "nns" in args.trainer:
+            model.apply(
+                lambda m: setattr(
+                    m, "num_tasks_learned", min(model.num_tasks_learned, args.num_tasks)
+                )
+            )
+        else:
+            model.apply(lambda m: setattr(m, "num_tasks_learned", num_tasks_learned))
+
+
+
 
     # Run inference on all the tasks.
     avg_acc = 0.0
@@ -410,23 +345,23 @@ def main():
 
     utils.clear_masks(model)
     torch.cuda.empty_cache()
-#
-#
-#    if args.save:
-#        torch.save(
-#            {
-#                "epoch": args.epochs,
-#                "arch": args.model,
-#                "state_dict": model.state_dict(),
-#                "best_acc1": best_acc1,
-#                "curr_acc1": curr_acc1,
-#                "args": args,
-#            },
-#            run_base_dir / "final.pt",
-#        )
-#
-#
-#    return adapt_acc1
+
+
+    if args.save:
+        torch.save(
+            {
+                "epoch": args.epochs,
+                "arch": args.model,
+                "state_dict": model.state_dict(),
+                "best_acc1": best_acc1,
+                "curr_acc1": curr_acc1,
+                "args": args,
+            },
+            run_base_dir / "final.pt",
+        )
+
+
+    return adapt_acc1
 
 
 # TODO: Remove this with task-eval
