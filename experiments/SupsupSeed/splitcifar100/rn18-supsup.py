@@ -49,7 +49,9 @@ def main():
     data = args.data
 
     config = "experiments/SupsupSeed/splitcifar100/configs/rn18-supsup{}.yaml".format("" if args.num_masks == 20 else "_{}".format(str(args.num_masks)))
-    log_dir = "runs/SupsupSeed/rn18-supsup_num_masks_{}".format(str(args.num_masks))
+    # log_dir = "runs/SupsupSeed/rn18-supsup_num_masks_{}".format(str(args.num_masks))
+    # AT: try with 2 GPU
+    log_dir = "runs/SupsupSeed/rn18-supsup_gpu2_num_masks_{}".format(str(args.num_masks))
     experiments = []
     sparsities = [1, 2, 4, 8, 16, 32] # Higher sparsity values mean more dense subnetworks
 
@@ -67,7 +69,7 @@ def main():
         experiments.append(kwargs)
 
     print(experiments)
-    # AT Remove any key 
+    # AT Remove any key
     # input("Press any key to continue...")
     queue = Queue()
 
