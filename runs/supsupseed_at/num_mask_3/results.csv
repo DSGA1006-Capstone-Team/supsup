@@ -22,3 +22,14 @@ Date Finished,Name,Current Val,Best Val,Save Directory
 10-31-20_11:32:08, id=supsup~seed=0~sparsity=1~try=1~set=RandSplitCIFAR100~task=0, 0.7520, 0.7620, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=1~try=1
 10-31-20_11:35:20, id=supsup~seed=0~sparsity=1~try=2~set=RandSplitCIFAR100~task=1, 0.7680, 0.7680, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=1~try=2
 10-31-20_11:36:22, id=supsup~seed=0~sparsity=1~try=4~set=RandSplitCIFAR100~task=1, 0.7500, 0.7500, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=1~try=4
+10-31-20_11:40:58, id=supsup~seed=0~sparsity=1~try=2~set=RandSplitCIFAR100~task=2, 0.8440, 0.8560, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=1~try=2
+10-31-20_11:41:51, id=supsup~seed=0~sparsity=1~try=1~set=RandSplitCIFAR100~task=1, 0.7660, 0.7700, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=1~try=1
+10-31-20_11:42:17, id=supsup~seed=0~sparsity=1~try=4~set=RandSplitCIFAR100~task=2, 0.8320, 0.8540, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=1~try=4
+10-31-20_11:46:27, id=supsup~seed=0~sparsity=1~try=2~set=RandSplitCIFAR100~task=3, 0.8240, 0.8380, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=1~try=2
+10-31-20_11:48:07, id=supsup~seed=0~sparsity=1~try=4~set=RandSplitCIFAR100~task=3, 0.8080, 0.8360, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=1~try=4
+10-31-20_11:51:36, id=supsup~seed=0~sparsity=1~try=1~set=RandSplitCIFAR100~task=2, 0.8420, 0.8600, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=1~try=1
+10-31-20_11:51:58, id=supsup~seed=0~sparsity=1~try=2~set=RandSplitCIFAR100~task=4, 0.8180, 0.8320, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=1~try=2
+10-31-20_11:53:55, id=supsup~seed=0~sparsity=1~try=4~set=RandSplitCIFAR100~task=4, 0.8200, 0.8340, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=1~try=4
+10-31-20_11:58:04, id=supsup~seed=0~sparsity=2~try=3~set=RandSplitCIFAR100~task=0, 0.7640, 0.7860, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=2~try=3
+10-31-20_12:01:23, id=supsup~seed=0~sparsity=2~try=2~set=RandSplitCIFAR100~task=0, 0.7580, 0.7840, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=2~try=2
+10-31-20_12:03:58, id=supsup~seed=0~sparsity=2~try=3~set=RandSplitCIFAR100~task=1, 0.8020, 0.8060, runs/supsupseed_at/num_mask_3/id=supsup~seed=0~sparsity=2~try=3
