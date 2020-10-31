@@ -48,7 +48,8 @@ def main():
     seeds = list(range(args.seeds))
     data = args.data
 
-    config = "experiments/SupsupSeed/splitcifar100/configs/rn18-supsup{}.yaml".format("" if args.num_masks == 20 else "_{}".format(str(args.num_masks)))
+    config = "experiments/SupsupSeed/splitcifar100/configs/rn18-supsup_{}.yaml".format("" if args.num_masks == 20 else "_{}".format(str(args.num_masks)))
+    # config = "experiments/SupsupSeed/splitcifar100/configs/rn18-supsup{}.yaml".format("" if args.num_masks == 20 else "_{}".format(str(args.num_masks)))
     # log_dir = "runs/SupsupSeed/rn18-supsup_num_masks_{}".format(str(args.num_masks))
     # AT: try with 2 GPU
     log_dir = "runs/SupsupSeed/rn18-supsup_gpu2_num_masks_{}".format(str(args.num_masks))
