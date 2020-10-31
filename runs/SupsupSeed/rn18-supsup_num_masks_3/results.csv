@@ -1,0 +1,16 @@
+Date Finished,Name,Current Val,Best Val,Save Directory
+10-28-20_16:24:44, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=0, 0.7180, 0.7520, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=1~try=0
+10-28-20_16:30:04, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=1, 0.7440, 0.7560, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=1~try=0
+10-28-20_16:35:17, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=2, 0.8240, 0.8460, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=1~try=0
+10-28-20_16:51:24, id=supsup~seed=0~sparsity=2~try=0~set=RandSplitCIFAR100~task=0, 0.7840, 0.7940, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=2~try=0
+10-28-20_16:56:31, id=supsup~seed=0~sparsity=2~try=0~set=RandSplitCIFAR100~task=1, 0.7840, 0.8000, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=2~try=0
+10-28-20_17:01:32, id=supsup~seed=0~sparsity=2~try=0~set=RandSplitCIFAR100~task=2, 0.8560, 0.8720, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=2~try=0
+10-28-20_17:09:36, id=supsup~seed=0~sparsity=4~try=0~set=RandSplitCIFAR100~task=0, 0.8220, 0.8240, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=4~try=0
+10-28-20_17:15:37, id=supsup~seed=0~sparsity=4~try=0~set=RandSplitCIFAR100~task=1, 0.7840, 0.8080, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=4~try=0
+10-28-20_17:32:10, id=supsup~seed=0~sparsity=4~try=0~set=RandSplitCIFAR100~task=2, 0.8960, 0.9020, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=4~try=0
+10-28-20_17:53:08, id=supsup~seed=0~sparsity=16~try=0~set=RandSplitCIFAR100~task=0, 0.8460, 0.8580, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=16~try=0
+10-28-20_17:58:37, id=supsup~seed=0~sparsity=16~try=0~set=RandSplitCIFAR100~task=1, 0.8020, 0.8360, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=16~try=0
+10-28-20_18:04:29, id=supsup~seed=0~sparsity=16~try=0~set=RandSplitCIFAR100~task=2, 0.9180, 0.9300, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=16~try=0
+10-28-20_18:12:46, id=supsup~seed=0~sparsity=32~try=0~set=RandSplitCIFAR100~task=0, 0.8560, 0.8660, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=32~try=0
+10-28-20_18:22:29, id=supsup~seed=0~sparsity=32~try=0~set=RandSplitCIFAR100~task=1, 0.8220, 0.8460, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=32~try=0
+10-28-20_18:39:42, id=supsup~seed=0~sparsity=32~try=0~set=RandSplitCIFAR100~task=2, 0.9080, 0.9140, runs/SupsupSeed/rn18-supsup_num_masks_3/id=supsup~seed=0~sparsity=32~try=0

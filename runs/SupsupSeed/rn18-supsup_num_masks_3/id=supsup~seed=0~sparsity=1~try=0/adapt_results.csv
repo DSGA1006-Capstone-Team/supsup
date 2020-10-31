@@ -1,0 +1,4 @@
+Date Finished,Name,Task,Num Tasks Learned,Current Val,Adapt Val
+10-28-20_16:35:18, id=supsup~seed=0~sparsity=1~try=0~task=RandSplitCIFAR100_0~numtaskslearned=3~tasknumber=0, RandSplitCIFAR100_0, 3, 0.7180, 0.7220
+10-28-20_16:35:19, id=supsup~seed=0~sparsity=1~try=0~task=RandSplitCIFAR100_1~numtaskslearned=3~tasknumber=1, RandSplitCIFAR100_1, 3, 0.7440, 0.7380
+10-28-20_16:35:19, id=supsup~seed=0~sparsity=1~try=0~task=RandSplitCIFAR100_2~numtaskslearned=3~tasknumber=2, RandSplitCIFAR100_2, 3, 0.8240, 0.8220
