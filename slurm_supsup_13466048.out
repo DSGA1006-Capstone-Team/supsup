@@ -1,0 +1,90 @@
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+# All requested packages already installed.
+
+Looking in links: https://download.pytorch.org/whl/torch_stable.html
+Requirement already satisfied: torch==1.5.0+cu101 in /home/at2507/miniconda3/lib/python3.8/site-packages (1.5.0+cu101)
+Requirement already satisfied: torchvision==0.6.0+cu101 in /home/at2507/miniconda3/lib/python3.8/site-packages (0.6.0+cu101)
+Requirement already satisfied: numpy in /home/at2507/miniconda3/lib/python3.8/site-packages (from torch==1.5.0+cu101) (1.18.1)
+Requirement already satisfied: future in /home/at2507/miniconda3/lib/python3.8/site-packages (from torch==1.5.0+cu101) (0.18.2)
+Requirement already satisfied: pillow>=4.1.1 in /home/at2507/miniconda3/lib/python3.8/site-packages (from torchvision==0.6.0+cu101) (7.2.0)
+[{'config': 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml', 'name': 'id=supsup~seed=0~sparsity=1', 'sparsity': 1, 'seed': 0, 'log-dir': 'runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3', 'epochs': 250, 'data': './data'}, {'config': 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml', 'name': 'id=supsup~seed=0~sparsity=2', 'sparsity': 2, 'seed': 0, 'log-dir': 'runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3', 'epochs': 250, 'data': './data'}, {'config': 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml', 'name': 'id=supsup~seed=0~sparsity=4', 'sparsity': 4, 'seed': 0, 'log-dir': 'runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3', 'epochs': 250, 'data': './data'}, {'config': 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml', 'name': 'id=supsup~seed=0~sparsity=8', 'sparsity': 8, 'seed': 0, 'log-dir': 'runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3', 'epochs': 250, 'data': './data'}, {'config': 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml', 'name': 'id=supsup~seed=0~sparsity=16', 'sparsity': 16, 'seed': 0, 'log-dir': 'runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3', 'epochs': 250, 'data': './data'}, {'config': 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml', 'name': 'id=supsup~seed=0~sparsity=32', 'sparsity': 32, 'seed': 0, 'log-dir': 'runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3', 'epochs': 250, 'data': './data'}]
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    from args import args
+  File "/home/at2507/supsup_team/supsup/args.py", line 259, in <module>
+    run_args()
+  File "/home/at2507/supsup_team/supsup/args.py", line 256, in run_args
+    args = parse_arguments()
+  File "/home/at2507/supsup_team/supsup/args.py", line 232, in parse_arguments
+    get_config(args)
+  File "/home/at2507/supsup_team/supsup/args.py", line 242, in get_config
+    yaml_txt = open(args.config).read()
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml'
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    from args import args
+  File "/home/at2507/supsup_team/supsup/args.py", line 259, in <module>
+    run_args()
+  File "/home/at2507/supsup_team/supsup/args.py", line 256, in run_args
+    args = parse_arguments()
+  File "/home/at2507/supsup_team/supsup/args.py", line 232, in parse_arguments
+    get_config(args)
+  File "/home/at2507/supsup_team/supsup/args.py", line 242, in get_config
+    yaml_txt = open(args.config).read()
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml'
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    from args import args
+  File "/home/at2507/supsup_team/supsup/args.py", line 259, in <module>
+    run_args()
+  File "/home/at2507/supsup_team/supsup/args.py", line 256, in run_args
+    args = parse_arguments()
+  File "/home/at2507/supsup_team/supsup/args.py", line 232, in parse_arguments
+    get_config(args)
+  File "/home/at2507/supsup_team/supsup/args.py", line 242, in get_config
+    yaml_txt = open(args.config).read()
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml'
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    from args import args
+  File "/home/at2507/supsup_team/supsup/args.py", line 259, in <module>
+    run_args()
+  File "/home/at2507/supsup_team/supsup/args.py", line 256, in run_args
+    args = parse_arguments()
+  File "/home/at2507/supsup_team/supsup/args.py", line 232, in parse_arguments
+    get_config(args)
+  File "/home/at2507/supsup_team/supsup/args.py", line 242, in get_config
+    yaml_txt = open(args.config).read()
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml'
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    from args import args
+  File "/home/at2507/supsup_team/supsup/args.py", line 259, in <module>
+    run_args()
+  File "/home/at2507/supsup_team/supsup/args.py", line 256, in run_args
+    args = parse_arguments()
+  File "/home/at2507/supsup_team/supsup/args.py", line 232, in parse_arguments
+    get_config(args)
+  File "/home/at2507/supsup_team/supsup/args.py", line 242, in get_config
+    yaml_txt = open(args.config).read()
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml'
+Traceback (most recent call last):
+  File "main.py", line 13, in <module>
+    from args import args
+  File "/home/at2507/supsup_team/supsup/args.py", line 259, in <module>
+    run_args()
+  File "/home/at2507/supsup_team/supsup/args.py", line 256, in run_args
+    args = parse_arguments()
+  File "/home/at2507/supsup_team/supsup/args.py", line 232, in parse_arguments
+    get_config(args)
+  File "/home/at2507/supsup_team/supsup/args.py", line 242, in get_config
+    yaml_txt = open(args.config).read()
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml'
+==> Starting experiment python main.py --config=experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml --name=id=supsup~seed=0~sparsity=1 --sparsity=1 --seed=0 --log-dir=runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3 --epochs=250 --data=./data --multigpu=0 
+==> Starting experiment python main.py --config=experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml --name=id=supsup~seed=0~sparsity=2 --sparsity=2 --seed=0 --log-dir=runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3 --epochs=250 --data=./data --multigpu=0 
+==> Starting experiment python main.py --config=experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml --name=id=supsup~seed=0~sparsity=4 --sparsity=4 --seed=0 --log-dir=runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3 --epochs=250 --data=./data --multigpu=0 
+==> Starting experiment python main.py --config=experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml --name=id=supsup~seed=0~sparsity=8 --sparsity=8 --seed=0 --log-dir=runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3 --epochs=250 --data=./data --multigpu=0 
+==> Starting experiment python main.py --config=experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml --name=id=supsup~seed=0~sparsity=16 --sparsity=16 --seed=0 --log-dir=runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3 --epochs=250 --data=./data --multigpu=0 
+==> Starting experiment python main.py --config=experiments/SupsupSeed/splitcifar100/configs/rn18-supsup__3.yaml --name=id=supsup~seed=0~sparsity=32 --sparsity=32 --seed=0 --log-dir=runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3 --epochs=250 --data=./data --multigpu=0 

@@ -45,3 +45,11 @@ Date Finished,Name,Current Val,Best Val,Save Directory
 10-31-20_11:07:09, id=supsup~seed=0~sparsity=16~try=6~set=RandSplitCIFAR100~task=2, 0.8840, 0.9060, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=16~try=6
 10-31-20_11:07:53, id=supsup~seed=0~sparsity=16~try=8~set=RandSplitCIFAR100~task=2, 0.9100, 0.9220, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=16~try=8
 10-31-20_11:12:19, id=supsup~seed=0~sparsity=32~try=6~set=RandSplitCIFAR100~task=0, 0.8740, 0.8740, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=32~try=6
+10-31-20_11:12:52, id=supsup~seed=0~sparsity=32~try=7~set=RandSplitCIFAR100~task=0, 0.8520, 0.8680, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=32~try=7
+10-31-20_11:14:15, id=supsup~seed=0~sparsity=32~try=8~set=RandSplitCIFAR100~task=0, 0.8740, 0.8740, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=32~try=8
+10-31-20_11:17:54, id=supsup~seed=0~sparsity=32~try=6~set=RandSplitCIFAR100~task=1, 0.8280, 0.8400, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=32~try=6
+10-31-20_11:18:17, id=supsup~seed=0~sparsity=32~try=7~set=RandSplitCIFAR100~task=1, 0.8160, 0.8380, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=32~try=7
+10-31-20_11:20:27, id=supsup~seed=0~sparsity=32~try=8~set=RandSplitCIFAR100~task=1, 0.7900, 0.8200, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=32~try=8
+10-31-20_11:23:29, id=supsup~seed=0~sparsity=32~try=6~set=RandSplitCIFAR100~task=2, 0.9280, 0.9320, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=32~try=6
+10-31-20_11:23:47, id=supsup~seed=0~sparsity=32~try=7~set=RandSplitCIFAR100~task=2, 0.9100, 0.9240, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=32~try=7
+10-31-20_11:26:38, id=supsup~seed=0~sparsity=32~try=8~set=RandSplitCIFAR100~task=2, 0.9200, 0.9260, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=32~try=8
