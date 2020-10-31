@@ -8,7 +8,7 @@ import argparse
 
 sys.path.append(os.path.abspath("."))
 
-
+# note: new algorithm code 
 def kwargs_to_cmd(kwargs):
     cmd = "python main.py "
     for flag, val in kwargs.items():
@@ -66,8 +66,8 @@ def main():
             "sparsity": sparsity,
             "seed": seed,
             "log-dir": log_dir,
-            # "epochs": 250,
-            "epochs": 10,
+            "epochs": 250,
+            # "epochs": 10,
             "data": data
         }
 
