@@ -52,6 +52,7 @@ def main():
     experiments = []
     sparsities = [1, 2, 4, 8, 16, 32] # Higher sparsity values mean more dense subnetworks
 
+    # at change for 1 epoch to check dir
     for sparsity, seed in product(sparsities, seeds):
         kwargs = {
             "config": config,
@@ -60,13 +61,14 @@ def main():
             "seed": seed,
             "log-dir": log_dir,
             "epochs": 250,
+            # "epochs": 10,
             "data": data
         }
 
         experiments.append(kwargs)
 
     print(experiments)
-    # AT Remove any key 
+    # AT Remove any key
     # input("Press any key to continue...")
     queue = Queue()
 

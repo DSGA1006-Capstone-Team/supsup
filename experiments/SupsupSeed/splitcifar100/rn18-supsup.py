@@ -48,14 +48,17 @@ def main():
     seeds = list(range(args.seeds))
     data = args.data
 
-    config = "experiments/SupsupSeed/splitcifar100/configs/rn18-supsup_{}.yaml".format("" if args.num_masks == 20 else "_{}".format(str(args.num_masks)))
+    config = "experiments/SupsupSeed/splitcifar100/configs/rn18-supsup{}.yaml".format("" if args.num_masks == 20 else "_{}".format(str(args.num_masks)))
     # config = "experiments/SupsupSeed/splitcifar100/configs/rn18-supsup{}.yaml".format("" if args.num_masks == 20 else "_{}".format(str(args.num_masks)))
     # log_dir = "runs/SupsupSeed/rn18-supsup_num_masks_{}".format(str(args.num_masks))
     # AT: try with 2 GPU
-    log_dir = "runs/SupsupSeed/rn18-supsup_gpu2_num_masks_{}".format(str(args.num_masks))
+    # at change dir
+    log_dir = "runs/supsupseed_at/num_mask_3"
+    # log_dir = "runs/SupsupSeed/rn18-supsup_gpu2_num_masks_{}".format(str(args.num_masks))
     experiments = []
     sparsities = [1, 2, 4, 8, 16, 32] # Higher sparsity values mean more dense subnetworks
 
+    # at change for 1 epoch to check dir
     for sparsity, seed in product(sparsities, seeds):
         kwargs = {
             "config": config,
@@ -63,7 +66,8 @@ def main():
             "sparsity": sparsity,
             "seed": seed,
             "log-dir": log_dir,
-            "epochs": 250,
+            # "epochs": 250,
+            "epochs": 10,
             "data": data
         }
 
