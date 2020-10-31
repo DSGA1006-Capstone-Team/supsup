@@ -66,8 +66,8 @@ def main():
             "sparsity": sparsity,
             "seed": seed,
             "log-dir": log_dir,
-            # "epochs": 250,
-            "epochs": 10,
+            "epochs": 250,
+            # "epochs": 10,
             "data": data
         }
 
