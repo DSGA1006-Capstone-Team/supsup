@@ -115,6 +115,7 @@ pip install -r requirements.txt
 
 sbatch supsup_slurm.s
 sbatch supsup_slurm_v2.s
+sbatch supsup_slurm_v3.s
 squeue -u $USER
 git add slurm_lab0_<JOB_ID>.out
 git commit -m "adding log file"
