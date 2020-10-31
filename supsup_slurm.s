@@ -7,7 +7,7 @@
 #SBATCH --job-name=dsga1006-supsup
 #SBATCH --mail-type=END
 #SBATCH --mail-user=at2507@nyu.edu
-#SBATCH --gres=gpu:2
+#SBATCH --gres=gpu:1
 #SBATCH --output=slurm_supsup_%j.out
 
 # Refer to https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/batch/submitting-jobs-with-sbatch
@@ -15,6 +15,7 @@
 
 # Remove all unused system modules
 module purge
+module load cuda/10.1.105
 
 # Move into the directory that contains our code
 SRCDIR=$HOME/supsup
