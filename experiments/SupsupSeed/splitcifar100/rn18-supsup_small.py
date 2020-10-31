@@ -54,7 +54,7 @@ def main():
     # AT: try with 2 GPU
     # at change dir
     # log_dir = "runs/supsupseed_at/num_mask_3"
-     log_dir = "runs/supsupseed_at/num_mask_3_gpu_1_epoch_10"
+    log_dir = "runs/supsupseed_at/num_mask_3_gpu_1_epoch_10"
     # log_dir = "runs/SupsupSeed/rn18-supsup_gpu1_num_masks_{}".format(str(args.num_masks))
     experiments = []
     sparsities = [1, 2, 4, 8, 16, 32] # Higher sparsity values mean more dense subnetworks
