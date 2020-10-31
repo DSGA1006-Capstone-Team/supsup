@@ -35,3 +35,13 @@ Date Finished,Name,Current Val,Best Val,Save Directory
 10-31-20_10:48:24, id=supsup~seed=0~sparsity=8~try=6~set=RandSplitCIFAR100~task=2, 0.8940, 0.9040, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=8~try=6
 10-31-20_10:48:35, id=supsup~seed=0~sparsity=8~try=7~set=RandSplitCIFAR100~task=2, 0.9020, 0.9140, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=8~try=7
 10-31-20_10:49:08, id=supsup~seed=0~sparsity=8~try=8~set=RandSplitCIFAR100~task=2, 0.8980, 0.9180, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=8~try=8
+10-31-20_10:54:41, id=supsup~seed=0~sparsity=16~try=6~set=RandSplitCIFAR100~task=0, 0.8620, 0.8620, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=16~try=6
+10-31-20_10:54:45, id=supsup~seed=0~sparsity=16~try=7~set=RandSplitCIFAR100~task=0, 0.8340, 0.8460, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=16~try=7
+10-31-20_10:55:31, id=supsup~seed=0~sparsity=16~try=8~set=RandSplitCIFAR100~task=0, 0.8560, 0.8620, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=16~try=8
+10-31-20_11:00:36, id=supsup~seed=0~sparsity=16~try=7~set=RandSplitCIFAR100~task=1, 0.8080, 0.8280, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=16~try=7
+10-31-20_11:00:56, id=supsup~seed=0~sparsity=16~try=6~set=RandSplitCIFAR100~task=1, 0.7960, 0.8200, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=16~try=6
+10-31-20_11:01:40, id=supsup~seed=0~sparsity=16~try=8~set=RandSplitCIFAR100~task=1, 0.7960, 0.8200, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=16~try=8
+10-31-20_11:06:32, id=supsup~seed=0~sparsity=16~try=7~set=RandSplitCIFAR100~task=2, 0.9180, 0.9240, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=16~try=7
+10-31-20_11:07:09, id=supsup~seed=0~sparsity=16~try=6~set=RandSplitCIFAR100~task=2, 0.8840, 0.9060, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=16~try=6
+10-31-20_11:07:53, id=supsup~seed=0~sparsity=16~try=8~set=RandSplitCIFAR100~task=2, 0.9100, 0.9220, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=16~try=8
+10-31-20_11:12:19, id=supsup~seed=0~sparsity=32~try=6~set=RandSplitCIFAR100~task=0, 0.8740, 0.8740, runs/SupsupSeed/rn18-supsup_gpu2_num_masks_3/id=supsup~seed=0~sparsity=32~try=6
