@@ -157,5 +157,6 @@ python ./experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --s
 
 
 ## AT Prince Runs Log
+
 Starting log for 11/3/2020 due to failing jobs:
-- 
+-
