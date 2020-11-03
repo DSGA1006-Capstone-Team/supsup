@@ -26,16 +26,20 @@ def main():
     if os.path.isfile(args.seed_model):
         print(f"=> Loading seed model from '{args.seed_model}'")
         checkpoint = torch.load(
-            args.seed_model#, map_location=f"cuda:{args.multigpu[0]}"
+            args.seed_model, map_location=f"cuda:{args.multigpu[0]}" if torch.cuda.is_available() else torch.device('cpu')
         )
         best_acc1 = checkpoint["best_acc1"]
         pretrained_dict = checkpoint["state_dict"]
         seed_args = checkpoint['args']
         num_tasks_learned = checkpoint['args'].num_tasks
+        args.num_seed_tasks_learned = num_tasks_learned
     else:
         raise Exception(f"=> No seed model found at '{args.seed_model}'!")
 
+    assert not ((args.num_tasks - args.num_seed_tasks_learned > 1) and (args.conv_type == 'BasisMaskConv')), 'BasisMaskConv only supports learning one extra task over the mask tasks. Please fix config or change conv_type!'
+
     if seed_args.seed is not None:
+        args.seed = seed_args.seed
         random.seed(seed_args.seed)
         torch.manual_seed(seed_args.seed)
         torch.cuda.manual_seed(seed_args.seed)
@@ -87,7 +91,6 @@ def main():
                 )
                 print(f"Set sparsity of {n} to {m.sparsity}")
     model = utils.set_gpu(model)
-
 
     # Get dataloader.
     data_loader = getattr(data, args.set)()
@@ -166,8 +169,8 @@ def main():
         torch.cuda.empty_cache()
         return
 
-    # Iterate through all tasks.
-    for idx in range(seed_args.num_tasks, args.num_tasks):
+    # Iterate through all new tasks that were not used for training masks.
+    for idx in range(args.num_seed_tasks_learned, args.num_tasks):
         print(f"Task {args.set}: {idx}")
 
         # Tell the model which task it is trying to solve -- in Scenario NNs this is ignored.
@@ -185,22 +188,13 @@ def main():
             p.grad = None
 
         # Make a list of the parameters relavent to this task.
-        params = [p for _, p in model.named_parameters() if p.requires_grad]
-#        for n, p in model.named_parameters():
-#            if not p.requires_grad:
-#                continue
-#            split = n.split(".")
-#            if split[-2] in ["scores", "s", "t"] and (
-#                int(split[-1]) == idx or (args.trainer and "nns" in args.trainer)
-#            ):
-#                params.append(p)
-#            # train all weights if train_weight_tasks is -1, or num_tasks_learned < train_weight_tasks
-#            if (
-#                args.train_weight_tasks < 0
-#                or num_tasks_learned < args.train_weight_tasks
-#            ):
-#                if split[-1] == "weight" or split[-1] == "bias":
-#                    params.append(p)
+        params = []
+        for n, p in model.named_parameters():
+            if args.conv_type == 'BasisMultitaskMaskConv':
+                if p.requires_grad and int(n.split('.')[-1]) == idx:
+                    params.append(p)
+            elif p.requires_grad:
+                params.append(p)
 
         # train_weight_tasks specifies the number of tasks that the weights are trained for.
         # e.g. in SupSup, train_weight_tasks = 0. in BatchE, train_weight_tasks = 1.
@@ -283,8 +277,6 @@ def main():
             model.apply(lambda m: setattr(m, "num_tasks_learned", num_tasks_learned))
 
 
-
-
     # Run inference on all the tasks.
     avg_acc = 0.0
     avg_correct = 0.0
@@ -357,7 +349,7 @@ def main():
                 "curr_acc1": curr_acc1,
                 "args": args,
             },
-            run_base_dir / "final.pt",
+            run_base_dir / "basis_final.pt",
         )
 
 

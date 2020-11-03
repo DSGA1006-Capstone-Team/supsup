@@ -109,7 +109,7 @@ class BasisMaskConv(nn.Conv2d):
         self.scores = nn.ParameterList(
             [
                 nn.Parameter(module_util.mask_init(self))
-                for _ in range(pargs.num_tasks)
+                for _ in range(pargs.num_seed_tasks_learned)
             ]
         )
         for s in self.scores:
@@ -118,8 +118,7 @@ class BasisMaskConv(nn.Conv2d):
         if pargs.train_weight_tasks == 0:
             self.weight.requires_grad = False
 
-        self.basis_alpha = nn.Parameter(torch.ones(pargs.num_tasks)/pargs.num_tasks)
-
+        self.basis_alpha = nn.Parameter(torch.ones(pargs.num_seed_tasks_learned)/pargs.num_seed_tasks_learned)
         self.sparsity = pargs.sparsity
 
     def forward(self, x):
@@ -128,12 +127,17 @@ class BasisMaskConv(nn.Conv2d):
                 self.scores[pargs.use_single_mask].abs(), self.sparsity
             )
             w = self.weight * subnet
+        elif self.task < pargs.num_seed_tasks_learned:
+            subnet = module_util.GetSubnet.apply(
+                self.scores[self.task].abs(), self.sparsity
+            )
+            w = self.weight * subnet
         else:
             subnet = module_util.GetSubnet.apply(
                 self.scores[0].abs(), self.sparsity
             )
             w = self.weight * subnet * self.basis_alpha[0]
-            for i in range(1, pargs.num_tasks):
+            for i in range(1, pargs.num_seed_tasks_learned):
                 subnet = module_util.GetSubnet.apply(
                     self.scores[i].abs(), self.sparsity
                 )
@@ -146,6 +150,63 @@ class BasisMaskConv(nn.Conv2d):
 
     def __repr__(self):
         return f"BasisMaskConv({self.in_channels}, {self.out_channels})"
+
+
+class BasisMultitaskMaskConv(nn.Conv2d):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.scores = nn.ParameterList(
+            [
+                nn.Parameter(module_util.mask_init(self))
+                for _ in range(pargs.num_seed_tasks_learned)
+            ]
+        )
+        for s in self.scores:
+            s.requires_grad = False
+        self.scores.requires_grad = False
+        if pargs.train_weight_tasks == 0:
+            self.weight.requires_grad = False
+
+        self.basis_alphas = nn.ParameterList(
+            [
+                nn.Parameter(torch.ones(pargs.num_seed_tasks_learned)/pargs.num_seed_tasks_learned)
+                for _ in range(pargs.num_tasks)
+            ]
+        )
+        self.sparsity = pargs.sparsity
+
+    def forward(self, x):
+        if pargs.use_single_mask:
+            subnet = module_util.GetSubnet.apply(
+                self.scores[pargs.use_single_mask].abs(), self.sparsity
+            )
+            w = self.weight * subnet
+        elif self.task < pargs.num_seed_tasks_learned:
+            subnet = module_util.GetSubnet.apply(
+                self.scores[self.task].abs(), self.sparsity
+            )
+            w = self.weight * subnet
+        else:
+            subnet = module_util.GetSubnet.apply(
+                self.scores[0].abs(), self.sparsity
+            )
+            task_alpha = self.basis_alphas[self.task]
+            w = self.weight * subnet * task_alpha[0]
+            for i in range(1, pargs.num_seed_tasks_learned):
+                subnet = module_util.GetSubnet.apply(
+                    self.scores[i].abs(), self.sparsity
+                )
+                w += self.weight * subnet * task_alpha[i]
+
+        x = F.conv2d(
+            x, w, self.bias, self.stride, self.padding, self.dilation, self.groups
+        )
+        return x
+
+    def __repr__(self):
+        return f"BasisMultitaskMaskConv({self.in_channels}, {self.out_channels})"
 
 
 # Init from What's Hidden with masking from Mallya et al. (Piggyback)
