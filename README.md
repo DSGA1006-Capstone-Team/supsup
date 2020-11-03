@@ -161,3 +161,4 @@ python ./experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --s
 Starting log for 11/3/2020 due to failing jobs:
 
 - 6:50 PM ET: **Submitted batch job 13511043:** python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 3 --gpu-sets="0"
+- 6:57 PM ET: **Submitted batch job 13512046** num-masks 5
