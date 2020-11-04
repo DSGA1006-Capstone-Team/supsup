@@ -1,8 +1,0 @@
-Date Finished,Name,Task,Num Tasks Learned,Current Val,Adapt Val
-11-03-20_23:34:14, id=supsup~seed=0~sparsity=8~try=0~task=RandSplitCIFAR100_0~numtaskslearned=7~tasknumber=0, RandSplitCIFAR100_0, 7, 0.8480, 0.8440
-11-03-20_23:34:14, id=supsup~seed=0~sparsity=8~try=0~task=RandSplitCIFAR100_1~numtaskslearned=7~tasknumber=1, RandSplitCIFAR100_1, 7, 0.7900, 0.7980
-11-03-20_23:34:15, id=supsup~seed=0~sparsity=8~try=0~task=RandSplitCIFAR100_2~numtaskslearned=7~tasknumber=2, RandSplitCIFAR100_2, 7, 0.8980, 0.8960
-11-03-20_23:34:15, id=supsup~seed=0~sparsity=8~try=0~task=RandSplitCIFAR100_3~numtaskslearned=7~tasknumber=3, RandSplitCIFAR100_3, 7, 0.9220, 0.9220
-11-03-20_23:34:15, id=supsup~seed=0~sparsity=8~try=0~task=RandSplitCIFAR100_4~numtaskslearned=7~tasknumber=4, RandSplitCIFAR100_4, 7, 0.8560, 0.8580
-11-03-20_23:34:16, id=supsup~seed=0~sparsity=8~try=0~task=RandSplitCIFAR100_5~numtaskslearned=7~tasknumber=5, RandSplitCIFAR100_5, 7, 0.9340, 0.9320
-11-03-20_23:34:16, id=supsup~seed=0~sparsity=8~try=0~task=RandSplitCIFAR100_6~numtaskslearned=7~tasknumber=6, RandSplitCIFAR100_6, 7, 0.8740, 0.8840
