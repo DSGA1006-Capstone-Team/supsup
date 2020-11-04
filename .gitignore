@@ -5,3 +5,6 @@
 *.csv
 *.txt
 runs/
+env/
+logs/
+
