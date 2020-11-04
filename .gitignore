@@ -1,6 +1,7 @@
 *.pyc
 *.swp
 *.swo
-
-
+runs/*
+*.pt
+*.txt
 .DS_Store
