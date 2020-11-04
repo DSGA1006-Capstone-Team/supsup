@@ -168,4 +168,4 @@ Starting log for 11/3/2020 due to failing jobs:
 - 7:00 PM ET: **Submitted batch job 13512057** num-masks 15
 
 
-![Prince Log](/images/Screen Shot 2020-11-03 at 7.18.24 PM.png)
+![Prince Log](/images/'Screen Shot 2020-11-03 at 7.18.24 PM.png')
