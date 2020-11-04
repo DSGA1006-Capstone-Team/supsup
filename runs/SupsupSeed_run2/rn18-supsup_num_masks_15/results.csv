@@ -1,0 +1,12 @@
+Date Finished,Name,Current Val,Best Val,Save Directory
+11-03-20_19:26:05, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=0, 0.7340, 0.7540, runs/SupsupSeed_run2/rn18-supsup_num_masks_15/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_19:34:58, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=1, 0.7540, 0.7660, runs/SupsupSeed_run2/rn18-supsup_num_masks_15/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_19:43:51, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=2, 0.8600, 0.8780, runs/SupsupSeed_run2/rn18-supsup_num_masks_15/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_19:52:44, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=3, 0.8260, 0.8420, runs/SupsupSeed_run2/rn18-supsup_num_masks_15/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_20:01:38, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=4, 0.8040, 0.8260, runs/SupsupSeed_run2/rn18-supsup_num_masks_15/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_20:10:29, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=5, 0.8460, 0.8680, runs/SupsupSeed_run2/rn18-supsup_num_masks_15/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_20:19:24, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=6, 0.8280, 0.8620, runs/SupsupSeed_run2/rn18-supsup_num_masks_15/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_20:28:16, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=7, 0.7240, 0.7240, runs/SupsupSeed_run2/rn18-supsup_num_masks_15/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_20:37:09, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=8, 0.7620, 0.7860, runs/SupsupSeed_run2/rn18-supsup_num_masks_15/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_20:46:02, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=9, 0.7320, 0.7640, runs/SupsupSeed_run2/rn18-supsup_num_masks_15/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_20:54:55, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=10, 0.8500, 0.8540, runs/SupsupSeed_run2/rn18-supsup_num_masks_15/id=supsup~seed=0~sparsity=1~try=0

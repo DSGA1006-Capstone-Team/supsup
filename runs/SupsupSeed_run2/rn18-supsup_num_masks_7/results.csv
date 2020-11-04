@@ -1,0 +1,12 @@
+Date Finished,Name,Current Val,Best Val,Save Directory
+11-03-20_19:19:56, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=0, 0.7200, 0.7280, runs/SupsupSeed_run2/rn18-supsup_num_masks_7/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_19:29:05, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=1, 0.7340, 0.7720, runs/SupsupSeed_run2/rn18-supsup_num_masks_7/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_19:38:12, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=2, 0.8380, 0.8580, runs/SupsupSeed_run2/rn18-supsup_num_masks_7/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_19:47:19, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=3, 0.8080, 0.8220, runs/SupsupSeed_run2/rn18-supsup_num_masks_7/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_19:56:25, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=4, 0.7860, 0.8360, runs/SupsupSeed_run2/rn18-supsup_num_masks_7/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_20:05:34, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=5, 0.8520, 0.8780, runs/SupsupSeed_run2/rn18-supsup_num_masks_7/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_20:14:40, id=supsup~seed=0~sparsity=1~try=0~set=RandSplitCIFAR100~task=6, 0.8220, 0.8440, runs/SupsupSeed_run2/rn18-supsup_num_masks_7/id=supsup~seed=0~sparsity=1~try=0
+11-03-20_20:24:13, id=supsup~seed=0~sparsity=2~try=0~set=RandSplitCIFAR100~task=0, 0.8040, 0.8180, runs/SupsupSeed_run2/rn18-supsup_num_masks_7/id=supsup~seed=0~sparsity=2~try=0
+11-03-20_20:33:33, id=supsup~seed=0~sparsity=2~try=0~set=RandSplitCIFAR100~task=1, 0.8020, 0.8020, runs/SupsupSeed_run2/rn18-supsup_num_masks_7/id=supsup~seed=0~sparsity=2~try=0
+11-03-20_20:42:54, id=supsup~seed=0~sparsity=2~try=0~set=RandSplitCIFAR100~task=2, 0.8700, 0.8840, runs/SupsupSeed_run2/rn18-supsup_num_masks_7/id=supsup~seed=0~sparsity=2~try=0
+11-03-20_20:52:14, id=supsup~seed=0~sparsity=2~try=0~set=RandSplitCIFAR100~task=3, 0.8780, 0.8960, runs/SupsupSeed_run2/rn18-supsup_num_masks_7/id=supsup~seed=0~sparsity=2~try=0
