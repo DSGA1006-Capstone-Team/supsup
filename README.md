@@ -151,7 +151,7 @@ conda install pytorch==1.5.1 torchvision==0.6.1 -c pytorch
 The experiment and associated config files for the seed SupSup models are in `experiments/SupsupSeed/splitcifar100/configs/`. To run the driver for a 3 basis mask seed model run the following:
 
 ```
-python ./experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 3 --gpu-sets="0"
+python ./experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 3 --gpu-sets="0" --logdir-prefix amber_test
 ```
 
 

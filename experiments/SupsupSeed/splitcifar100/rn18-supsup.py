@@ -43,6 +43,7 @@ def main():
     parser.add_argument('--data', default='/scratch/db404/data', type=str)
     parser.add_argument('--num-masks', default=20, type=int)
     parser.add_argument('--epochs', default=100, type=int)
+    parser.add_argument('--logdir-prefix', type=str, required=True)
     args = parser.parse_args()
 
     gpus = args.gpu_sets
@@ -50,7 +51,7 @@ def main():
     data = args.data
 
     config = "experiments/SupsupSeed/splitcifar100/configs/rn18-supsup{}.yaml".format("" if args.num_masks == 20 else "_{}".format(str(args.num_masks)))
-    log_dir = "/scratch/{user}/runs/SupsupSeed/rn18-supsup_num_masks_{num_masks}".format(user=os.environ.get("USER"), num_masks=str(args.num_masks))
+    log_dir = "/scratch/{user}/runs/{logdir_prefix}/SupsupSeed/rn18-supsup_num_masks_{num_masks}".format(user=os.environ.get("USER"), num_masks=str(args.num_masks), logdir_prefix=args.logdir_prefix)
     experiments = []
     sparsities = [1, 2, 4, 8, 16, 32] # Higher sparsity values mean more dense subnetworks
 
