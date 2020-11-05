@@ -3,3 +3,8 @@
 *.swo
 *.pt
 runs/
+*.pt
+*.txt
+env/
+data/
+.DS_Store

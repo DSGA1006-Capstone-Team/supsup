@@ -114,6 +114,8 @@ source env/bin/activate
 pip install -r requirements.txt
 
 sbatch supsup_slurm.s
+sbatch supsup_slurm_v2.s
+sbatch supsup_slurm_v3.s
 squeue -u $USER
 git add slurm_lab0_<JOB_ID>.out
 git commit -m "adding log file"
@@ -143,3 +145,26 @@ conda install pytorch==1.5.1 torchvision==0.6.1 -c pytorch
 - https://sites.google.com/a/nyu.edu/nyu-hpc/systems/prince
 - https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/batch/slurm-best-practices#TOC-Is-my-job-scalable-How-efficiently-I-use-multiple-CPUs-GPUs
 - https://docs.computecanada.ca/wiki/Using_GPUs_with_Slurm
+
+## Running jobs for Seed Masks:
+
+The experiment and associated config files for the seed SupSup models are in `experiments/SupsupSeed/splitcifar100/configs/`. To run the driver for a 3 basis mask seed model run the following:
+
+```
+python ./experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 3 --gpu-sets="0"
+```
+
+
+## AT Prince Runs Log
+
+Starting log for 11/3/2020 due to failing jobs:
+
+- 6:50 PM ET: **Submitted batch job 13511043:** python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 3 --gpu-sets="0"
+- 6:57 PM ET: **Submitted batch job 13512046** num-masks 5
+- 6:58 PM ET: **Submitted batch job 13512051** num-masks 7
+- 6:59 PM ET: **Submitted batch job 13512053** num-masks 10
+- 7:00 PM ET: **Submitted batch job 13512055** num-masks 12
+- 7:00 PM ET: **Submitted batch job 13512057** num-masks 15
+
+
+![Prince Log](/images/prince_0.png)
