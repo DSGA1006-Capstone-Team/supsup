@@ -18,7 +18,7 @@ module purge
 module load cuda/10.1.105
 
 # Move into the directory that contains our code
-SRCDIR=$pwd
+SRCDIR=$(pwd)
 
 # python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 3 --gpu-sets="0"
 # python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 5 --gpu-sets="0"
