@@ -18,6 +18,7 @@ module purge
 
 # Move into the directory that contains our code
 SRCDIR=$HOME/supsup
+cd $SRCDIR
 
 # Activate the conda environment
 # source ~/.bashrc

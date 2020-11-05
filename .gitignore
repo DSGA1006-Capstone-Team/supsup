@@ -4,6 +4,7 @@
 *.pt
 *.csv
 *.txt
+*.out.
 runs/
 env/
 logs/

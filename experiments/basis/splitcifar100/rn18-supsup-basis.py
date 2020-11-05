@@ -10,7 +10,7 @@ sys.path.append(os.path.abspath("."))
 
 # note: new algorithm code
 def kwargs_to_cmd(kwargs):
-    cmd = "python basis.py "
+    cmd = "/home/db4045/.conda/envs/capstone/bin/python basis.py "
     for flag, val in kwargs.items():
         cmd += f"--{flag}={val} "
 
@@ -41,7 +41,7 @@ def main():
     parser.add_argument('--gpu-sets', default=0, type=lambda x: [a for a in x.split("|") if a])
     parser.add_argument('--seeds', default=1, type=int)
     parser.add_argument('--data', default='~/data', type=str)
-    parser.add_argument('--seed_model_dir', default='~/seed_models/id\=supsup~seed\={seed}~sparsity\={sparsity}~try\=0/', type=str)
+    parser.add_argument('--seed_model_dir', default='~/seed_models_{num_masks}/id\=supsup~seed\={seed}~sparsity\={sparsity}~try\=0/', type=str)
     parser.add_argument('--num-masks', default=20, type=int)
     args = parser.parse_args()
 
@@ -50,7 +50,7 @@ def main():
     data = args.data
 
     config = "experiments/basis/splitcifar100/configs/rn18-supsup-basis-multitask.yaml"
-    log_dir = "runs/SupsupSeedBasis/rn18-supsup_basis_num_masks_{}".format(str(args.num_masks))
+    log_dir = "/scratch/db4045/runs/SupsupSeedBasis/rn18-supsup_basis_num_masks_{}".format(str(args.num_masks))
     experiments = []
     sparsities = [1, 2, 4, 8, 16, 32] # Higher sparsity values mean more dense subnetworks
 
@@ -62,7 +62,7 @@ def main():
             "log-dir": log_dir,
             "epochs": 250,
             "data": data,
-            "seed-model": "{}/final.pt".format(args.seed_model_dir.format(sparsity=str(sparsity), seed=str(seed)))
+            "seed-model": "{}/final.pt".format(args.seed_model_dir.format(sparsity=str(sparsity), seed=str(seed), num_masks=str(args.num_masks)))
         }
 
         experiments.append(kwargs)
