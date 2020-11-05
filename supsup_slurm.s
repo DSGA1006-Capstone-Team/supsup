@@ -25,4 +25,4 @@ SRCDIR=$(pwd)
 # python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 7 --gpu-sets="0"
 # python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 10 --gpu-sets="0"
 # python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 12 --gpu-sets="0"
-/scratch/db4045/capstone_env/bin/python $SRCDIR/experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="/scratch/db4045/data" --seeds 1 --num-masks 15 --gpu-sets="0"
+/scratch/db4045/capstone_env/bin/python $SRCDIR/experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="/scratch/db4045/data" --seeds 1 --num-masks 15 --gpu-sets="0" --logdir-prefix="dhrupad_test"
