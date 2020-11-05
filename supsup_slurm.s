@@ -6,7 +6,7 @@
 #SBATCH --mem=30GB
 #SBATCH --job-name=dsga1006-supsup
 #SBATCH --mail-type=END
-#SBATCH --mail-user=at2507@nyu.edu
+#SBATCH --mail-user=$USER@nyu.edu
 #SBATCH --gres=gpu:1
 #SBATCH --output=slurm_supsup_%j.out
 
@@ -18,16 +18,16 @@ module purge
 module load cuda/10.1.105
 
 # Move into the directory that contains our code
-SRCDIR=$HOME/supsup
+SRCDIR=$pwd
 
 # Activate the conda environment
 # source ~/.bashrc
 # conda activate dsga3001
-source env/bin/activate
+# source env/bin/activate
 
 # Execute the script
-conda install pytorch==1.5.1 torchvision==0.6.1 -c pytorch
-pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+# conda install pytorch==1.5.1 torchvision==0.6.1 -c pytorch
+# pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pytorch.org/whl/torch_stable.html
 # python ./experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data="./data" --seeds 1
 
 # python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data=/path/to/dataset/parent --seeds 1
@@ -39,4 +39,4 @@ pip install torch==1.5.0+cu101 torchvision==0.6.0+cu101 -f https://download.pyto
 # python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 7 --gpu-sets="0"
 # python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 10 --gpu-sets="0"
 # python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 12 --gpu-sets="0"
-python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="./data" --seeds 1 --num-masks 15 --gpu-sets="0"
+/scratch/db4045/capstone_env/bin/python experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="/scratch/db4045/data" --seeds 1 --num-masks 15 --gpu-sets="0"
