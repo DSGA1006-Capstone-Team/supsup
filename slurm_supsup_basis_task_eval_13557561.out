@@ -1,0 +1,459 @@
+=> Reading YAML config from /home/db4045/git/supsup/experiments/seeds/splitcifar100/configs/rn18-supsup_5.yaml
+=> Saving data in /scratch/db4045/runs/dhrupad_seed_epoch10_single/SupsupSeed/dhrupad_seed_mask~try=0
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+Set sparsity of conv1 to 0.34074074074074073
+Set sparsity of layer1.0.conv1 to 0.08888888888888889
+Set sparsity of layer1.0.conv2 to 0.08888888888888889
+Set sparsity of layer1.1.conv1 to 0.08888888888888889
+Set sparsity of layer1.1.conv2 to 0.08888888888888889
+Set sparsity of layer2.0.conv1 to 0.06666666666666667
+Set sparsity of layer2.0.conv2 to 0.044444444444444446
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.044444444444444446
+Set sparsity of layer2.1.conv2 to 0.044444444444444446
+Set sparsity of layer3.0.conv1 to 0.03333333333333333
+Set sparsity of layer3.0.conv2 to 0.022222222222222223
+Set sparsity of layer3.0.shortcut.0 to 0.3
+Set sparsity of layer3.1.conv1 to 0.022222222222222223
+Set sparsity of layer3.1.conv2 to 0.022222222222222223
+Set sparsity of layer4.0.conv1 to 0.016666666666666666
+Set sparsity of layer4.0.conv2 to 0.011111111111111112
+Set sparsity of layer4.0.shortcut.0 to 0.15
+Set sparsity of layer4.1.conv1 to 0.011111111111111112
+Set sparsity of layer4.1.conv2 to 0.011111111111111112
+Set sparsity of linear to 0.5
+=> Using trainer <module 'trainers.default' from '/home/db4045/git/supsup/trainers/default.py'>
+Task RandSplitCIFAR100: 0
+Train Epoch: 1 [0/2500 (0%)]	Loss: 1.667484
+Train Epoch: 1 [1280/2500 (50%)]	Loss: 1.313486
+
+Test set: Average loss: 1.1702, Accuracy: (0.5380)
+
+Train Epoch: 2 [0/2500 (0%)]	Loss: 1.172894
+Train Epoch: 2 [1280/2500 (50%)]	Loss: 1.181469
+
+Test set: Average loss: 1.0225, Accuracy: (0.5960)
+
+Train Epoch: 3 [0/2500 (0%)]	Loss: 1.159241
+Train Epoch: 3 [1280/2500 (50%)]	Loss: 1.039123
+
+Test set: Average loss: 1.0551, Accuracy: (0.5780)
+
+Train Epoch: 4 [0/2500 (0%)]	Loss: 1.131673
+Train Epoch: 4 [1280/2500 (50%)]	Loss: 0.973971
+
+Test set: Average loss: 1.0181, Accuracy: (0.6060)
+
+Train Epoch: 5 [0/2500 (0%)]	Loss: 1.071137
+Train Epoch: 5 [1280/2500 (50%)]	Loss: 0.909994
+
+Test set: Average loss: 0.9698, Accuracy: (0.6400)
+
+Train Epoch: 6 [0/2500 (0%)]	Loss: 0.984651
+Train Epoch: 6 [1280/2500 (50%)]	Loss: 0.971715
+
+Test set: Average loss: 0.9004, Accuracy: (0.6660)
+
+Train Epoch: 7 [0/2500 (0%)]	Loss: 0.845551
+Train Epoch: 7 [1280/2500 (50%)]	Loss: 0.838620
+
+Test set: Average loss: 0.9118, Accuracy: (0.6420)
+
+Train Epoch: 8 [0/2500 (0%)]	Loss: 0.777024
+Train Epoch: 8 [1280/2500 (50%)]	Loss: 0.740105
+
+Test set: Average loss: 0.8622, Accuracy: (0.6640)
+
+Train Epoch: 9 [0/2500 (0%)]	Loss: 0.672502
+Train Epoch: 9 [1280/2500 (50%)]	Loss: 0.732554
+
+Test set: Average loss: 0.8447, Accuracy: (0.6520)
+
+Train Epoch: 10 [0/2500 (0%)]	Loss: 0.663256
+Train Epoch: 10 [1280/2500 (50%)]	Loss: 0.611512
+
+Test set: Average loss: 0.8429, Accuracy: (0.6740)
+
+Task RandSplitCIFAR100: 1
+Train Epoch: 1 [0/2500 (0%)]	Loss: 1.953344
+Train Epoch: 1 [1280/2500 (50%)]	Loss: 1.236111
+
+Test set: Average loss: 1.1463, Accuracy: (0.5180)
+
+Train Epoch: 2 [0/2500 (0%)]	Loss: 1.146221
+Train Epoch: 2 [1280/2500 (50%)]	Loss: 1.082288
+
+Test set: Average loss: 1.1129, Accuracy: (0.5720)
+
+Train Epoch: 3 [0/2500 (0%)]	Loss: 1.110758
+Train Epoch: 3 [1280/2500 (50%)]	Loss: 0.913479
+
+Test set: Average loss: 1.0470, Accuracy: (0.6140)
+
+Train Epoch: 4 [0/2500 (0%)]	Loss: 0.945778
+Train Epoch: 4 [1280/2500 (50%)]	Loss: 0.981177
+
+Test set: Average loss: 0.9505, Accuracy: (0.6400)
+
+Train Epoch: 5 [0/2500 (0%)]	Loss: 0.839896
+Train Epoch: 5 [1280/2500 (50%)]	Loss: 0.805475
+
+Test set: Average loss: 0.8147, Accuracy: (0.6920)
+
+Train Epoch: 6 [0/2500 (0%)]	Loss: 0.791554
+Train Epoch: 6 [1280/2500 (50%)]	Loss: 0.814311
+
+Test set: Average loss: 0.8654, Accuracy: (0.6500)
+
+Train Epoch: 7 [0/2500 (0%)]	Loss: 0.719855
+Train Epoch: 7 [1280/2500 (50%)]	Loss: 0.695850
+
+Test set: Average loss: 0.8548, Accuracy: (0.6800)
+
+Train Epoch: 8 [0/2500 (0%)]	Loss: 0.803844
+Train Epoch: 8 [1280/2500 (50%)]	Loss: 0.728086
+
+Test set: Average loss: 0.8282, Accuracy: (0.6760)
+
+Train Epoch: 9 [0/2500 (0%)]	Loss: 0.650025
+Train Epoch: 9 [1280/2500 (50%)]	Loss: 0.583760
+
+Test set: Average loss: 0.7681, Accuracy: (0.7040)
+
+Train Epoch: 10 [0/2500 (0%)]	Loss: 0.705782
+Train Epoch: 10 [1280/2500 (50%)]	Loss: 0.680253
+
+Test set: Average loss: 0.7550, Accuracy: (0.6920)
+
+Task RandSplitCIFAR100: 2
+Train Epoch: 1 [0/2500 (0%)]	Loss: 1.884764
+Train Epoch: 1 [1280/2500 (50%)]	Loss: 1.261006
+
+Test set: Average loss: 0.8161, Accuracy: (0.6560)
+
+Train Epoch: 2 [0/2500 (0%)]	Loss: 0.803459
+Train Epoch: 2 [1280/2500 (50%)]	Loss: 0.803663
+
+Test set: Average loss: 0.7035, Accuracy: (0.7320)
+
+Train Epoch: 3 [0/2500 (0%)]	Loss: 0.556109
+Train Epoch: 3 [1280/2500 (50%)]	Loss: 0.694370
+
+Test set: Average loss: 0.6557, Accuracy: (0.7720)
+
+Train Epoch: 4 [0/2500 (0%)]	Loss: 0.964103
+Train Epoch: 4 [1280/2500 (50%)]	Loss: 0.650562
+
+Test set: Average loss: 0.6257, Accuracy: (0.7760)
+
+Train Epoch: 5 [0/2500 (0%)]	Loss: 0.663557
+Train Epoch: 5 [1280/2500 (50%)]	Loss: 0.697479
+
+Test set: Average loss: 0.5854, Accuracy: (0.7660)
+
+Train Epoch: 6 [0/2500 (0%)]	Loss: 0.790798
+Train Epoch: 6 [1280/2500 (50%)]	Loss: 0.675485
+
+Test set: Average loss: 0.5196, Accuracy: (0.8160)
+
+Train Epoch: 7 [0/2500 (0%)]	Loss: 0.494425
+Train Epoch: 7 [1280/2500 (50%)]	Loss: 0.447045
+
+Test set: Average loss: 0.5406, Accuracy: (0.8040)
+
+Train Epoch: 8 [0/2500 (0%)]	Loss: 0.512310
+Train Epoch: 8 [1280/2500 (50%)]	Loss: 0.640741
+
+Test set: Average loss: 0.5126, Accuracy: (0.8020)
+
+Train Epoch: 9 [0/2500 (0%)]	Loss: 0.393242
+Train Epoch: 9 [1280/2500 (50%)]	Loss: 0.472546
+
+Test set: Average loss: 0.4554, Accuracy: (0.8180)
+
+Train Epoch: 10 [0/2500 (0%)]	Loss: 0.468865
+Train Epoch: 10 [1280/2500 (50%)]	Loss: 0.424089
+
+Test set: Average loss: 0.4591, Accuracy: (0.8380)
+
+Task RandSplitCIFAR100: 3
+Train Epoch: 1 [0/2500 (0%)]	Loss: 2.015767
+Train Epoch: 1 [1280/2500 (50%)]	Loss: 1.273170
+
+Test set: Average loss: 0.9280, Accuracy: (0.6440)
+
+Train Epoch: 2 [0/2500 (0%)]	Loss: 0.978059
+Train Epoch: 2 [1280/2500 (50%)]	Loss: 0.972161
+
+Test set: Average loss: 0.8830, Accuracy: (0.6600)
+
+Train Epoch: 3 [0/2500 (0%)]	Loss: 0.912312
+Train Epoch: 3 [1280/2500 (50%)]	Loss: 0.895662
+
+Test set: Average loss: 0.7371, Accuracy: (0.7300)
+
+Train Epoch: 4 [0/2500 (0%)]	Loss: 0.745607
+Train Epoch: 4 [1280/2500 (50%)]	Loss: 0.645372
+
+Test set: Average loss: 0.7848, Accuracy: (0.7100)
+
+Train Epoch: 5 [0/2500 (0%)]	Loss: 0.818055
+Train Epoch: 5 [1280/2500 (50%)]	Loss: 0.588967
+
+Test set: Average loss: 0.7287, Accuracy: (0.7260)
+
+Train Epoch: 6 [0/2500 (0%)]	Loss: 0.703854
+Train Epoch: 6 [1280/2500 (50%)]	Loss: 0.644226
+
+Test set: Average loss: 0.6497, Accuracy: (0.7480)
+
+Train Epoch: 7 [0/2500 (0%)]	Loss: 0.544702
+Train Epoch: 7 [1280/2500 (50%)]	Loss: 0.628280
+
+Test set: Average loss: 0.6345, Accuracy: (0.7520)
+
+Train Epoch: 8 [0/2500 (0%)]	Loss: 0.509175
+Train Epoch: 8 [1280/2500 (50%)]	Loss: 0.618934
+
+Test set: Average loss: 0.6328, Accuracy: (0.7420)
+
+Train Epoch: 9 [0/2500 (0%)]	Loss: 0.670398
+Train Epoch: 9 [1280/2500 (50%)]	Loss: 0.521052
+
+Test set: Average loss: 0.6113, Accuracy: (0.7540)
+
+Train Epoch: 10 [0/2500 (0%)]	Loss: 0.557420
+Train Epoch: 10 [1280/2500 (50%)]	Loss: 0.417029
+
+Test set: Average loss: 0.5822, Accuracy: (0.7580)
+
+Task RandSplitCIFAR100: 4
+Train Epoch: 1 [0/2500 (0%)]	Loss: 1.796986
+Train Epoch: 1 [1280/2500 (50%)]	Loss: 0.925731
+
+Test set: Average loss: 0.8292, Accuracy: (0.6840)
+
+Train Epoch: 2 [0/2500 (0%)]	Loss: 0.755152
+Train Epoch: 2 [1280/2500 (50%)]	Loss: 0.877976
+
+Test set: Average loss: 0.7287, Accuracy: (0.7360)
+
+Train Epoch: 3 [0/2500 (0%)]	Loss: 0.715823
+Train Epoch: 3 [1280/2500 (50%)]	Loss: 0.725804
+
+Test set: Average loss: 0.6563, Accuracy: (0.7460)
+
+Train Epoch: 4 [0/2500 (0%)]	Loss: 0.641916
+Train Epoch: 4 [1280/2500 (50%)]	Loss: 0.622896
+
+Test set: Average loss: 0.6292, Accuracy: (0.7720)
+
+Train Epoch: 5 [0/2500 (0%)]	Loss: 0.631058
+Train Epoch: 5 [1280/2500 (50%)]	Loss: 0.674914
+
+Test set: Average loss: 0.6008, Accuracy: (0.7820)
+
+Train Epoch: 6 [0/2500 (0%)]	Loss: 0.659976
+Train Epoch: 6 [1280/2500 (50%)]	Loss: 0.596700
+
+Test set: Average loss: 0.5961, Accuracy: (0.7840)
+
+Train Epoch: 7 [0/2500 (0%)]	Loss: 0.539465
+Train Epoch: 7 [1280/2500 (50%)]	Loss: 0.519950
+
+Test set: Average loss: 0.5615, Accuracy: (0.7960)
+
+Train Epoch: 8 [0/2500 (0%)]	Loss: 0.491956
+Train Epoch: 8 [1280/2500 (50%)]	Loss: 0.512369
+
+Test set: Average loss: 0.5547, Accuracy: (0.7980)
+
+Train Epoch: 9 [0/2500 (0%)]	Loss: 0.481014
+Train Epoch: 9 [1280/2500 (50%)]	Loss: 0.439183
+
+Test set: Average loss: 0.5498, Accuracy: (0.8060)
+
+Train Epoch: 10 [0/2500 (0%)]	Loss: 0.434463
+Train Epoch: 10 [1280/2500 (50%)]	Loss: 0.400281
+
+Test set: Average loss: 0.5590, Accuracy: (0.7920)
+
+Testing 0: RandSplitCIFAR100 (0)
+
+Test set: Accuracy: (0.6620%)
+
+Testing 1: RandSplitCIFAR100 (1)
+
+Test set: Accuracy: (0.6980%)
+
+Testing 2: RandSplitCIFAR100 (2)
+
+Test set: Accuracy: (0.8220%)
+
+Testing 3: RandSplitCIFAR100 (3)
+
+Test set: Accuracy: (0.7540%)
+
+Testing 4: RandSplitCIFAR100 (4)
+
+Test set: Accuracy: (0.7980%)
+
+=> Reading YAML config from /home/db4045/git/supsup/experiments/basis/splitcifar100/configs/rn18-supsup-basis-multitask.yaml
+/scratch/db4045/runs/dhrupad_seed_epoch10_single/SupsupSeed/dhrupad_seed_mask~try=0/final.pt
+=> Loading seed model from '/scratch/db4045/runs/dhrupad_seed_epoch10_single/SupsupSeed/dhrupad_seed_mask~try=0/final.pt'
+=> Saving data in REPLACE/default~try=4
+=> Loaded seed model parameters from '/scratch/db4045/runs/dhrupad_seed_epoch10_single/SupsupSeed/dhrupad_seed_mask~try=0/final.pt' (num tasks: 5) (epochs: 10)
+Set sparsity of conv1 to 0.34074074074074073
+Set sparsity of layer1.0.conv1 to 0.08888888888888889
+Set sparsity of layer1.0.conv2 to 0.08888888888888889
+Set sparsity of layer1.1.conv1 to 0.08888888888888889
+Set sparsity of layer1.1.conv2 to 0.08888888888888889
+Set sparsity of layer2.0.conv1 to 0.06666666666666667
+Set sparsity of layer2.0.conv2 to 0.044444444444444446
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.044444444444444446
+Set sparsity of layer2.1.conv2 to 0.044444444444444446
+Set sparsity of layer3.0.conv1 to 0.03333333333333333
+Set sparsity of layer3.0.conv2 to 0.022222222222222223
+Set sparsity of layer3.0.shortcut.0 to 0.3
+Set sparsity of layer3.1.conv1 to 0.022222222222222223
+Set sparsity of layer3.1.conv2 to 0.022222222222222223
+Set sparsity of layer4.0.conv1 to 0.016666666666666666
+Set sparsity of layer4.0.conv2 to 0.011111111111111112
+Set sparsity of layer4.0.shortcut.0 to 0.15
+Set sparsity of layer4.1.conv1 to 0.011111111111111112
+Set sparsity of layer4.1.conv2 to 0.011111111111111112
+Set sparsity of linear to 0.5
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+[60 80 90 68 51]
+[27 18 56 63 74]
+[ 1 61 42 41  4]
+[15 17 40 38  5]
+[91 59  0 34 28]
+[50 11 35 23 52]
+[10 31 66 57 79]
+[85 32 84 14 89]
+[19 29 49 97 98]
+[69 20 94 72 77]
+[25 37 81 46 39]
+[65 58 12 88 70]
+[87 36 21 83  9]
+[96 67 64 47 44]
+=> Using trainer <module 'trainers.default' from '/home/db4045/git/supsup/trainers/default.py'>
+Task RandSplitCIFAR100: 3
+Testing 4: RandSplitCIFAR100 (3)
+
+Test set: Accuracy: (0.7560%)
+
+=> Reading YAML config from /home/db4045/git/supsup/experiments/basis/splitcifar100/configs/rn18-supsup-basis.yaml
+/scratch/db4045/runs/dhrupad_seed_epoch10_single/SupsupSeed/dhrupad_seed_mask~try=0/final.pt
+=> Loading seed model from '/scratch/db4045/runs/dhrupad_seed_epoch10_single/SupsupSeed/dhrupad_seed_mask~try=0/final.pt'
+=> Saving data in REPLACE/default~try=5
+=> Loaded seed model parameters from '/scratch/db4045/runs/dhrupad_seed_epoch10_single/SupsupSeed/dhrupad_seed_mask~try=0/final.pt' (num tasks: 5) (epochs: 10)
+Set sparsity of conv1 to 0.34074074074074073
+Set sparsity of layer1.0.conv1 to 0.08888888888888889
+Set sparsity of layer1.0.conv2 to 0.08888888888888889
+Set sparsity of layer1.1.conv1 to 0.08888888888888889
+Set sparsity of layer1.1.conv2 to 0.08888888888888889
+Set sparsity of layer2.0.conv1 to 0.06666666666666667
+Set sparsity of layer2.0.conv2 to 0.044444444444444446
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.044444444444444446
+Set sparsity of layer2.1.conv2 to 0.044444444444444446
+Set sparsity of layer3.0.conv1 to 0.03333333333333333
+Set sparsity of layer3.0.conv2 to 0.022222222222222223
+Set sparsity of layer3.0.shortcut.0 to 0.3
+Set sparsity of layer3.1.conv1 to 0.022222222222222223
+Set sparsity of layer3.1.conv2 to 0.022222222222222223
+Set sparsity of layer4.0.conv1 to 0.016666666666666666
+Set sparsity of layer4.0.conv2 to 0.011111111111111112
+Set sparsity of layer4.0.shortcut.0 to 0.15
+Set sparsity of layer4.1.conv1 to 0.011111111111111112
+Set sparsity of layer4.1.conv2 to 0.011111111111111112
+Set sparsity of linear to 0.5
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+[48  6 99 82 76]
+=> Using trainer <module 'trainers.default' from '/home/db4045/git/supsup/trainers/default.py'>
+Task RandSplitCIFAR100: 3
+Testing 5: RandSplitCIFAR100 (3)
+
+Test set: Accuracy: (0.7560%)
+
+=> Reading YAML config from /home/db4045/git/supsup/experiments/basis/splitcifar100/configs/rn18-supsup.yaml
+/scratch/db4045/runs/dhrupad_seed_epoch10_single/SupsupSeed/dhrupad_seed_mask~try=0/final.pt
+=> Loading seed model from '/scratch/db4045/runs/dhrupad_seed_epoch10_single/SupsupSeed/dhrupad_seed_mask~try=0/final.pt'
+=> Saving data in REPLACE/default~try=6
+=> Loaded seed model parameters from '/scratch/db4045/runs/dhrupad_seed_epoch10_single/SupsupSeed/dhrupad_seed_mask~try=0/final.pt' (num tasks: 5) (epochs: 10)
+Set sparsity of conv1 to 0.34074074074074073
+Set sparsity of layer1.0.conv1 to 0.08888888888888889
+Set sparsity of layer1.0.conv2 to 0.08888888888888889
+Set sparsity of layer1.1.conv1 to 0.08888888888888889
+Set sparsity of layer1.1.conv2 to 0.08888888888888889
+Set sparsity of layer2.0.conv1 to 0.06666666666666667
+Set sparsity of layer2.0.conv2 to 0.044444444444444446
+Set sparsity of layer2.0.shortcut.0 to 0.5
+Set sparsity of layer2.1.conv1 to 0.044444444444444446
+Set sparsity of layer2.1.conv2 to 0.044444444444444446
+Set sparsity of layer3.0.conv1 to 0.03333333333333333
+Set sparsity of layer3.0.conv2 to 0.022222222222222223
+Set sparsity of layer3.0.shortcut.0 to 0.3
+Set sparsity of layer3.1.conv1 to 0.022222222222222223
+Set sparsity of layer3.1.conv2 to 0.022222222222222223
+Set sparsity of layer4.0.conv1 to 0.016666666666666666
+Set sparsity of layer4.0.conv2 to 0.011111111111111112
+Set sparsity of layer4.0.shortcut.0 to 0.15
+Set sparsity of layer4.1.conv1 to 0.011111111111111112
+Set sparsity of layer4.1.conv2 to 0.011111111111111112
+Set sparsity of linear to 0.5
+Files already downloaded and verified
+Files already downloaded and verified
+[26 86  2 55 75 93 16 73 54 95 53 92 78 13  7 30 22 24 33  8 43 62  3 71
+ 45 48  6 99 82 76 60 80 90 68 51 27 18 56 63 74  1 61 42 41  4 15 17 40
+ 38  5 91 59  0 34 28 50 11 35 23 52 10 31 66 57 79 85 32 84 14 89 19 29
+ 49 97 98 69 20 94 72 77 25 37 81 46 39 65 58 12 88 70 87 36 21 83  9 96
+ 67 64 47 44]
+[26 86  2 55 75]
+[93 16 73 54 95]
+[53 92 78 13  7]
+[30 22 24 33  8]
+[43 62  3 71 45]
+=> Using trainer <module 'trainers.default' from '/home/db4045/git/supsup/trainers/default.py'>
+Task RandSplitCIFAR100: 3
+Testing 6: RandSplitCIFAR100 (3)
+
+Test set: Accuracy: (0.7560%)
+
