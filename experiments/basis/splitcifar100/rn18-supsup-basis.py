@@ -40,9 +40,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--gpu-sets', default=0, type=lambda x: [a for a in x.split("|") if a])
     parser.add_argument('--seeds', default=1, type=int)
-    parser.add_argument('--data', default='~/data', type=str)
-    parser.add_argument('--seed_model_dir', default='~/seed_models_{num_masks}/id\=supsup~seed\={seed}~sparsity\={sparsity}~try\=0/', type=str)
+    parser.add_argument('--data', default='/scratch/db4045/data', type=str)
+    parser.add_argument('--seed_model_dir', default='/scratch/db4045/seed_models_{num_masks}/id\=supsup~seed\={seed}~sparsity\={sparsity}~try\=0/', type=str)
     parser.add_argument('--num-masks', default=20, type=int)
+    parser.add_argument('--logdir-prefix', type=str)
+    parser.add_argument('--epochs', type=int, default=100)
     args = parser.parse_args()
 
     gpus = args.gpu_sets
@@ -50,7 +52,7 @@ def main():
     data = args.data
 
     config = "experiments/basis/splitcifar100/configs/rn18-supsup-basis-multitask.yaml"
-    log_dir = "/scratch/db4045/runs/SupsupSeedBasis/rn18-supsup_basis_num_masks_{}".format(str(args.num_masks))
+    log_dir = "{scratch}/runs/{logdir_prefix}/SupsupSeedBasis/rn18-supsup_basis_num_masks_{num_masks}".format(num_masks=str(args.num_masks), scratch=os.environ.get("SCRATCH"), logdir_prefix=args.logdir_prefix)
     experiments = []
     sparsities = [1, 2, 4, 8, 16, 32] # Higher sparsity values mean more dense subnetworks
 
@@ -60,7 +62,7 @@ def main():
             "config": config,
             "name": f"id=basis-supsup~seed={seed}~sparsity={sparsity}",
             "log-dir": log_dir,
-            "epochs": 250,
+            "epochs": args.epochs,
             "data": data,
             "seed-model": "{}/final.pt".format(args.seed_model_dir.format(sparsity=str(sparsity), seed=str(seed), num_masks=str(args.num_masks)))
         }
