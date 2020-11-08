@@ -10,7 +10,8 @@ sys.path.append(os.path.abspath("."))
 
 # note: new algorithm code
 def kwargs_to_cmd(kwargs):
-    cmd = "/scratch/db4045/capstone_env/bin/python main.py "
+#    cmd = "/scratch/db4045/capstone_env/bin/python main.py "
+    cmd = "/home/db4045/.conda/envs/capstone/bin/python main.py "
     for flag, val in kwargs.items():
         cmd += f"--{flag}={val} "
 
