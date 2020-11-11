@@ -70,13 +70,8 @@ def main():
 
     # Get model with correct architecture and load in state dict.
     model = utils.get_model()
-    model_dict = model.state_dict()
-    pretrained_dict = {
-        k: v for k, v in pretrained_dict.items() if k in model_dict
-    }
-    model_dict.update(pretrained_dict)
-    model.load_state_dict(model_dict)
-    model.eval()
+    model = utils.set_gpu(model)
+
     print(f"=> Loaded seed model parameters from '{args.seed_model}' (num tasks: {checkpoint['args'].num_tasks}) (epochs: {checkpoint['epoch']})")
     if seed_args.er_sparsity:
         for n, m in model.named_modules():
@@ -93,8 +88,14 @@ def main():
                     ),
                 )
                 print(f"Set sparsity of {n} to {m.sparsity}")
-    model = utils.set_gpu(model)
 
+    model_dict = model.state_dict()
+    pretrained_dict = {
+        k: v for k, v in pretrained_dict.items() if k in model_dict
+    }
+    model_dict.update(pretrained_dict)
+    model.load_state_dict(model_dict)
+    #model.eval()
     # Get dataloader.
     data_loader = getattr(data, args.set)()
 
