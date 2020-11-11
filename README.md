@@ -168,3 +168,7 @@ Starting log for 11/3/2020 due to failing jobs:
 
 
 ![Prince Log](/images/prince_0.png)
+
+
+Running new slurm scripts:
+sbatch supsup_basis_slurm_task_eval.s
