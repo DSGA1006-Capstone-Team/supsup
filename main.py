@@ -96,8 +96,12 @@ def main():
             pretrained_dict = {
                 k: v for k, v in pretrained_dict.items() if k in model_dict
             }
+
             model_dict.update(pretrained_dict)
-            model.load_state_dict(pretrained_dict)
+            model.load_state_dict(model_dict)
+
+#            model_dict.update(pretrained_dict)
+#            model.load_state_dict(pretrained_dict)
 
             print(f"=> Loaded checkpoint '{args.resume}' (epoch {checkpoint['epoch']})")
         else:
@@ -165,6 +169,15 @@ def main():
 
             if curr_acc1 > best_acc1:
                 best_acc1 = curr_acc1
+
+        curr_acc1 = test(
+            model,
+            writer,
+            criterion,
+            data_loader.val_loader,
+            args.epochs,
+            task_idx=args.task_eval,
+        )
 
         utils.write_result_to_csv(
             name=f"{args.name}~set={args.set}~task={args.task_eval}",

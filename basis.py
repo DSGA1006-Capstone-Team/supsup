@@ -173,7 +173,7 @@ def main():
         return
 
     # Iterate through all new tasks that were not used for training masks.
-    for idx in range(args.num_seed_tasks_learned, args.num_tasks):
+    for idx in range(args.num_seed_tasks_learned if not args.train_mask_alphas else 0, args.num_tasks):
         print(f"Task {args.set}: {idx}")
 
         # Tell the model which task it is trying to solve -- in Scenario NNs this is ignored.

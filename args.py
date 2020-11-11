@@ -232,6 +232,10 @@ def parse_arguments():
         "--unshared_labels", action="store_true", default=False,
     )
 
+    parser.add_argument(
+        "--train_mask_alphas", action="store_true", default=False,
+    )
+
     args = parser.parse_args()
 
     # Allow for use from notebook without config file
