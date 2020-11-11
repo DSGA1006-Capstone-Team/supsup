@@ -24,10 +24,13 @@ from collections import defaultdict
 
 def main():
     if args.seed is not None:
-        random.seed(args.seed)
-        torch.manual_seed(args.seed)
-        torch.cuda.manual_seed(args.seed)
-        torch.cuda.manual_seed_all(args.seed)
+        random.seed(int(args.seed))  # Python random module.
+        torch.manual_seed(int(args.seed))
+        torch.cuda.manual_seed(int(args.seed))
+        torch.cuda.manual_seed_all(int(args.seed))  # if you are using multi-GPU.
+        np.random.seed(int(args.seed))  # Numpy module.
+        torch.backends.cudnn.benchmark = False
+        torch.backends.cudnn.deterministic = True
 
     # Make the a directory corresponding to this run for saving results, checkpoints etc.
     i = 0

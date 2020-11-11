@@ -26,7 +26,7 @@ def main():
     if os.path.isfile(args.seed_model):
         print(f"=> Loading seed model from '{args.seed_model}'")
         checkpoint = torch.load(
-            args.seed_model, torch.device('cpu')#map_location=f"cuda:{args.multigpu[0]}" if torch.cuda.is_available() else torch.device('cpu')
+            args.seed_model, torch.device('cpu')
         )
         best_acc1 = checkpoint["best_acc1"]
         pretrained_dict = checkpoint["state_dict"]
@@ -91,7 +91,7 @@ def main():
                     ),
                 )
                 print(f"Set sparsity of {n} to {m.sparsity}")
-    model = utils.set_gpu(model)
+    #model = utils.set_gpu(model)
 
     # Get dataloader.
     data_loader = getattr(data, args.set)()

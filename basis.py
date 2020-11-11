@@ -40,10 +40,13 @@ def main():
 
     if seed_args.seed is not None:
         args.seed = seed_args.seed
-        random.seed(seed_args.seed)
-        torch.manual_seed(seed_args.seed)
-        torch.cuda.manual_seed(seed_args.seed)
-        torch.cuda.manual_seed_all(seed_args.seed)
+        random.seed(int(seed_args.seed))
+        np.random.seed(int(seed_args.seed))  # Numpy module.
+        torch.manual_seed(int(seed_args.seed))
+        torch.cuda.manual_seed(int(seed_args.seed))
+        torch.cuda.manual_seed_all(int(seed_args.seed))  # if you are using multi-GPU.
+        torch.backends.cudnn.benchmark = False
+        torch.backends.cudnn.deterministic = True
 
     # Make the a directory corresponding to this run for saving results, checkpoints etc.
     i = 0
