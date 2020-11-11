@@ -7,7 +7,7 @@
 #SBATCH --job-name=dsga1006-supsup
 #SBATCH --mail-type=END
 #SBATCH --mail-user=$USER@nyu.edu
-#SBATCH --gres=gpu:k80:2
+#SBATCH --gres=gpu:k80:1
 #SBATCH --output=slurm_supsup_seed_gpu_10_%j.out
 
 # Refer to https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/batch/submitting-jobs-with-sbatch
@@ -21,4 +21,4 @@ module load anaconda3/5.3.1
 # Move into the directory that contains our code
 SRCDIR=$(pwd)
 
-/scratch/db4045/capstone_env/bin/python $SRCDIR/experiments/SupsupSeed/splitcifar100/rn18-supsup-gpu.py --data="/scratch/db4045/data" --seeds 1 --num-masks 10 --logdir-prefix="dhrupad_runs_gpu" --gpu-sets="0|1" 
+/scratch/db4045/capstone_env/bin/python $SRCDIR/experiments/SupsupSeed/splitcifar100/rn18-supsup-gpu.py --data="/scratch/db4045/data" --seeds 1 --num-masks 10 --logdir-prefix="dhrupad_runs_gpu" --gpu-sets="0" 
