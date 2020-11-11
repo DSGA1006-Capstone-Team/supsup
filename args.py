@@ -190,6 +190,10 @@ def parse_arguments():
     )
 
     parser.add_argument(
+        "--num_seed_tasks_learned", default=-1, type=int,
+    )
+
+    parser.add_argument(
         "--ortho-group", action="store_true", default=False,
     )
 
