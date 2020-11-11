@@ -23,6 +23,15 @@ class NonAffineNoStatsBN(nn.BatchNorm2d):
             dim, affine=False, track_running_stats=False
         )
 
+class MultitaskNonAffineBN(nn.Module):
+    def __init__(self, dim):
+        super(MultitaskNonAffineBN, self).__init__()
+        self.bns = nn.ModuleList([NonAffineBN(dim) for _ in range(pargs.num_tasks)])
+        self.task = 0
+
+    def forward(self, x):
+        return self.bns[self.task](x)
+
 class MaskConv(nn.Conv2d):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -183,7 +192,7 @@ class BasisMultitaskMaskConv(nn.Conv2d):
                 self.scores[pargs.use_single_mask].abs(), self.sparsity
             )
             w = self.weight * subnet
-        elif self.task < pargs.num_seed_tasks_learned:
+        elif self.task < pargs.num_seed_tasks_learned and not pargs.train_mask_alphas:
             subnet = module_util.GetSubnet.apply(
                 self.scores[self.task].abs(), self.sparsity
             )
