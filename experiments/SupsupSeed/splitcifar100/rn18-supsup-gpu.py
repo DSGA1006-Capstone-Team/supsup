@@ -26,6 +26,7 @@ def run_exp(gpu_num, in_queue):
 
         before = time.time()
 
+        experiment["multigpu"] = gpu_num
         print(f"==> Starting experiment {kwargs_to_cmd(experiment)}")
         os.system(kwargs_to_cmd(experiment))
 
@@ -37,6 +38,7 @@ def run_exp(gpu_num, in_queue):
 
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument('--gpu-sets', default=0, type=lambda x: [a for a in x.split("|") if a])
     parser.add_argument('--seeds', default=1, type=int)
     parser.add_argument('--data', default='/scratch/db404/data', type=str)
     parser.add_argument('--num-masks', default=20, type=int)
@@ -44,6 +46,7 @@ def main():
     parser.add_argument('--logdir-prefix', type=str, required=True)
     args = parser.parse_args()
 
+    gpus = args.gpu_sets
     seeds = list(range(args.seeds))
     data = args.data
 
@@ -73,9 +76,10 @@ def main():
         queue.put(e)
 
     processes = []
-    p = Process(target=run_exp, args=(0, queue))
-    p.start()
-    processes.append(p)
+    for gpu in gpus:
+        p = Process(target=run_exp, args=(0, queue))
+        p.start()
+        processes.append(p)
 
     for p in processes:
         p.join()
