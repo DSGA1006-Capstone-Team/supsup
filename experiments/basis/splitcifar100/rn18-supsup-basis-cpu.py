@@ -10,9 +10,10 @@ sys.path.append(os.path.abspath("."))
 
 # note: new algorithm code
 def kwargs_to_cmd(kwargs):
-    cmd = "/scratch/db4045/capstone_env/bin/python basis.py "
+    cmd = "/scratch/db4045/capstone_env/bin/python basis_cpu.py "
     for flag, val in kwargs.items():
         cmd += f"--{flag}={val} "
+    cmd +="--train_mask_alphas"
 
     return cmd
 
@@ -73,7 +74,7 @@ def main():
         queue.put(e)
 
     processes = []
-    p = Process(target=run_exp, args=(queue))
+    p = Process(target=run_exp, args=(queue, ))
     p.start()
     processes.append(p)
 

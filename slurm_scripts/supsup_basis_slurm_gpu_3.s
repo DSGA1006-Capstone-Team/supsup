@@ -2,12 +2,13 @@
 
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=2
-#SBATCH --time=120:00:00
+#SBATCH --time=60:00:00
 #SBATCH --mem=30GB
 #SBATCH --job-name=dsga1006-supsup-basis
 #SBATCH --mail-type=END
 #SBATCH --mail-user=db4045@nyu.edu
-#SBATCH --output=slurm_supsup_basis_7_%j.out
+#SBATCH --gres=gpu:k80:1
+#SBATCH --output=slurm_supsup_basis_gpu_3_%j.out
 
 # Refer to https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/batch/submitting-jobs-with-sbatch
 # for more information about the above options
@@ -20,4 +21,4 @@ module load anaconda3/5.3.1
 # Move into the directory that contains our code
 SRCDIR=$(pwd)
 
-/scratch/db4045/capstone_env/bin/python $SRCDIR/experiments/basis/splitcifar100/rn18-supsup-basis-cpu.py --data="/scratch/db4045/data" --seeds=1 --num-masks=7 --seed_model_dir="/scratch/db4045/runs/dhrupad_runs/SupsupSeed/rn18-supsup_num_masks_{num_masks}/id=supsup~seed={seed}~sparsity={sparsity}~try=0/" --logdir-prefix="dhrupad_runs" --epochs 100
+/scratch/db4045/capstone_env/bin/python $SRCDIR/experiments/basis/splitcifar100/rn18-supsup-basis.py --data="/scratch/db4045/data" --seeds=1 --num-masks=3 --seed_model_dir="/scratch/db4045/runs/dhrupad_runs_gpu/SupsupSeed/rn18-supsup_num_masks_{num_masks}/id=supsup~seed={seed}~sparsity={sparsity}~try=0/" --logdir-prefix="dhrupad_runs_gpu" --epochs 100 --gpu-sets="0"

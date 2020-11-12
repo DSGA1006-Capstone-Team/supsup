@@ -10,10 +10,10 @@ sys.path.append(os.path.abspath("."))
 
 # note: new algorithm code
 def kwargs_to_cmd(kwargs):
-    #cmd = "/home/db4045/.conda/envs/capstone/bin/python basis.py "
     cmd = "/scratch/db4045/capstone_env/bin/python basis.py "
     for flag, val in kwargs.items():
         cmd += f"--{flag}={val} "
+    cmd +="--train_mask_alphas"
 
     return cmd
 
