@@ -19,6 +19,8 @@ module load cuda/10.1.105
 module load anaconda3/5.3.1
 
 # Move into the directory that contains our code
+
+cd /home/at2507/supsup_new/supsup
 SRCDIR=$(pwd)
 
 # AT RUNS
