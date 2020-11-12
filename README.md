@@ -108,6 +108,10 @@ eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub
 
+git branch
+git switch at/dev
+cd /scratch/at2507
+
 rm -rf supsup
 git clone git@github.com:DSGA1006-Capstone-Team/supsup.git
 source env/bin/activate
