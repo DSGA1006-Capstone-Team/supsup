@@ -21,7 +21,7 @@ def parse_arguments():
         "--seed-model", type=str, help="Path to seed model"
     )
     parser.add_argument(
-        "--use-single-mask", type=int, help="If runing Basis Conv in single mask mode"
+        "--use-single-mask", type=int, help="If runing Basis Conv in single mask mode", default=-1
     )
     parser.add_argument(
         "--batch-size",

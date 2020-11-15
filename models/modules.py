@@ -131,7 +131,7 @@ class BasisMaskConv(nn.Conv2d):
         self.sparsity = pargs.sparsity
 
     def forward(self, x):
-        if pargs.use_single_mask:
+        if pargs.use_single_mask > -1:
             subnet = module_util.GetSubnet.apply(
                 self.scores[pargs.use_single_mask].abs(), self.sparsity
             )
@@ -200,7 +200,7 @@ class BasisMultitaskMaskConv(nn.Conv2d):
         self.sparsity = pargs.sparsity
 
     def forward(self, x):
-        if pargs.use_single_mask:
+        if pargs.use_single_mask > -1:
             subnet = module_util.GetSubnet.apply(
                 self.scores[pargs.use_single_mask].abs(), self.sparsity
             )
