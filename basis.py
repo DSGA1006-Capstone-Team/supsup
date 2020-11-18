@@ -298,7 +298,7 @@ def main():
     # Iterate through all tasks.
     adapt = getattr(adaptors, args.adaptor)
 
-    for i in range(num_tasks_learned):
+    for i in range(args.num_tasks):
         print(f"Testing {i}: {args.set} ({i})")
         # model.apply(lambda m: setattr(m, "task", i))
 
