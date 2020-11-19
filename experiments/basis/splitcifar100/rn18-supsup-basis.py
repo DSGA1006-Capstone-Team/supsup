@@ -66,8 +66,8 @@ def main():
             "name": f"id=basis-supsup~seed={seed}~sparsity={sparsity}",
             "log-dir": log_dir,
             "epochs": int(args.epochs),
-            "batch_size": int(args.batch_size),
-            "lr": float(args.lr)
+            "batch-size": int(args.batch_size),
+            "lr": float(args.lr),
             "data": data,
             "seed-model": "{}/final.pt".format(args.seed_model_dir.format(sparsity=str(sparsity), seed=str(seed), num_masks=str(args.num_masks)))
         }
