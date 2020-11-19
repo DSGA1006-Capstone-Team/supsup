@@ -8,7 +8,7 @@
 #SBATCH --mail-type=END
 #SBATCH --mail-user=db4045@nyu.edu
 #SBATCH --gres=gpu:k80:1
-#SBATCH --output=slurm_supsup_basis_gpu_optimal_start_10_%j.out
+#SBATCH --output=logs/slurm_supsup_basis_gpu_optimal_start_10_%j.out
 
 # Refer to https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/batch/submitting-jobs-with-sbatch
 # for more information about the above options
