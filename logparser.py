@@ -106,7 +106,7 @@ def run(log_file, output_dir, is_basis, num_masks):
         raise ValueError("File not found!: {}".format(log_file))
 
     df = logparser(log_file, is_basis, num_masks)
-    df.to_csv(os.path.join(output_dir, '{}_results.csv'.format('_'.join(log_file.split('_')[:-1])))
+    df.to_csv(os.path.join(output_dir, '{}_results.csv'.format('_'.join(log_file.split('_')[:-1]))))
 
 
 if __name__ == "__main__":
