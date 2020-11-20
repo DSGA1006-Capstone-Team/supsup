@@ -46,6 +46,8 @@ def main():
     parser.add_argument('--num-masks', default=20, type=int)
     parser.add_argument('--logdir-prefix', type=str)
     parser.add_argument('--epochs', type=int, default=100)
+    parser.add_argument('--lr', type=str, default='0.001')
+    parser.add_argument('--batch-size', type=int, default=128)
     args = parser.parse_args()
 
     gpus = args.gpu_sets
@@ -63,7 +65,9 @@ def main():
             "config": config,
             "name": f"id=basis-supsup~seed={seed}~sparsity={sparsity}",
             "log-dir": log_dir,
-            "epochs": args.epochs,
+            "epochs": int(args.epochs),
+            "batch-size": int(args.batch_size),
+            "lr": float(args.lr),
             "data": data,
             "seed-model": "{}/final.pt".format(args.seed_model_dir.format(sparsity=str(sparsity), seed=str(seed), num_masks=str(args.num_masks)))
         }
