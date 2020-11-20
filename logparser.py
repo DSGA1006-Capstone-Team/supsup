@@ -60,6 +60,7 @@ def logparser(fname, is_basis=False, num_masks=None):
     if not is_basis and num_masks:
         raise ValueError("Cannot have seed experiement with num masks. Do not set a value for num_masks")
     data = [('ID', 'exp_no', 'seed_val', 'sparsity', 'task', 'epochno', 'train_loss', 'test_loss', 'accuracy', 'num_masks', 'seed_model')]
+    print("Starting parse for: {}".format(fname))
     it = logreader(fname)
     try:
         firstline = next(it)
@@ -67,7 +68,9 @@ def logparser(fname, is_basis=False, num_masks=None):
             raise ValueError("Log doesn't start with experiments description!")
         experiments = yaml.load(firstline)
         line = next(it)
+        print("Found {} experiments in logfile".format(len(experiments)))
         for expno, exp in enumerate(experiments):
+            print("Parsing experiement {}".format(expno))
             details = get_experiment_details(exp)
             exp_data = []
             assert line.startswith('=> Reading YAML config'), "Line: {}".format(line)
@@ -97,16 +100,18 @@ def logparser(fname, is_basis=False, num_masks=None):
     return pd.DataFrame(data=data[1:], columns=data[0]) 
 
 @click.command()
-@click.option("--log-file", type=str, required=True, description="Full path to log file")
-@click.option("--output-dir", type=str, required=True, description="Output file directory")
-@click.option("--is-basis", required=False, default=False, description="Is it a basis experiment?", is_flag=True)
-@click.option("--num-masks", type=int, required=False, default=None, description="Num masks if basis experiemnt")
+@click.option("--log-file", type=str, required=True, help="Full path to log file")
+@click.option("--output-dir", type=str, required=True, help="Output file directory")
+@click.option("--is-basis", required=False, default=False, help="Is it a basis experiment?", is_flag=True)
+@click.option("--num-masks", type=int, required=False, default=None, help="Num masks if basis experiemnt")
 def run(log_file, output_dir, is_basis, num_masks):
     if not os.path.exists(log_file):
         raise ValueError("File not found!: {}".format(log_file))
 
     df = logparser(log_file, is_basis, num_masks)
-    df.to_csv(os.path.join(output_dir, '{}_results.csv'.format('_'.join(log_file.split('_')[:-1]))))
+    outfile = os.path.join(output_dir, '{}_results.csv'.format('_'.join(os.path.basename(log_file).split('_')[:-1])))
+    print("Finished parsing log. Writing to: {}".format(outfile))
+    df.to_csv(outfile)
 
 
 if __name__ == "__main__":
