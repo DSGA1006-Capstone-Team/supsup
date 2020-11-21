@@ -1,0 +1,8 @@
+Training Stage
+/opt/slurm/data/slurmd/job13640485/slurm_script: line 28: /scratch/at2507/capstone_env/bin/python: No such file or directory
+Inference using Multimask(basis)
+/opt/slurm/data/slurmd/job13640485/slurm_script: line 31: /scratch/at2507/capstone_env/bin/python: No such file or directory
+Inference using SupSup(main)
+/opt/slurm/data/slurmd/job13640485/slurm_script: line 33: /scratch/at2507/capstone_env/bin/python: No such file or directory
+Inference using Multimask(main)
+/opt/slurm/data/slurmd/job13640485/slurm_script: line 35: /scratch/at2507/capstone_env/bin/python: No such file or directory
