@@ -108,7 +108,7 @@ eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub
 
-cp -r /scratch/db4045/experiment_data/. /at2507/supsup_new/supsup/csv_logs_params
+cp -r /scratch/db4045/experiment_data/. /home/at2507/supsup_new/supsup/csv_logs_params/
 
 
 git branch
