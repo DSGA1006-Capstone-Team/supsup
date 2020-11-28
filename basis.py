@@ -124,7 +124,6 @@ def main():
 
         # Settting task to -1 tells the model to infer task identity instead of being given the task.
         model.apply(lambda m: setattr(m, "task", -1))
-        #model.apply(lambda m: setattr(m, "task", args.task_eval))
 
         # an "adaptor" is used to infer task identity.
         # args.adaptor == gt implies we are in scenario GG.
@@ -135,9 +134,6 @@ def main():
 
         # Iterate through all tasks.
         adapt = getattr(adaptors, args.adaptor)
-
-        print(f"Testing {i}: {args.set} ({args.task_eval})")
-        # model.apply(lambda m: setattr(m, "task", i))
 
         # Update the data loader so it is returning data for the right task.
         data_loader.update_task(args.task_eval)
@@ -238,6 +234,7 @@ def main():
                 epoch,
                 idx,
                 data_loader,
+                True
             )
 
             # Required for our PSP implementation, not used otherwise.

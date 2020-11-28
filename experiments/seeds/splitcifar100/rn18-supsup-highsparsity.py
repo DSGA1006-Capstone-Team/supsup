@@ -54,7 +54,7 @@ def main():
     config = "experiments/seeds/splitcifar100/configs/rn18-supsup{}.yaml".format("" if args.num_masks == 20 else "_{}".format(str(args.num_masks)))
     log_dir = "/scratch/{user}/runs/{logdir_prefix}/SupsupSeed/rn18-supsup_num_masks_{num_masks}".format(user=os.environ.get("USER"), num_masks=str(args.num_masks), logdir_prefix=args.logdir_prefix)
     experiments = []
-    sparsities = [1, 2, 4, 8, 16, 32]
+    sparsities = [24, 30, 36, 42, 48, 54, 60]
 
     # at change for 1 epoch to check dir
     for sparsity, seed in product(sparsities, seeds):
