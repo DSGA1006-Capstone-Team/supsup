@@ -131,7 +131,7 @@ class BasisMaskConv(nn.Conv2d):
         self.sparsity = pargs.sparsity
 
     def forward(self, x):
-        if pargs.use_single_mask:
+        if pargs.use_single_mask > -1:
             subnet = module_util.GetSubnet.apply(
                 self.scores[pargs.use_single_mask].abs(), self.sparsity
             )
@@ -178,16 +178,29 @@ class BasisMultitaskMaskConv(nn.Conv2d):
         if pargs.train_weight_tasks == 0:
             self.weight.requires_grad = False
 
-        self.basis_alphas = nn.ParameterList(
-            [
-                nn.Parameter(torch.ones(pargs.num_seed_tasks_learned)/pargs.num_seed_tasks_learned)
-                for _ in range(pargs.num_tasks)
-            ]
-        )
+        if pargs.start_at_optimal:
+            self.basis_alphas = nn.ParameterList(
+                [
+                    nn.Parameter(torch.eye(pargs.num_seed_tasks_learned)[i])
+                    for i in range(pargs.num_seed_tasks_learned)
+                ]
+                +
+                [
+                    nn.Parameter(torch.ones(pargs.num_seed_tasks_learned)/pargs.num_seed_tasks_learned)
+                    for _ in range(pargs.num_seed_tasks_learned, pargs.num_tasks)
+                ]
+            )
+        else:
+            self.basis_alphas = nn.ParameterList(
+                [
+                    nn.Parameter(torch.ones(pargs.num_seed_tasks_learned)/pargs.num_seed_tasks_learned)
+                    for _ in range(pargs.num_tasks)
+                ]
+            )
         self.sparsity = pargs.sparsity
 
     def forward(self, x):
-        if pargs.use_single_mask:
+        if pargs.use_single_mask > -1:
             subnet = module_util.GetSubnet.apply(
                 self.scores[pargs.use_single_mask].abs(), self.sparsity
             )

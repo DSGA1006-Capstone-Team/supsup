@@ -168,3 +168,5 @@ Starting log for 11/3/2020 due to failing jobs:
 
 
 ![Prince Log](/images/prince_0.png)
+=======
+- https://docs.computecanada.ca/wiki/Using_GPUs_with_Slurm 

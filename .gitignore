@@ -2,9 +2,12 @@
 *.swp
 *.swo
 *.pt
-runs/
-*.pt
-*.txt
-env/
 data/
 .DS_Store
+*.csv
+*.txt
+*.out
+runs/
+env/
+logs/
+logs

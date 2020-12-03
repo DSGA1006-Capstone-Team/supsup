@@ -24,10 +24,13 @@ from collections import defaultdict
 
 def main():
     if args.seed is not None:
-        random.seed(args.seed)
-        torch.manual_seed(args.seed)
-        torch.cuda.manual_seed(args.seed)
-        torch.cuda.manual_seed_all(args.seed)
+        random.seed(int(args.seed))  # Python random module.
+        torch.manual_seed(int(args.seed))
+        torch.cuda.manual_seed(int(args.seed))
+        torch.cuda.manual_seed_all(int(args.seed))  # if you are using multi-GPU.
+        np.random.seed(int(args.seed))  # Numpy module.
+        torch.backends.cudnn.benchmark = False
+        torch.backends.cudnn.deterministic = True
 
     # Make the a directory corresponding to this run for saving results, checkpoints etc.
     i = 0
@@ -53,9 +56,9 @@ def main():
 
     # Track accuracy on all tasks.
     if args.num_tasks:
-        best_acc1 = [0.0 for _ in range(args.num_tasks)]
-        curr_acc1 = [0.0 for _ in range(args.num_tasks)]
-        adapt_acc1 = [0.0 for _ in range(args.num_tasks)]
+        best_acc1 = [0.0]*args.num_tasks
+        curr_acc1 = [0.0]*args.num_tasks
+        adapt_acc1 = [0.0]*args.num_tasks
 
     # Get the model.
     model = utils.get_model()
@@ -93,8 +96,12 @@ def main():
             pretrained_dict = {
                 k: v for k, v in pretrained_dict.items() if k in model_dict
             }
+
             model_dict.update(pretrained_dict)
-            model.load_state_dict(pretrained_dict)
+            model.load_state_dict(model_dict)
+
+#            model_dict.update(pretrained_dict)
+#            model.load_state_dict(pretrained_dict)
 
             print(f"=> Loaded checkpoint '{args.resume}' (epoch {checkpoint['epoch']})")
         else:
@@ -163,6 +170,15 @@ def main():
             if curr_acc1 > best_acc1:
                 best_acc1 = curr_acc1
 
+        curr_acc1 = test(
+            model,
+            writer,
+            criterion,
+            data_loader.val_loader,
+            args.epochs,
+            task_idx=args.task_eval,
+        )
+
         utils.write_result_to_csv(
             name=f"{args.name}~set={args.set}~task={args.task_eval}",
             curr_acc1=curr_acc1,
@@ -230,6 +246,7 @@ def main():
             or num_tasks_learned < args.train_weight_tasks
             else args.lr
         )
+
 
         # get optimizer, scheduler
         if args.optimizer == "adam":
@@ -365,7 +382,6 @@ def main():
 
             utils.clear_masks(model)
             torch.cuda.empty_cache()
-
 
     if args.save:
         torch.save(

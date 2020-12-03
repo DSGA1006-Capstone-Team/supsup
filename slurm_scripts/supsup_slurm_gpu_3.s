@@ -8,7 +8,11 @@
 #SBATCH --mail-type=END
 #SBATCH --mail-user=$USER@nyu.edu
 #SBATCH --gres=gpu:k80:1
+<<<<<<< HEAD
 #SBATCH --output=slurm_supsup_seed_gpu_3_%j.out
+=======
+#SBATCH --output=logs/slurm_supsup_seed_gpu_3_%j.out
+>>>>>>> dhrupad/dev
 
 # Refer to https://sites.google.com/a/nyu.edu/nyu-hpc/documentation/prince/batch/submitting-jobs-with-sbatch
 # for more information about the above options

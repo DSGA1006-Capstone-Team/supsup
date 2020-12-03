@@ -16,6 +16,13 @@ def parse_arguments():
     parser.add_argument(
         "--optimizer", type=str, default="sgd", help="Which optimizer to use"
     )
+
+    parser.add_argument(
+        "--seed-model", type=str, help="Path to seed model"
+    )
+    parser.add_argument(
+        "--use-single-mask", type=int, help="If runing Basis Conv in single mask mode", default=-1
+    )
     parser.add_argument(
         "--batch-size",
         type=int,
@@ -183,6 +190,10 @@ def parse_arguments():
     )
 
     parser.add_argument(
+        "--num_seed_tasks_learned", default=-1, type=int,
+    )
+
+    parser.add_argument(
         "--ortho-group", action="store_true", default=False,
     )
 
@@ -223,6 +234,14 @@ def parse_arguments():
 
     parser.add_argument(
         "--unshared_labels", action="store_true", default=False,
+    )
+
+    parser.add_argument(
+        "--train_mask_alphas", action="store_true", default=False,
+    )
+
+    parser.add_argument(
+        "--start_at_optimal", action="store_true", default=False,
     )
 
     args = parser.parse_args()
