@@ -28,11 +28,12 @@ def get_epoch_loss(line):
     mparts = mainline.split(' ')
     epoch = int(mparts[2])
     loss = float(mparts[-1])
-    if len(parts) > 1:
-        alphas = yaml.load(parts[1].strip())
-    else:
-        alphas = {}
-    return epoch, loss, alphas
+#    if len(parts) > 1:
+#        alphas = yaml.load(parts[1].strip())
+#    else:
+#        alphas = {}
+#    return epoch, loss, alphas
+    return epoch, loss, {}
 
 
 def get_test_accuracy_loss(line):
