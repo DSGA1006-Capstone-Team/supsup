@@ -32,9 +32,8 @@ def main():
         pretrained_dict = checkpoint["state_dict"]
         seed_args = checkpoint['args']
         num_tasks_learned = checkpoint['args'].num_tasks
-        args.num_seed_tasks_learned = num_tasks_learned
     else:
-        raise Exception(f"=> No seed model found at '{args.seed_model}'!")
+        raise RuntimeError(f"=> No seed model found at '{args.seed_model}'!")
 
     assert not ((args.num_tasks - args.num_seed_tasks_learned > 1) and (args.conv_type == 'BasisMaskConv')), 'BasisMaskConv only supports learning one extra task over the mask tasks. Please fix config or change conv_type!'
 
@@ -233,8 +232,7 @@ def main():
                 criterion,
                 epoch,
                 idx,
-                data_loader,
-                True
+                data_loader
             )
 
             # Required for our PSP implementation, not used otherwise.

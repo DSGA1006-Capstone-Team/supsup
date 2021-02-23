@@ -20,16 +20,12 @@ module purge
 SRCDIR=$HOME/supsup
 cd $SRCDIR
 
-# Activate the conda environment
-# source ~/.bashrc
-# conda activate dsga3001
-source env/bin/activate
+#SPARSITIES='25,30,35'
+SPARSITIES=$1
 
 # Execute the script
 # python ./lab0-test.py
 # python ./experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data="./data" --seeds 1
 
-# python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data=/path/to/dataset/parent --seeds 1
-# python ./experiments/GG/splitcifar100/rn18-supsup.py  --data="./data" --seeds 1
-# python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1|2|3" --data=./data --seeds 1
-python experiments/GG/splitcifar100/rn18-supsup.py --gpu-sets="0|1" --data=./data --seeds 1
+/home/db4045/.mypy/bin/python $SRCDIR/experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="/scratch/db4045/data" --seeds "1,2" --logdir-prefix="dhrupad_runs" --gpu-sets="0" --sparsities="$SPARSITIES"
+#/home/db4045/.mypy/bin/python $SRCDIR/experiments/SupsupSeed/splitcifar100/rn18-supsup.py --data="/scratch/db4045/data" --seeds 0,1,2 --logdir-prefix="dhrupad_runs" --gpu-sets="0" --sparsities="$SPARSITIES"

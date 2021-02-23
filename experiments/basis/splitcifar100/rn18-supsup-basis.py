@@ -10,7 +10,7 @@ sys.path.append(os.path.abspath("."))
 
 # note: new algorithm code
 def kwargs_to_cmd(kwargs):
-    cmd = "/scratch/db4045/capstone_env/bin/python basis.py "
+    cmd = "/ext3/miniconda3/bin/python3 basis.py "
     for flag, val in kwargs.items():
         cmd += f"--{flag}={val} "
     cmd +="--train_mask_alphas"
@@ -43,21 +43,23 @@ def main():
     parser.add_argument('--seeds', default=1, type=int)
     parser.add_argument('--data', default='/scratch/db4045/data', type=str)
     parser.add_argument('--seed_model_dir', default='/scratch/db4045/seed_models_{num_masks}/id\=supsup~seed\={seed}~sparsity\={sparsity}~try\=0/', type=str)
+    parser.add_argument('--sparsities', type=str, default='25,30,35,40')
     parser.add_argument('--num-masks', default=20, type=int)
     parser.add_argument('--logdir-prefix', type=str)
-    parser.add_argument('--epochs', type=int, default=100)
-    parser.add_argument('--lr', type=str, default='0.001')
-    parser.add_argument('--batch-size', type=int, default=128)
+    parser.add_argument('--epochs', type=int, default=150)
+    parser.add_argument('--lr', type=str, default='0.02')
+    parser.add_argument('--batch-size', type=int, default=64)
     args = parser.parse_args()
 
     gpus = args.gpu_sets
     seeds = list(range(args.seeds))
     data = args.data
+    sparsities = [int(x) for x in args.sparsities.split(',')]
 
     config = "experiments/basis/splitcifar100/configs/rn18-supsup-basis-multitask.yaml"
     log_dir = "{scratch}/runs/{logdir_prefix}/SupsupSeedBasis/rn18-supsup_basis_num_masks_{num_masks}".format(num_masks=str(args.num_masks), scratch=os.environ.get("SCRATCH"), logdir_prefix=args.logdir_prefix)
     experiments = []
-    sparsities = [1, 2, 4, 8, 16, 32] # Higher sparsity values mean more dense subnetworks
+    sparsities = [int(x) for x in args.sparsities.split(',')]
 
     # at change for 1 epoch to check dir
     for sparsity, seed in product(sparsities, seeds):
@@ -67,9 +69,10 @@ def main():
             "log-dir": log_dir,
             "epochs": int(args.epochs),
             "batch-size": int(args.batch_size),
+            "num-seed-tasks-learned": int(args.num_masks),
             "lr": float(args.lr),
             "data": data,
-            "seed-model": "{}/final.pt".format(args.seed_model_dir.format(sparsity=str(sparsity), seed=str(seed), num_masks=str(args.num_masks)))
+            "seed-model": "{}/final.pt".format(args.seed_model_dir.format(sparsity=str(sparsity), seed=str(seed)))
         }
 
         experiments.append(kwargs)

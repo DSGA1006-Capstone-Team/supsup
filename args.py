@@ -45,6 +45,12 @@ def parse_arguments():
         help="number of epochs to train (default: 100)",
     )
     parser.add_argument(
+        "--num-seed-tasks-learned",
+        type=int,
+        metavar="N",
+        help="number of seed masks to use (basis setup only)",
+    )
+    parser.add_argument(
         "--lr",
         type=float,
         default=0.1,
